@@ -1,8 +1,8 @@
-const userName = prompt("Please enter your name", "");
 const userLastname = prompt("Please enter your lastname", "");
+const userName = prompt("Please enter your name", "");
 const userSurname = prompt("Please enter your surname", "");
 const userAge = parseInt(prompt("Please enter your age(full years)", ""));
-const userGender = confirm(`For male gender kindly click on "yes" button, 
+const userGender = confirm(`For male gender kindly click on "confirm" button, 
                             for female gender kindly click on "no" button`);
 
 const ageInDays = userAge * 365;
