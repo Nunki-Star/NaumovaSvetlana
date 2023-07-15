@@ -7,6 +7,9 @@ const ageInFiveYears = userAge + 5;
 const ageInDays = userAge * 365;
 
 const userGender = confirm("for male gender click on confirm button, for female click on 'No' ");
+const userGenderCheck =
+const retiredMale
+
  
 
 
@@ -16,7 +19,7 @@ your surname is ${userSurname},
 your age is ${userAge},
 your age is days is ${ageInDays},
 your age in 5 years is ${ageInFiveYears},
-your gender is ${checkTheGender},
+your gender is ${userCheck},
 your retirement status is ${}`)
 
 
