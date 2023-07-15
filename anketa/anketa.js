@@ -30,10 +30,10 @@ else{
 
 
 
-const userInfo = alert(`Welcome to our first js task:  
-                        ${userLastname} ${userName} ${userSurname} 
-                        Your age is : ${userAge}
-                        Your age in days is: ${ageInDays}
-                        In five years ull be: ${ageInFiveYears}
-                        Your gender is: ${gender}
-                        Your retirement status is: ${retired}`)
+alert(`Welcome to our first js task,   
+${userLastname} ${userName} ${userSurname}!
+Your age is : ${userAge}
+Your age in days is: ${ageInDays}
+In five years ull be: ${ageInFiveYears}
+Your gender is: ${gender}
+Your retirement status is: ${retired}`)
