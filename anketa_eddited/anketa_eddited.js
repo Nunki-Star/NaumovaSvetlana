@@ -1,8 +1,13 @@
 const userLastName = prompt("kindly enter your last name in this field", "");
 const userName = prompt("Kindly enter your name in this field", "");
 const userSurname = prompt("Kinly enter your surname in this field");
+let userAge;
+do{
+    userAge = parseInt(prompt("Please enter your age"));
+    } while(userAge === "");
+    
 
-const userAge = parseInt(prompt("Please enter your age"));
+
 const ageInFiveYears = userAge + 5;
 const ageInDays = userAge * 365;
 
