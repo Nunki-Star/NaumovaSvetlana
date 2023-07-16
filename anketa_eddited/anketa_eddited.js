@@ -3,19 +3,19 @@ let lastName;
 
 do {
     (lastName = prompt("Please enter your last name", ""))
-} while (parseFloat(lastName) || lastName == null || lastName == undefined || lastName == '' ||  lastName == 'null')
+} while (lastName === NaN || parseFloat(lastName) || lastName == null || lastName == undefined || lastName == '' ||  lastName == 'null')
 
 let userName;
 
 do {
     (userName = prompt("Please enter your name", ""))
-} while (parseFloat(userName) || userName == null || userName == undefined || userName == '' ||  userName == 'null')
+} while (lastName === NaN || parseFloat(userName) || userName == null || userName == undefined || userName == '' ||  userName == 'null')
 
 let userSurname;
 
 do {
     (userSurname = prompt("Please enter your surname", ""))
-} while (parseFloat(userSurname) || userSurname == null || userSurname == undefined || userSurname == '' ||  userSurname == 'null')
+} while (lastName === NaN || parseFloat(userSurname) || userSurname == null || userSurname == undefined || userSurname == '' ||  userSurname == 'null')
 
 let userAge;
 /*while (userAge = prompt ("Please enter your age", "")){
