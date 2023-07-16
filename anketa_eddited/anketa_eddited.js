@@ -3,19 +3,19 @@ let lastName;
 
 do {
     (lastName = prompt("Please enter your last name", ""))
-} while (lastName === NaN || parseFloat(lastName) || lastName == null || lastName == undefined || lastName == '' ||  lastName == 'null')
+} while (parseFloat(lastName) || lastName == null || lastName == undefined || lastName == '' ||  lastName == 'null' || lastName.length >= 30)
 
 let userName;
 
 do {
     (userName = prompt("Please enter your name", ""))
-} while (lastName === NaN || parseFloat(userName) || userName == null || userName == undefined || userName == '' ||  userName == 'null')
+} while (Number(userName) || parseFloat(userName) || userName == null || userName == undefined || userName == '' ||  userName == 'null' || userName.length >= 30)
 
 let userSurname;
 
 do {
     (userSurname = prompt("Please enter your surname", ""))
-} while (lastName === NaN || parseFloat(userSurname) || userSurname == null || userSurname == undefined || userSurname == '' ||  userSurname == 'null')
+} while (parseFloat(userSurname) || userSurname == null || userSurname == undefined || userSurname == '' ||  userSurname == 'null' || userSurname.length >=30)
 
 let userAge;
 /*while (userAge = prompt ("Please enter your age", "")){
@@ -26,6 +26,7 @@ let userAge;
 }*/
 
 do{
+   
     (userAge = parseInt(prompt ("Please enter your age", "")))
 }while((userAge === "" || isNaN(userAge)))
 
