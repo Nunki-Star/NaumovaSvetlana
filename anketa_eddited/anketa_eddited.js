@@ -1,11 +1,33 @@
-const userLastName = prompt("kindly enter your last name in this field", "");
-const userName = prompt("Kindly enter your name in this field", "");
-const userSurname = prompt("Kinly enter your surname in this field");
+
+let lastName;
+
+do {
+    (lastName = prompt("Please enter your last name", ""))
+} while (parseFloat(lastName) || lastName == null || lastName == undefined || lastName == '' ||  lastName == 'null')
+
+let userName;
+
+do {
+    (userName = prompt("Please enter your name", ""))
+} while (parseFloat(userName) || userName == null || userName == undefined || userName == '' ||  userName == 'null')
+
+let userSurname;
+
+do {
+    (userSurname = prompt("Please enter your surname", ""))
+} while (parseFloat(userSurname) || userSurname == null || userSurname == undefined || userSurname == '' ||  userSurname == 'null')
+
 let userAge;
+/*while (userAge = prompt ("Please enter your age", "")){
+    if (userAge === "" || isNaN(userAge)){
+        alert("The age you've entered is not correct, try again!");
+        continue;
+    }
+}*/
+
 do{
-    userAge = parseInt(prompt("Please enter your age"));
-    } while(userAge === "");
-    
+    (userAge = parseInt(prompt ("Please enter your age", "")))
+}while((userAge === "" || isNaN(userAge)))
 
 
 const ageInFiveYears = userAge + 5;
@@ -21,7 +43,7 @@ let retirementCheck = (userGender == true) ? maleRetirement : femaleRetirement;
  
 
 
-alert(`your last name is ${userLastName},
+alert(`your last name is ${lastName},
 your name is ${userName}, 
 your surname is ${userSurname},
 your age is ${userAge},
