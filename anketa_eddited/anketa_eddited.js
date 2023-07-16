@@ -9,7 +9,7 @@ let userName;
 
 do {
     (userName = prompt("Please enter your name", ""))
-} while (Number(userName) || parseFloat(userName) || userName == null || userName == undefined || userName == '' ||  userName == 'null' || userName.length >= 30)
+} while (parseFloat(userName) || userName == null || userName == undefined || userName == '' ||  userName == 'null' || userName.length >= 30)
 
 let userSurname;
 
@@ -27,12 +27,12 @@ let userAge;
 
 do{
    
-    (userAge = parseInt(prompt ("Please enter your age", "")))
-}while((userAge === "" || isNaN(userAge)))
+    (userAge = prompt ("Please enter your age", ""))
+}while((userAge.isNumeric = false || userAge === "" || isNaN(userAge) || userAge.length >= 3))
 
 
-const ageInFiveYears = userAge + 5;
-const ageInDays = userAge * 365;
+const ageInFiveYears = parseInt(userAge) + 5;
+const ageInDays = parseInt(userAge) * 365;
 
 const userGender = confirm("for male gender click on confirm button, for female click on 'No' ");
 const userGenderCheck = (userGender == true) ? "male" : "female";
