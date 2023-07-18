@@ -46,7 +46,7 @@ switch(myNumber){
 
 
 
-console.log(parseInt("22.5"))
+/*console.log(parseInt("22.5"))
 console.log(parseInt("22years5months"))
 console.log(parseInt("a2"))
 console.log(parseInt(""))
@@ -70,11 +70,34 @@ console.log(time)
 console.log(speed==NaN)
 console.log(speed===NaN)
 const test = parseFloat("aaa")
-console.log
+console.log*/
+
+
+/*if (4 == 9){
+    console.log("ok!")
+}
+else if (4 > 9){
+    console.log("four is smaller than 9")
+}
+else{
+    console.log("nine is bigger than four!")
+}*/
 
 
 
+/*let num = parseInt(prompt("please enter your number", ""));
+if(num>50){
+    alert("your number is too big, try again");
+}else if(num===50){
+    alert("try again");
+}else{
+    alert("cool!!!!")
+}*/
 
+
+let num = 60;
+
+(num === 50) ? console.log("cool") : console.log("nope!!!!");
 
 
 

@@ -3,7 +3,7 @@ let lastName;
 
 do {
     (lastName = prompt("Please enter your last name", ""))
-} while (isNaN(lastName) === false ||parseFloat(lastName) || lastName == null || lastName == undefined || lastName == '' ||  lastName == 'null' || lastName.length >= 30)
+} while (type ||parseFloat(lastName) || lastName == null || lastName == undefined || lastName == '' ||  lastName == 'null' || lastName.length >= 30)
 
 let userName;
 
