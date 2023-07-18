@@ -95,9 +95,14 @@ if(num>50){
 }*/
 
 
-let num = 60;
+/*let num = 60;
 
-(num === 50) ? console.log("cool") : console.log("nope!!!!");
+(num === 50) ? console.log("cool") : console.log("nope!!!!");*/
 
+do{
+    let name = prompt("please enter your name", "");
+}while(
+    
+)
 
 

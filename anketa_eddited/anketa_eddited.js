@@ -1,9 +1,12 @@
-
 let lastName;
-
 do {
     (lastName = prompt("Please enter your last name", ""))
-} while (type ||parseFloat(lastName) || lastName == null || lastName == undefined || lastName == '' ||  lastName == 'null' || lastName.length >= 30)
+} while (parseFloat(lastName) || lastName == null || lastName == undefined || lastName == '' ||  lastName == 'null' || lastName.length >= 30);
+/*let lastName = prompt("please enter your name", "");
+for(let i in lastName){
+    if (!isNaN(lastName.charAt(i)) || parseFloat(lastName) || lastName == null || lastName == undefined || lastName == '' ||  lastName == 'null' || lastName.length >= 30);
+} prompt("please enter your correct last name", "");*/
+
 
 let userName;
 
