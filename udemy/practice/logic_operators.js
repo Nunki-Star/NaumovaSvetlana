@@ -98,11 +98,22 @@ if(num>50){
 /*let num = 60;
 
 (num === 50) ? console.log("cool") : console.log("nope!!!!");*/
+/*const number = parseInt(prompt("please enter your number"));
+switch(number){
+    case 4:
+        alert("too small");
+        break;
+    case 6:
+        alert("too big");
+        break;
+    case 5:
+        alert("correct");
+        break;
+    default:
+        alert("no-no")
+}*/
 
-do{
-    let name = prompt("please enter your name", "");
-}while(
-    
-)
-
-
+let lastName;
+for(let i=0; i <= lastName.length; i++);
+    console.log(lastName)
+    console.log(i)
