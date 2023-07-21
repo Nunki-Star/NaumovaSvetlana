@@ -50,18 +50,27 @@ for(let i = 0; i<=10; i++){
     if(i%2==0){
         console.log(i)
     }
-}*/
-
-let i = 2;
-while(i <= 16){
-    
-    if(i%2==0){
-        console.log(i);
-        i++;
-        
-        
-        
-    }
-    
 }
 
+let num = 2;
+while(num <= 16){
+    
+    if(num%2==0){
+        console.log(num);
+    }
+    num++;
+}*/
+
+
+function thirdTask() {
+    num = 0;}
+    for (let i = 2; i <= 10; i++) {
+     if (i % 2 !== 0) {
+         continue;
+     } else {
+         console.log(i);
+     }
+ }
+    
+    
+thirdTask();

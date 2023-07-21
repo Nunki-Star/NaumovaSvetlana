@@ -7,7 +7,7 @@ let userName;
 
 do {
     (userName = prompt("Please enter your name", ""))
-} while (typeof userName !== "string" || parseFloat(userName) || userName == null || userName == undefined || userName == '' ||  userName == 'null' || userName.length >= 30)
+} while (parseFloat(userName) || userName == null || userName == undefined || userName == '' ||  userName == 'null' || userName.length >= 30)
 
 let userSurname;
 
