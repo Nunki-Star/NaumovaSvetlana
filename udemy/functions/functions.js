@@ -9,7 +9,9 @@ sayHello("Svetlana")*/
 //}
 //sayHello();
 
-function getTheDistance(speed, time){
-    alert("the distance is " + speed * time);
+function summaryOfNumbers(num1, num2){
+    //alert(num1 + num2);
+    const numbersSummary = num1 + num2;
+
 }
-getTheDistance(6, 7)
+summaryOfNumbers(5, 6);
