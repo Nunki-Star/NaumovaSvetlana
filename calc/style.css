@@ -1,0 +1,18 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+button{
+    background-color: pink;
+    color:grey;
+    width:80px;
+    height:60px;
+    font-size: 30px;
+    border-radius: 30%;
+}
+.calc{
+    margin-top:50px;
+    margin-left:40px
+}
