@@ -1,40 +1,47 @@
-const x = null; 
-const y = null;
-const sign = ""
+let num1 = null, 
+    num2 = null, 
+    sign = "";
 
-function getNumber(num){
+    function getNumber(num){
     
-        if(x === null){
-            x=num
+        if(num1 === null){
+            num1=num;
+            console.log(num1);
         }
         else{
-            y=num
+            num2=num;
+            console.log(num2);
         }
     }
 
     function getSign(operation){
-        sign = operation
+        sign = operation;
+        console.log(sign);
     }
 
-    function result(){
-        var EL = document.getElementById('result');
-
-        switch(operVariable){
+    function getResult(){
+        switch(sign){
             case "+": 
-                EL.innerText = x+y;
+                console.log(num1+num2);
                 break;
             case "-": 
-                EL.innerText = (x-y).toString();
+                console.log(num1-num2);
                 break;
             case "*": 
-                EL.innerText = (x*y).toString();
-                break
+               console.log(num1*num2);
+                break;
             case "/":
-                EL.innerText = (x/y).toString();
-                break
-    
+               console.log(num1/num2);
+                break;
         }
     }
+
+
+
+
+
+
+
 
 
 
