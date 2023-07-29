@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.head_header{
+    padding-left:70px;
+    padding-right:70px;
+    background-color: #1B3764;
+    padding-top:35px;
+    display: flex;
+    flex-direction: row;
+}
+
+.head_header div:nth-child(2){
+    padding-left:35px;
+    padding-right:260px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: yellow;
+}
+
+
