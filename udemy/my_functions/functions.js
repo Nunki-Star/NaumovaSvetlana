@@ -132,7 +132,7 @@ getElements(5, 6, 7, 8)*/
 }*/
 
 
-function sayHello(name) {
+/*function sayHello(name) {
     console.log(`Привет, ${name}!`)
 }
 sayHello("Артем")
@@ -145,6 +145,26 @@ function returnNeighboringNumbers(num2) {
     let neighbour2 = num2 + 1;
     return [neighbour1, middleNumber, neighbour2]
  }
-myArray = console.log(returnNeighboringNumbers(5))
+myArray = console.log(returnNeighboringNumbers(5))*/
+
+/*function minusNumber(a, b){
+    console.log(a-b);
+
+}
+minusNumber(4, 3);
+
+function plusNumber(a, b){
+    let myMinus = a - b;
+    return myMinus
+}
+console.log(plusNumber(7, 5))*/
 
 
+function person(){
+    let name = "peter";
+    return function dispalyName(){
+        console.log(name);
+    };
+}
+let peter = person();
+peter()
