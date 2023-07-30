@@ -13,13 +13,64 @@
     flex-direction: row;
 }
 
-.head_header div:nth-child(2){
+.head_header > div.icons{
     padding-left:35px;
-    padding-right:260px;
+    padding-right:150px;
     display:flex;
+    padding-top:-15px;
     flex-direction: row;
     justify-content: space-between;
-    background-color: yellow;
+   
 }
+
+.direction_links{
+    padding-top:20px;
+    display:flex;
+}
+.direction_links p:first-child{
+    color: #FFCA42;
+    font-family: Inter;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25.5px; /* 150% */
+    letter-spacing: 0.17px;
+    padding-right: 47px
+
+}
+
+.direction_links p:nth-child(2){
+    color: #F6F8FC;
+    font-family: Inter;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25.5px; /* 150% */
+    letter-spacing: 0.17px;
+    padding-right:48px
+}
+
+.direction_links p:nth-child(3){
+    color: #F6F8FC;
+    font-family: Inter;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25.5px; /* 150% */
+    letter-spacing: 0.17px;
+    padding-right:60px
+}
+
+.direction_links p:nth-child(4){
+    color: #F6F8FC;
+    font-family: Inter;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25.5px; /* 150% */
+    letter-spacing: 0.17px;
+}
+
+
 
 
