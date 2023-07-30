@@ -160,11 +160,40 @@ function plusNumber(a, b){
 console.log(plusNumber(7, 5))*/
 
 
-function person(){
+/*function person(){
     let name = "peter";
     return function dispalyName(){
         console.log(name);
     };
 }
 let peter = person();
-peter()
+peter()*/
+
+/*let a = 1, b = 1;
+let c = ++a;
+let d = b++;
+console.log(a);
+console.log(b);
+console.log(c);
+console.log(d)*/
+
+/*let birthDate = prompt("What year have you been born?", "");
+if(birthDate ==1986){
+    alert("correct");
+}else if(birthDate == 1985){
+    alert("almost correct")
+}else if(birthDate == 1987){
+    alert("you need to minus one year")
+}else{
+    alert("wrong answer!!!")
+}*/
+/*
+
+let correctNameJS = prompt("please enter an offical name of js?","");
+if(correctNameJS =="ECMAScript"){
+    alert("correct");
+}else{
+    alert("dont you know ECMAscript?")
+}*/
+
+
