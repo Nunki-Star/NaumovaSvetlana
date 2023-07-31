@@ -197,3 +197,13 @@ if(correctNameJS =="ECMAScript"){
 }*/
 
 
+/*let myNumber = +prompt("please enter your number", "");
+if(myNumber>0){
+    alert(1)
+}else if(myNumber<0){
+    alert(-1)
+}else if(myNumber === 0){
+    alert(0)
+}*/
+
+let result = (a+b<4)?"not enough":"a lot";
