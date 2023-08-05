@@ -74,5 +74,29 @@ duckMassive("aaa", "bbb", "ccc")*/
 
 
 
-
-
+/*function testFactorial(a) {
+    let x = 1;
+    for(let i = 1; i <= a; i++)
+		x = x*i;
+    return x;
+let x  = 0;
+let y = 1;
+while(y <= a){
+    if(y % 2 === 0){
+        x = x + y;
+        y++
+    }
+}    
+}
+console.log(testFactorial(7))*/
+let color = "green";
+switch (color){
+    case "orange":
+        alert("orange color");
+        break;
+    case "blue":
+        alert("blue color");
+        break;
+    case "green":
+        alert("correct!!!!")
+}

@@ -49,7 +49,7 @@ name = "Pete";
 
 sayHi();*/
 
-function makeWorker() {
+/*function makeWorker() {
     let name = "Pete";
   
     return function() {
@@ -63,5 +63,6 @@ function makeWorker() {
   let work = makeWorker();
   
   // call it
-  work();
+  work();*/
 
+  
