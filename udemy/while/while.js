@@ -89,7 +89,7 @@ while(y <= a){
 }    
 }
 console.log(testFactorial(7))*/
-let color = "green";
+/*let color = "green";
 switch (color){
     case "orange":
         alert("orange color");
@@ -99,4 +99,22 @@ switch (color){
         break;
     case "green":
         alert("correct!!!!")
+}*/
+
+/*for (let i = 0; i < 10; i++){
+    saySomething();
+}
+
+function saySomething(){
+    document.write("HELLO!");
+}*/
+
+
+function anyThing(a, b){
+    let c = a+b;
+    return c
+}
+
+for(let i = 1; i <= 5; i++){
+    console.log(i, anyThing(3, 2))
 }

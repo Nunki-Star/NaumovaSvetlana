@@ -206,4 +206,10 @@ if(myNumber>0){
     alert(0)
 }*/
 
-let result = (a+b<4)?"not enough":"a lot";
+function youSayGoodbye(){
+    alert("good bue!!!");
+    function andISayHello(){
+        alert("hello!");
+    }
+    return andISayHello()
+}
