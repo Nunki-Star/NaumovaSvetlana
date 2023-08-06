@@ -22,7 +22,7 @@ function capitalizeitem(item){
 }
 let newArray = names.map(capitalizeitem)
 console.log(newArray)*/
-const myArray= [ 5, 7, 
+/*const myArray= [ 5, 7, 
     [ 4, [2], 8, [1,3], 2 ], 
     [ 9, [] ], 
     1, 8
@@ -35,4 +35,31 @@ function sumOfArray(arr){
     }
     console.log(mySum);
 }
-sumOfArray(myArray)
+sumOfArray(myArray)*/
+
+/*function findAverage(array) {
+    let sum = 0;
+    if(array.length === 0){
+        return 0;
+    }else{
+    
+    for(let i = 0; i < array.length; i++){
+    sum+=array[i];}
+    }
+    return sum/array.length;
+  }
+  console.log(findAverage([4, 2]))*/
+
+  /*function findNeedle(haystack) {
+    let indexOfNeedle = haystack.indexOf("needle", 0);
+    let total = "found the needle at position " + indexOfNeedle;
+    return total;
+  }
+  console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]))*/
+
+
+  function removeEveryOther(arr){
+    
+  }
+
+  
