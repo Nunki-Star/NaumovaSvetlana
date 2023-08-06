@@ -206,10 +206,25 @@ if(myNumber>0){
     alert(0)
 }*/
 
-function youSayGoodbye(){
-    alert("good bue!!!");
+/*function youSayGoodbye(){
+    alert("good bye!!!");
+
     function andISayHello(){
         alert("hello!");
     }
-    return andISayHello()
+    return andISayHello();
 }
+let smth = youSayGoodbye()*/
+function stopWatch(){
+    var startTime = Date.now();
+    function getDelay(){
+        var elapsetTime = Date.now() - startTime;
+        alert(elapsetTime);
+    }
+    return getDelay;
+}
+let timer = stopWatch();
+for (let i = 0; i < 1000000; i++){
+    let foo = Math.random()*10000;
+}
+timer();
