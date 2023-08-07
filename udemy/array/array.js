@@ -57,9 +57,17 @@ sumOfArray(myArray)*/
   }
   console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]))*/
 
-
-  function removeEveryOther(arr){
-    
-  }
-
   
+  /*function removeEveryOther(arr){
+    for(let i = 0; i < arr.length; i++){
+        if(i % 2 === 0){
+            return arr[i]
+        }
+    }
+  }  
+console.log(removeEveryOther(["milk", "banana", "chocolate", "bread"]))*/
+
+function removeEveryOther(arr){
+    for( i = arr.length - 1; i >= 0; i--) if( i % 2 === 1) arr.splice(i,1);}
+
+  console.log(removeEveryOther(["Keep", "Remove", "Keep", "Remove", "Keep"]))
