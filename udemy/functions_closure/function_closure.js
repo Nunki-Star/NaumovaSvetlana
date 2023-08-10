@@ -65,4 +65,39 @@ sayHi();*/
   // call it
   work();*/
 
-  
+ /*let a  = 12;
+ function f(){
+    let b = 42;
+    console.log(a);
+    console.log(b);
+ }
+ f();
+ f();
+ f();*/
+
+ /*let count = 0;
+ function counter(){
+    
+    count++;
+    return count
+ }
+ console.log(counter());
+ console.log(counter());
+ console.log(counter());*/
+
+ function Counter(){
+    var count = 0;
+    return function(){
+        count++;
+
+        return count;
+    }
+ }
+
+ var counter = Counter();
+ console.log(counter());
+ console.log(counter());
+ console.log(counter());
+
+ var anotherCounter = Counter();
+ console.log(anotherCounter())
