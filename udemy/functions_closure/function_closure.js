@@ -85,7 +85,7 @@ sayHi();*/
  console.log(counter());
  console.log(counter());*/
 
- function Counter(){
+ /*function Counter(){
     var count = 0;
     return function(){
         count++;
@@ -100,4 +100,13 @@ sayHi();*/
  console.log(counter());
 
  var anotherCounter = Counter();
- console.log(anotherCounter())
+ console.log(anotherCounter())*/
+
+ function disemvowel(str) {
+    
+    let outputString=str.replace(/[aeiouAEIOU]/g,"");
+    return outputString;
+     }
+  
+
+let check = console.log(str("svetlana"))
