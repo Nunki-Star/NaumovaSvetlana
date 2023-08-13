@@ -1,9 +1,9 @@
 function summOfArrays(arr) {
 	let totalSumm = 0;
 	
-	for (let i = 0; i<arr.length; i++) {
+	for (let i of arr) {
 		if (typeof i == 'object') {
-			totalSumm += summOfArrays(arr[i]);
+			totalSumm += summOfArrays(i);
 		} else {
 			totalSumm += i;
 		}
