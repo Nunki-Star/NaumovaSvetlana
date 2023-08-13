@@ -1,9 +1,12 @@
-function isPalindrom(str){
+/*function isPalindrom(str){
     for(let i = 0; i < str.length; i++){
-        str.replace("ё", "ggg");
+      return  str.replace("ё", "ggg");
     }
 }
 
-console.log(isPalindrom("ёмаё"))
+console.log(isPalindrom("ёмаё"))*/
+
+
+
 
     

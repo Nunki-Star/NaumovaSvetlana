@@ -5,7 +5,7 @@ console.log(mySum(2, 3))*/
 /*let myMultiply = a => a*2;
 console.log(myMultiply(5))*/
 
-const factorial = (n) =>{
+/*const factorial = (n) =>{
     if (n === 0){
         return 1;
     }
@@ -15,4 +15,18 @@ const factorial = (n) =>{
 }
 
 const answer = factorial(6)
-console.log(answer)
+console.log(answer)*/
+ 
+/*function sumOfArrays(arr){
+    add = 0;
+    for(let i = 0; i<arr.length; i++){
+       
+        add += arr[i];
+    } 
+
+    return add;
+}
+console.log(sumOfArrays([10, 3, 4]))*/
+
+
+const a = [2, 3, [4, 6]];
