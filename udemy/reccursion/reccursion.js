@@ -84,9 +84,9 @@ function summOfArrays(arr) {
 	
 	for (let i = 0; i<arr.length; i++) {
 		if (typeof i == 'object') {
-			totalSumm += summOfArrays(i);
+			totalSumm += summOfArrays(arr[i]);
 		} else {
-			sum += i;
+			totalSumm += i;
 		}
 	}
 	
