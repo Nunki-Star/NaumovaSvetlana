@@ -1,9 +1,9 @@
 function isPalindrom(str){
     for(let i = 0; i < str.length; i++){
-        if(i == "ё"){
-        console.log("a")
+        str.replace("ё", "ggg");
     }
-}
 }
 
 console.log(isPalindrom("ёмаё"))
+
+    
