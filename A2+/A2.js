@@ -1,4 +1,3 @@
-
 function removeSpaceWithNoTrim(str){
     //for(let i = 0; i<str.length; i++){
         if(str.indexOf(" ") === 0 && str.lastIndexOf(" ") !== -1){
