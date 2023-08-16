@@ -24,7 +24,25 @@ console.log(isPalindrom("Искать такси"))*/
 function isPalindrom(str){
     let lettersToLowerCase = str.toLowerCase();
     let replaceSpace = lettersToLowerCase.replace(" ", "");
-    let replacePunctuationMarks = replaceSpace.replace(/\s/g, "");
-    return replacePunctuationMarks;
+    let replacedPunctuationMarks = replaceSpace.replace(/[\.,%!?]/g, '');
+    let revercedStr = ""
+    for(let i = replacedPunctuationMarks.length - 1; i>=0; i--){
+        revercedStr += replacedPunctuationMarks[i];
+    }
+    for( let i = 0; i < replacedPunctuationMarks.length; i++){
+        for (let k = 0; k < revercedStr.length; k++){
+            if(replacedPunctuationMarks[i] === revercedStr[k]){
+                return `Your string "${str}" is palindrom`
+            }else{
+                return `Your string "${str}" is not a palindrom`
+            }
+        }
+    }
 }
-console.log(isPalindrom("SVETLANA, SveTLANA!"))
+
+console.log(isPalindrom("Anna"));
+console.log(isPalindrom("Искать!!!!! такси????"));
+
+        
+    
+
