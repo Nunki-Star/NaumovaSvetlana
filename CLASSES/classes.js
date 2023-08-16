@@ -19,7 +19,7 @@ secondPerson.hair = "curly"
 firstPerson.greeting()
 secondPerson.greeting()*/
 
-class Car{
+/*class Car{
     color = this.color;
     year = this.year;
     ride(){
@@ -34,4 +34,26 @@ let myCar2 = new Car();
 myCar2.color = "blue";
 myCar2.year = 2010;
 myCar1.ride();
-myCar2.ride();
+myCar2.ride();*/
+
+
+class Clothes{
+    dress = this.dress;
+    jeans = this.jeans;
+    count = this.count;
+    laundry(){
+        console.log("my mum has a dress of " + this.dress + " color and jeans of " + this.jeans + " total count of " + this.count)
+    }
+}
+
+
+let clothesForMum = new Clothes();
+clothesForMum.dress = "red";
+clothesForMum.jeans = "zara";
+clothesForMum.count = 20
+let clothesForMe =new Clothes();
+clothesForMe.dress = "pink";
+clothesForMe.jeans = "colins";
+clothesForMe.count = 22
+clothesForMum.laundry();
+clothesForMe.laundry();
