@@ -1,5 +1,6 @@
-function isPalindrom(str){
-    let splitString = str.split("");
+/*function isPalindrom(str){
+    let loweCaseLetters = str.toLowerCase();
+    let splitString = loweCaseLetters.split("");
     let reversedArr = splitString.reverse();
     for(let i = 0; i < str.length; i++){
         for(let k = 0; k<reversedArr.length; k++){
@@ -17,4 +18,13 @@ function isPalindrom(str){
 }
 console.log(isPalindrom("anna"));
 console.log(isPalindrom("svetlana"));
-console.log(isPalindrom("Искать такси"))
+console.log(isPalindrom("Искать такси"))*/
+
+
+function isPalindrom(str){
+    let lettersToLowerCase = str.toLowerCase();
+    let replaceSpace = lettersToLowerCase.replace(" ", "");
+    let replacePunctuationMarks = replaceSpace.replace(/\s/g, "");
+    return replacePunctuationMarks;
+}
+console.log(isPalindrom("SVETLANA, SveTLANA!"))
