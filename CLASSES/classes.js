@@ -19,3 +19,19 @@ secondPerson.hair = "curly"
 firstPerson.greeting()
 secondPerson.greeting()*/
 
+class Car{
+    color = this.color;
+    year = this.year;
+    ride(){
+        console.log("choose a car of " + this.color + " a year of " + this.year)
+    }
+}
+
+let myCar1 = new Car();
+myCar1.color = "red";
+myCar1.year = 2007;
+let myCar2 = new Car();
+myCar2.color = "blue";
+myCar2.year = 2010;
+myCar1.ride();
+myCar2.ride();
