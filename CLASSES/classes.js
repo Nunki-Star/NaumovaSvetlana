@@ -36,24 +36,29 @@ myCar2.year = 2010;
 myCar1.ride();
 myCar2.ride();*/
 
-
-class Clothes{
-    dress = this.dress;
-    jeans = this.jeans;
-    count = this.count;
-    laundry(){
-        console.log("my mum has a dress of " + this.dress + " color and jeans of " + this.jeans + " total count of " + this.count)
+/*class Car{
+    model = this.model;
+    color = this.color;
+    wheels = this.wheels;
+    ride(){
+        
+        console.log(`my cars model is ${this.model}, its color is ${this.color}, it has ${this.wheels} wheels`)
     }
 }
 
+let myCar1 = new Car();
+myCar1.color = "red";
+myCar1.model = "bmw";
+myCar1.wheels = 4;
+let myCar2 = new Car(); 
+myCar2.color = "black";
+myCar2.model = "mercedes";
+myCar2.wheels = "4";
 
-let clothesForMum = new Clothes();
-clothesForMum.dress = "red";
-clothesForMum.jeans = "zara";
-clothesForMum.count = 20
-let clothesForMe =new Clothes();
-clothesForMe.dress = "pink";
-clothesForMe.jeans = "colins";
-clothesForMe.count = 22
-clothesForMum.laundry();
-clothesForMe.laundry();
+myCar1.ride();
+myCar2.ride();*/
+
+class
+
+
+
