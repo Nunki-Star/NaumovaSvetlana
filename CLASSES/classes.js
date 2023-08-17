@@ -58,7 +58,25 @@ myCar2.wheels = "4";
 myCar1.ride();
 myCar2.ride();*/
 
-class
+class Box{
+    
+    constructor(name, age){
+        this.name = name;
+        this.age = age;
+    }
+    hi(){
+        console.log("hi, " + this.name + " are you " + this.age + "?")
+    }
+}
+
+let myBox = new Box("Olya", 12);
+let myBox2 = new Box("Igor", 25);
+let myBox3 = new Box("Vanya", 37);
+
+
+myBox.hi();
+myBox2.hi();
+myBox3.hi()
 
 
 
