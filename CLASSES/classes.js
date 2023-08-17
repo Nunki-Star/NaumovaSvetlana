@@ -1,4 +1,4 @@
-"use strict"
+
 
 /*class Person{
     name = "Any";
@@ -148,7 +148,113 @@ myCar.beep()
 console.log("string" + myCar)*/
 
 
+/*function Car(color, model, year){
+    var self = this;
+    self.color = color;
+    self.model = model;
+    self.year = year;
+    self.beep = function(){
+        console.log("i have a " + self.model + " of " + self.color + " color. Of " + self.year + " year")
+    }
+}
 
+var myCar = new Car("black", "bmw", 2020);
+myCar.beep()*/
+
+/*class Car{
+    constructor(model, color){
+        this.model = model;
+        this.color = color
+    }
+    beep(){
+        console.log("i have " + this.model + " of " + this.color + " color!")
+    }
+}
+
+let myCar = new Car("bmw", "white");
+myCar.beep()
+
+console.log("my string :" + myCar)
+console.log(myCar instanceof Car)*/
+
+
+/*function Man(){
+    this.eyesCount = 2;
+    this.showEyes = function(){
+        console.log("this" + this);
+        console.log("eyes " + this.eyesCount)
+    }
+}
+var man = new Man();
+man.showEyes()
+
+
+var showEyesFunc = man.showEyes;
+showEyesFunc()*/
+
+/*function Car(color, model){
+    this.color = color;
+    this.model = model;
+    this.beep = function(){
+        console.log("i have a " + this.model + " it has a " + this.color + " color")
+    }
+}
+
+var myCar = new Car("red", "bmw");
+var beepbeep = myCar.beep();
+myCar.beep();*/
+
+/*(function Food(drink, dish){
+    var self = this;
+    self.drink = drink;
+    self.dish = dish;
+    self.favourite = function(){
+        console.log("i like to drink a " + self.drink + " and to eat a " + self.dish)
+    }
+}
+
+var myFavourite = new Food("juice", "cake")
+myFavourite.favourite()*/
+
+
+
+/*class Education{
+    constructor(favourite, unfavourite){
+        this.favourite = favourite;
+        this.unfavourite = unfavourite;
+    }
+    tellTheTruth(){
+        console.log("my favourite subject was " + this.favourite + " and i didnt like " + this.unfavourite);
+        console.log("my education " + this.favourite);
+        console.log("my education" + this)
+    }
+}
+
+var myEducation = new Education("english", "physics");
+myEducation.tellTheTruth();
+
+
+console.log("string" + myEducation)*/
+
+/*function Car(){
+    this.wheels = 4;
+    this.beep = function(){
+        console.log("this car has " + this.wheels + " wheels");
+        console.log("string" + this);
+        
+    }
+}
+
+var anyCar = new Car;
+//anyCar.beep()
+
+var showWheels = anyCar.beep;
+showWheels()*/
+
+
+function Cyclope(){
+    
+}
 
 
 
