@@ -323,18 +323,18 @@ let Planet = {
 let Planet2 ={
     planet:"jupiter",
     width:7458746583475638,
-    years:75897983583598356935693586
+    years:3598356935693586
 }
 
-let planetFunc = function(){
-    console.log("My planet is " + this.planet + " its width is " + this.width + " years " + this.years)
+let planetFunc = function(color, population){
+    console.log("My planet is " + this.planet + " its width is " + this.width + " years " + this.years + " withd population " + population + "," + color)
 }
 
-planetFunc.call(Planet);
-planetFunc.call(Planet2);
+planetFunc.call(Planet, 5658765876576, "colourful");
+planetFunc.call(Planet2, 939858959585, "yellow");
 
-planetFunc.apply(Planet);
-planetFunc.apply(Planet2)
+planetFunc.apply(Planet, [5658765876576, "colourful"]);
+planetFunc.apply(Planet2, [5658765876576, "colourful"])
 
 
 
