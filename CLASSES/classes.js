@@ -252,9 +252,89 @@ var showWheels = anyCar.beep;
 showWheels()*/
 
 
-function Cyclope(){
+/*function Cyclope(){
+    this.eyesCount = 1; 
+    this.showEyes = showEyesFunc;
     
 }
+var cyclope = new Cyclope;
+cyclope.showEyes()*/
+
+
+/*class Planet{
+    constructor(name, radius){
+        this.name = name;
+        this.radius = radius;
+    }
+    getSurfaceArea(){
+        console.log(this.name + " palnet has radius " + this.radius)
+    }
+
+    set gravity(value){
+        console.log("setting value!");
+        this._gravity = value
+    }
+    get gravity(){
+        console.log("getting value");
+        return this._gravity
+    }
+}
+
+let myPlanet = new Planet("Earth", 6378);
+
+myPlanet.getSurfaceArea()
+earth.gravity =9.81;
+earth.getSurfaceArea()
+console.log(earth.gravity)*/
+
+
+/*function Planet(planet, width){
+    this.planet = planet;
+    this.width = width;
+    this.intro = function(){
+        console.log("my planet is " + this.planet + " it has a width " + this.width );
+        console.log("string: " + this)
+    }
+}
+
+var myPanet = new Planet("earth", 60123)
+myPanet.intro()*/
+
+/*function Planet(planet, width){
+    var self = this;
+    self.planet = planet;
+    self.width = width;
+    self.myFunc = function(){
+        console.log("my planet is " + self.planet + " it has a width " + self.width)
+    }
+}
+
+var myPlanet = new Planet("earth", 6895876);
+myPlanet.myFunc()
+console.log(myPlanet instanceof Planet)*/
+
+
+let Planet = {
+    planet:"earth",
+    width:13456, 
+    years:893795385893
+}
+
+let Planet2 ={
+    planet:"jupiter",
+    width:7458746583475638,
+    years:75897983583598356935693586
+}
+
+let planetFunc = function(){
+    console.log("My planet is " + this.planet + " its width is " + this.width + " years " + this.years)
+}
+
+planetFunc.call(Planet);
+planetFunc.call(Planet2);
+
+planetFunc.apply(Planet);
+planetFunc.apply(Planet2)
 
 
 
