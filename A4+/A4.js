@@ -29,4 +29,4 @@ console.log(recursPalindrom("шал!!!!!      аш"));
 console.log(recursPalindrom("programming"))
 
 //let a = "anna"
-//console.log(a.slice(1, -1))
+//console.log(a.slice(1, -1)) пишем не с нуля а с какого по какой индекс!
