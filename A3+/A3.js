@@ -24,7 +24,7 @@ console.log(isPalindrom("Искать такси"))*/
 function isPalindrom(str){
     let lettersToLowerCase = str.toLowerCase();
     let replaceSpace = lettersToLowerCase.replace(" ", "");
-    let replacedPunctuationMarks = replaceSpace.replace(/[\.,%!?]/g, '');
+    let replacedPunctuationMarks = replaceSpace.replaceAll(/[\.,%!?]/g, '');
     let revercedStr = ""
     for(let i = replacedPunctuationMarks.length - 1; i>=0; i--){
         revercedStr += replacedPunctuationMarks[i];

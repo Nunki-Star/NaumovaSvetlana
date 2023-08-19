@@ -1,6 +1,6 @@
 function recursPalindrom(str){
     let lettersToLowerCase = str.toLowerCase();
-    let replaceSpace = lettersToLowerCase.replace(" ", "");
+    let replaceSpace = lettersToLowerCase.replaceAll(" ", "");
     let replacedPunctuationMarks = replaceSpace.replace(/[\.,%!?]/g, '');
     let revercedStr = "";
 
