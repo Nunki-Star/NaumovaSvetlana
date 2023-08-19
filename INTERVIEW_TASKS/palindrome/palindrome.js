@@ -1,6 +1,25 @@
-function isPalindrom(str){
-    let lowerCase = str.toLowerCase(str);
-    let removePunctMarks = lowerCase.
+function isPalindrome(str){
+    let strLower = str.toLowerCase();
+    let removeSpace = strLower.replaceAll(" ", "");
+    let removeMarks = removeSpace.replace(/[\.,;!?]/g, "");
+    let revesedStr = "";
+    for(let i = removeMarks.length - 1; i >= 0; i--){
+        revesedStr += removeMarks[i]
+    }
+    for(let k = 0; k<str.length; k++){
+        for(let j = 0; j<revesedStr.length; j++){
+            if(str[k] === revesedStr[j]){
+                return `${str} is palindrome`
+            }else{
+                return `${str} is not a palindrome`
+            }
+        }
+    }
 }
-console.log(isPalindrom("Anna!!!!"));
-console.log(isPalindrom("Programming"));
+
+console.log(isPalindrome("     SVETLANA..?;      svetlana"));
+console.log(isPalindrome("Анн         а"));
+
+console.log(isPalindrome("a!!!!!       NNA"));
+console.log(isPalindrome("SVRTKHFKJ     !!!!!!??????AABB"))
+
