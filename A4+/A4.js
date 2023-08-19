@@ -11,7 +11,7 @@ function recursPalindrom(str){
         return `the string you are checking is a palindrom`
     }
     if(str.length === 2){
-        if(str[0] ===str[1]){
+        if(str[0] === str[1]){
             return `the string you are checking is a palindrom`
         }
     }
