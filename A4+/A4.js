@@ -8,7 +8,7 @@ function recursPalindrom(str){
         revercedStr += replacedPunctuationMarks[i]
     }
     if(str.length === 1){
-        return `the string you are checking is palindrom`
+        return `the string you are checking is a palindrom`
     }
     if(str.length === 2){
         if(str[0] ===str[1]){
