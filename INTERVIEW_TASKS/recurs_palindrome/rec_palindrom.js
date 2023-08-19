@@ -1,9 +1,9 @@
-function recursPaindrom(str){
+function recursPalindrom(str){
     let lowCase = str.toLowerCase();
     let removeSpace = lowCase.replaceAll(" ", "");
     let replaceMarks = removeSpace.replace(/[\.!?;:]/g,"");
     let reversedStr = "";
-    for(let i  = replaceMarks.length; i>= 0; i--){
+    for(let i  = replaceMarks.length -1 ; i>= 0; i--){
         reversedStr += replaceMarks[i];
     }
     if(replaceMarks.length === 1){
@@ -13,13 +13,16 @@ function recursPaindrom(str){
         if(replaceMarks[0] === replaceMarks[1]){
             return `the string is palindrom`
         }
-        if(replaceMarks[0] === reversedStr[0]){
-            return recursPaindrom(str.slice(1, -1))
-        }else{
-            return `is not a palindrom`
-        }
+    }
+    if(replaceMarks[0] === reversedStr[0]){
+        return recursPalindrom(str.slice(1, -1));
+    }else{
+        return `is not a palindrom`
     }
 }
-console.log(recursPaindrom("ANN!!     na"));
-console.log(recursPaindrom("svet!!        laNa"))
+
+console.log(recursPalindrom("n"))
+console.log(recursPalindrom("nn"));
+console.log(recursPalindrom("ann     !!!!a"))
+console.log(recursPalindrom("svet!!        laNa"))
 
