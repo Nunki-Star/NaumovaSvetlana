@@ -41,7 +41,7 @@ function isPalindrom(str){
 }
 
 console.log(isPalindrom("!!!An,,,na!!!"));
-console.log(isPalindrom("Искать!!!!! такси????"));
+console.log(isPalindrom("Искать!!!!!    такси????"));
 console.log(isPalindrom("Programming"))
 
         
