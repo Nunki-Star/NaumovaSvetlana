@@ -28,5 +28,5 @@ console.log(recursPalindrom("An!!!       ????Na"));
 console.log(recursPalindrom("шал!!!!!      аш"));
 console.log(recursPalindrom("programming"))
 
-let a = "anna"
-console.log(a.slice(1, -1))
+//let a = "anna"
+//console.log(a.slice(1, -1))
