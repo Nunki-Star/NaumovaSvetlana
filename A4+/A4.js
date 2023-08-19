@@ -20,13 +20,6 @@ function recursPalindrom(str){
     }else{
         return `the string you are checking is not a palindrom`
     }
-    
-    
-    
-
-
-   
-    
 }
 console.log(recursPalindrom("anna"));
 console.log(recursPalindrom("шалаш"));
