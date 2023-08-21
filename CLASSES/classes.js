@@ -314,7 +314,7 @@ myPlanet.myFunc()
 console.log(myPlanet instanceof Planet)*/
 
 
-let Planet = {
+/*let Planet = {
     planet:"earth",
     width:13456, 
     years:893795385893
@@ -334,9 +334,80 @@ planetFunc.call(Planet, 5658765876576, "colourful");
 planetFunc.call(Planet2, 939858959585, "yellow");
 
 planetFunc.apply(Planet, [5658765876576, "colourful"]);
-planetFunc.apply(Planet2, [5658765876576, "colourful"])
+planetFunc.apply(Planet2, [5658765876576, "colourful"])*/
+/*function ToyCar(carNum){
+    this.carNum = carNum;
+    this.beep = function(){
+        console.log("this car with number" + carNum + "can make aloud beep!")
+    }
+}
+
+var car1 = new ToyCar("1111-aaaaa");
+car1.beep();
+console.log(car1.carNum)*/
+
+/*function Planet(planet, color){
+    this.planet = planet;
+    this.color = color;
+    this.showThePLanet = function(){
+        console.log("my zodiac planet is " + this.planet + " it is a " + this.color + " color")
+    }
+}
+
+var myPlanet = new Planet("jupiter", "yellow");
+myPlanet.showThePLanet();
+console.log(myPlanet.color, myPlanet.planet)*/
 
 
+/*function Clothes(style, brand){
+    var self = this;
+    self.brand = brand;
+    self.style = style;
+    self.showYourStyle = function(){
+        console.log("my fav brand is " + this.brand + " my fav style is " + this.style)
+    }
+}
+
+var myClothes = new Clothes("street", "gucci");
+myClothes.showYourStyle();*/
+
+
+/*function ff(a, b){
+    console.log(a + " " + b);
+    console.log(this);
+    console.log(this.c)
+}
+
+ff(3, 4);
+var hh = {c:77};
+ff.call(hh, 5, 6);
+
+ff.apply(hh, [5, 6] )*/
+
+
+function Car(carNum){
+    var self = this;
+    self.carNum = carNum; //публичное свойство
+    self.maxSpeed = 160; //публичное свойство
+    var wheels = 4;// приватное свойство
+    function getMaxedSpeed(){ //приватный метод
+        return self.maxSpeed;
+    }
+
+    self.beep = function(){ //публичный метод
+        console.log("number " + self.carNum  
+                    + "wheels " + wheels
+                    +"maxspeed " + getMaxedSpeed()
+                    + "beep!!!")
+    }
+}
+
+var myCar = new Car("mbw-7777");
+
+console.log(myCar.carNum);
+console.log(myCar.maxSpeed);
+
+myCar.beep()
 
 
 
