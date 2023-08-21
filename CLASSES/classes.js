@@ -498,7 +498,7 @@ var pirate = new Man;
 
 
 professor.showEyes();
-pirate.showeyes();
+pirate.showEyes();
 
 
 
