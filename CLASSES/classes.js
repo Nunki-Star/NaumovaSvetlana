@@ -385,7 +385,7 @@ ff.call(hh, 5, 6);
 ff.apply(hh, [5, 6] )*/
 
 
-function Car(carNum){
+/*function Car(carNum){
     var self = this;
     self.carNum = carNum; //публичное свойство
     self.maxSpeed = 160; //публичное свойство
@@ -407,7 +407,76 @@ var myCar = new Car("mbw-7777");
 console.log(myCar.carNum);
 console.log(myCar.maxSpeed);
 
-myCar.beep()
+myCar.beep()*/
+
+/*class User{
+    constructor(name){
+        this.name = name
+    }
+    sayHello(){
+        console.log(this.name + ", hello!")
+    }
+}
+
+const alex= new User("Alex");
+alex.sayHello()
+console.log(alex)
+
+class Person extends User{
+    constructor(name, lastname){
+        super(name);
+        this.name = name;
+        this.lastname = lastname
+    }
+    greetOffissialy(){
+        console.log("hello " + this.name +" "+ this.lastname)
+    }
+}
+
+const person = new Person("svetlana", "naumova");
+person.greetOffissialy();*/
+
+/*class Planet{
+    constructor(name){
+        this.name = name
+    }
+    sayHi(){
+        console.log("my planet is " + this.name)
+    }
+}
+
+const myPlanet = new Planet("jupiter");
+myPlanet.sayHi()
+
+class otherPlanet extends Planet{
+    constructor(name, color){
+        super(name);
+        this.name = name;
+        this.color = color;
+    }
+    diffPlanet(){
+        console.log("my planet is " + this.name + " it has a " + this.color + " color")
+    }
+}
+
+const myFavPlanet = new otherPlanet("venera", " blue");
+myFavPlanet.diffPlanet()*/
+
+let first = {
+    "name":"svetlana",
+    "lastname":"namumova"
+}
+
+console.log(first)
+
+let second = {
+    "position":"junior frontend developer",
+    __proto__:first
+}
+console.log(second);
+second.name = "Svetlana";
+console.log(second.name);
+console.log(second)
 
 
 
