@@ -4,10 +4,11 @@ function positiveSum(arr) {
       return 0
     }else{
       for(let i = 0; i< arr.length; i++){
-        if(arr[i] > 1){
+        if(arr[i] >= 1){
           sum += arr[i]
         }
       }
       return sum
     }
 }  
+console.log(positiveSum([1,2,3,4,5]))
