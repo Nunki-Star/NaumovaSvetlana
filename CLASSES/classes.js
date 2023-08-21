@@ -462,7 +462,7 @@ class otherPlanet extends Planet{
 const myFavPlanet = new otherPlanet("venera", " blue");
 myFavPlanet.diffPlanet()*/
 
-let first = {
+/*let first = {
     "name":"svetlana",
     "lastname":"namumova"
 }
@@ -476,7 +476,40 @@ let second = {
 console.log(second);
 second.name = "Svetlana";
 console.log(second.name);
-console.log(second)
+console.log(second)*/
+
+
+var humanProto = {
+    eyes : 2,
+    showEyes : function(){
+        console.log("eyes: " + this.eyes)
+    }
+}
+
+function Man(){
+
+}
+
+Man.prototype = humanProto;
+
+
+var professor = new Man;
+var pirate = new Man;
+
+
+professor.showEyes();
+pirate.showeyes();
+
+
+
+professor.eyes = 4;
+pirate.eyes = 1;
+
+professor.showEyes();
+pirate.showEyes()
+
+
+
 
 
 
