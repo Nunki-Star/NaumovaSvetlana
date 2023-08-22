@@ -12,4 +12,5 @@ function findMultiples(integer, limit) {
     }
     
   }
-console.log(findMultiples(4, 27))
+console.log(findMultiples(5, 104))
+
