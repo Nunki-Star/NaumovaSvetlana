@@ -562,7 +562,7 @@ class Potato extends Planet{
     }
 }*/
 
-/class Animal{
+/*class Animal{
     constructor(animal, color, placeOfHabitat){
         this.eyes = 2;
         this.animal = animal;
@@ -591,7 +591,39 @@ class Birds extends Animal{
 }
 
 let myBird = new Birds("talk", "parrots");
-myBird.showBird()
+myBird.showBird()*/
+
+
+class Car{
+    constructor(model, color){
+        this.model = model;
+        this.color = color;
+    }
+    showCar(){
+        console.log(`my car is ${this.model} and it has ${this.color} color`)
+    }
+}
+let myCar = new Car("bmw", "black");
+myCar.showCar()
+
+
+class carOfMyDream extends Car{
+    constructor(model, color, price){
+        super(model, color)
+        this.model = model;
+        this.color = color;
+        this.price = price
+    }
+    dreamCar(){
+        console.log(`The car of my dream is ${this.model} of ${this.color} color which costs ${this.price}$`)
+    }
+}
+
+let dreamCar = new carOfMyDream("mereceres", "white", 50000);
+dreamCar.dreamCar();
+dreamCar.showCar()
+
+
 
 
 
