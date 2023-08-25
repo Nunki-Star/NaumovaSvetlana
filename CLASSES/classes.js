@@ -508,7 +508,7 @@ pirate.eyes = 1;
 professor.showEyes();
 pirate.showEyes()()*/
 
-function Car(color, speed, model){
+/*function Car(color, speed, model){
     this.speed = speed;
     this.color = color;
     this.model = model;
@@ -521,8 +521,79 @@ myCar.beep()
 
 
 class Planet{
-    constructor()
+    constructor(planet, age){
+        this.planet = planet;
+        this.age = age
+    }
+    getAgeInFiveYears(){
+        let ageOfPlanet = this.age + 5;
+        console.log(`planet ${this.planet} of the age ${this.age} in five years will be ${ageOfPlanet}`)
+    }
 }
+
+let myPlanet = new Planet("JUPITER", 4.1678000000000);
+myPlanet.getAgeInFiveYears()*/
+
+
+/*class Planet{
+    constructor(name, radius){
+        this.name = name;
+        this.radius = radius;
+    }
+    getSurfaceARea(){
+        let SurfaceARea = 4 * Math.PI * Math.pow(this.radius, 2);
+        console.log( SurfaceARea + "square km");
+        return SurfaceARea
+    }
+
+    set Gravity(value){
+        console.log("setting value!");
+        this._gravity = value
+    }
+}
+
+class Potato extends Planet{
+    constructor(name, age, potatotype){
+        super(name)
+        this.age = age;
+        this.potatotype =potatotype
+        
+        
+    }
+}*/
+
+class Animal{
+    constructor(animal, color, placeOfHabitat){
+        this.eyes = 2;
+        this.animal = animal;
+        this.color = color;
+        this.placeOfHabitat = placeOfHabitat;
+    }
+    showAnimal(){
+        console.log(`${this.animal} usually has ${this.color} color and lives in ${this.placeOfHabitat}`)
+    }
+}
+
+let myAnimal = new Animal("tiger", "orange with black stripes", "Africa");
+myAnimal.showAnimal()
+
+class Birds extends Animal{
+    constructor(action, birdtype, color, placeOfHabitat){
+        super(color, placeOfHabitat);
+        this.color = color;
+        this.placeOfHabitat = placeOfHabitat;
+        this.action = action;
+        this.birdtype = birdtype
+    }
+    showBird(){
+        console.log(`${this.birdtype} can ${this.action}, usually have ${this.color} color and live in ${this.placeOfHabitat}`)
+    }
+}
+
+let myBird = new Birds("talk", "parrots");
+myBird.showBird()
+
+
 
 
 
