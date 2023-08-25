@@ -562,7 +562,7 @@ class Potato extends Planet{
     }
 }*/
 
-class Animal{
+/class Animal{
     constructor(animal, color, placeOfHabitat){
         this.eyes = 2;
         this.animal = animal;
