@@ -479,7 +479,7 @@ console.log(second.name);
 console.log(second)*/
 
 
-var humanProto = {
+/*var humanProto = {
     eyes : 2,
     showEyes : function(){
         console.log("eyes: " + this.eyes)
@@ -506,7 +506,23 @@ professor.eyes = 4;
 pirate.eyes = 1;
 
 professor.showEyes();
-pirate.showEyes()
+pirate.showEyes()()*/
+
+function Car(color, speed, model){
+    this.speed = speed;
+    this.color = color;
+    this.model = model;
+    this.beep = function(){
+        console.log(`my car is ${this.color} ${this.model}, the maximum speed of ${this.speed}`)
+    }
+}
+var myCar = new Car("white", 220 ,"mercedes")
+myCar.beep()
+
+
+class Planet{
+    constructor()
+}
 
 
 
