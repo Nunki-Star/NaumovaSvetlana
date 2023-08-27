@@ -4,11 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
 </head>
 <body>
+    <h1>green planet</h1>
     <p id="greenplanet">all is well</p>
-    <p id="redplanet">nothing to report</p>
-    <p id="blueplanet">all systems are ok</p>
-    <script></script>
+    <h1>red planet</h1>
+    <p id="redplanet">nothin to report</p>
+    <h1>blue planet</h1>
+    <p id="blueplanet">all system are ok</p>
+    <script>
+        function init(){
+            let planet = document.getElementById("greenplanet");
+        planet.innerHTML = "red alert";
+        planet.setAttribute("class", "redtext")
+        }
+        window.onload = init;
+        
+    </script>
 </body>
 </html>
