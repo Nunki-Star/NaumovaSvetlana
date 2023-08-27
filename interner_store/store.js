@@ -14,13 +14,15 @@ const tomFordParfume = [
 "title":"TOM FORD FuCKING FABULOUS",
 "text":"Fucking Fabulous Tom Ford — это аромат для мужчин и женщин, он принадлежит к группе кожаные. Fucking Fabulous выпущен в 2017 году. Верхние ноты: Лаванда и Мускатный шалфей; средние ноты: Кожа, Горький миндаль, Ваниль и Корень ириса; базовые ноты: Кожа, Бобы тонка, Кашмеран, Светлое дерево и Амбра."
 },
-{"id":"card3",
-"url":"",
-"title":""
+{"id":"card4",
+"url":"https://fraguru.com/mdimg/perfume/375x500.51411.jpg",
+"title":"TOM FORD LOST CHERRY",
+"text":"Lost Cherry Tom Ford — это аромат для мужчин и женщин, он принадлежит к группе восточные цветочные. Lost Cherry выпущен в 2018 году. Парфюмер: Louise Turner. Верхние ноты: Горький миндаль, Черная вишня и Cherry Liqueur; средние ноты: Вишня, Слива, Турецкая роза и Жасмин Самбак."
 },
-{"id":"",
-"url":"",
-"title":""
+{"id":"card5",
+"url":"https://fimgs.net/mdimg/perfume/375x500.62707.jpg",
+"title":"TOM FORD BITTER PEACH",
+"text":"Bitter Peach by Tom Ford is a Amber Vanilla fragrance for women and men. Bitter Peach was launched in 2020. Top notes are Peach, Blood Orange, Cardamom and Heliotrope; middle notes are Rum, Cognac, Davana and Jasmine; base notes are Indonesian Patchouli Leaf, Vanilla, Tonka Bean."
 }
 
 ]
