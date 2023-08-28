@@ -6,13 +6,18 @@
 }
 
 header{
-    padding-left:98px;
-    padding-right:98px;
-    padding-top:40px
+    background-image: url(images/Rectangle\ 35.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;;
+    padding-top:50px;
+    padding-left:168px;
+    padding-right:168px
+    
+
 }
 
 header div{
-    background-color: yellow;
+    
    display:flex
 
 }    
@@ -21,10 +26,7 @@ header div{
     padding-left:600px;
 
 }
-.about div:first-child{
-    padding-right: 20px;
-    
-}
+
 .about div p{
     font-family: 'M PLUS 1p', sans-serif;
 }
@@ -34,7 +36,7 @@ header div{
 }
 
 .personal{
-    padding-left:200px
+    padding-left:150px
 }
 
 .personal img[src*="Vector"]{
@@ -42,3 +44,44 @@ header div{
 }
 
 
+.after_head{
+    padding-left:68px;
+    padding-right:168px;
+    padding-top:74px;
+    padding-bottom:70px;
+    display:flex;
+    justify-content: space-between;
+}
+.after_head div:first-child{
+    flex-direction: column;
+}
+
+.after_head div:nth-child(2){
+    flex-direction: column;
+    padding-top:70px;
+    padding-left:30px;
+    padding-right:30px
+}
+
+.after_head div button{
+    padding-top:15px;
+    padding-bottom:15px;
+    margin-top:30px;
+    width:150px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top:15px
+}
+
+.after_head div p{
+    font-family: 'M PLUS 1p', sans-serif;
+    padding-top:15px
+}
+
+.after_head div:nth-child(2) img[src*="MAROON2"]{
+    padding-bottom:40px
+}   
+
+.after_head div:nth-child(3){
+    flex-direction: column;
+}
