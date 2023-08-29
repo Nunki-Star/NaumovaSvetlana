@@ -42,16 +42,17 @@ tomFordParfume.forEach(item =>{
 
 app.innerHTML = htmlTags;
 
-const parfumeStore = [];
-const add=()=>{
-    const brand = document.querySelector("[name=brand]").value;
-    const model = document.querySelector("[name=model]").value;
-}
-
-const parfume = {
-    brand, model
-}
-
-console.log("-----parfume", parfume)
 
 
+
+const parfume = [];
+
+        const add = () => {
+            const brand = document.querySelector("[name='title']").value;
+            //const model = document.querySelector("[name='model']").value;
+
+            parfume.push({
+                brand
+        })
+    }
+console.log(parfume)
