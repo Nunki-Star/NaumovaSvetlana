@@ -7,6 +7,31 @@
     
 </head>
 <body>
-    
+    <script>
+        let width = window.innerWidth
+        console.log(width);
+        let height = window.innerHeight
+        console.log(height);
+        const bodyElement = document.body;
+        console.log(bodyElement);
+        const firstChileNode = document.firstChild;
+        const lastChildNode = document.lastChild;
+        console.log(firstChileNode);
+        console.log(lastChildNode);
+
+        //const childNodes = bodyElement.childNodes;
+        //console.log(childNodes)
+
+        let previousSibling = bodyElement.previosSibling;
+        console.log(previousSibling);
+        let parent = lastChildNode.parentNode;
+        console.log(parent);
+        let myfirstChileNode = lastChildNode.nextSibling;
+        console.log(myfirstChileNode);
+
+        let prev = lastChildNode.previousSibling;
+        console.log(prev)
+    </script>;
+
 </body>
 </html>
