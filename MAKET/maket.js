@@ -16,4 +16,4 @@ const kidsLast = docLastChild.children;
 console.log(kidsLast);
 
 const kidsNode = docLastChild.childNodes;
-console.log(kidsNode)
+console.log(kidsNode);
