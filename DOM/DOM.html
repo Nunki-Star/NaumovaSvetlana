@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+    <div id = "main">
+        <div class="picturecontainer" >
+            <img class = "theImage" src="https://i.pinimg.com/236x/45/7c/72/457c7275e7296e17210e05170c4b6353.jpg" height="300" width="300">
+        </div>
+        <div class="picturecontainer">
+            <img class = "theImage"src="https://avatanplus.com/files/resources/mid/5d20ac38c56f916bc7a0bde9.png" height="300" width="300">
+        </div>
+        <div class="picturecontainer">
+            <img class = "theImage" src="https://bipbap.ru/wp-content/uploads/2017/07/bd7a2d23a55100afd6f0506b2880c9a7.jpg" height="300" width="300">
+        </div>
+        <div class="picturecontainer">
+            <img class = "theImage" src="https://omoro.ru/wp-content/uploads/2018/05/smailik-pocelyi-19.jpg" height="300" width="300">
+        </div>
+    </div>
+
+
+<body>
+    <script>
+        let elementId = document.querySelector("#main");
+        console.log(elementId)
+
+        let elementClass = document.querySelector(".picturecontainer");
+        console.log(elementClass);
+
+        let elementClasses = document.querySelectorAll(".picturecontainer");
+        console.log(elementClasses)
+
+        let images = document.querySelectorAll(".theImage");
+        console.log(images)
+        for(let i = 0; i < images.length; i++){
+            let image = images[i];
+            console.log(image.getAttribute("src"))
+        }
+
+        let alldivs = document.querySelectorAll("div");
+        console.log(alldivs);
+
+        let alliimg = document.querySelectorAll("img");
+        console.log(alliimg);
+
+
+        let certain = document.querySelectorAll("img[src='https://omoro.ru/wp-content/uploads/2018/05/smailik-pocelyi-19.jpg']");
+        console.log(certain)
+    </script>
+</body>
+</html>
