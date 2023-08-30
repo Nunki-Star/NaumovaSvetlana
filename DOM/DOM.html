@@ -3,7 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hello</title>
+    <style>
+        
+            /*font-size: 64px;
+            color:#0099FF*/
+
+            #superman{
+                font-size: 64px;
+                background-color:#0099FF
+            }
+            
+        
+    </style>
     
 </head>
     <div id = "main">
@@ -21,35 +33,37 @@
         </div>
     </div>
 
+    <!--<img class = "theImage" src="https://omoro.ru/wp-content/uploads/2018/05/smailik-pocelyi-19.jpg" alt="kissing smile" height="300" width="300">-->
+    <h1 id="superman">Superman</h1>
+    <!--<h1 id="bigMessage" class="highlight">What's happening?</h1>-->
 
 <body>
     <script>
-        let elementId = document.querySelector("#main");
-        console.log(elementId)
-
-        let elementClass = document.querySelector(".picturecontainer");
-        console.log(elementClass);
-
-        let elementClasses = document.querySelectorAll(".picturecontainer");
-        console.log(elementClasses)
-
-        let images = document.querySelectorAll(".theImage");
-        console.log(images)
-        for(let i = 0; i < images.length; i++){
-            let image = images[i];
-            console.log(image.getAttribute("src"))
-        }
-
-        let alldivs = document.querySelectorAll("div");
-        console.log(alldivs);
-
-        let alliimg = document.querySelectorAll("img");
-        
-        console.log(alliimg);
+    /*let queryId = document.querySelector("#main");
+    console.log(queryId);
 
 
-        let certain = document.querySelectorAll("img[src='https://omoro.ru/wp-content/uploads/2018/05/smailik-pocelyi-19.jpg']");
-        console.log(certain)
+    let queryAllSelectors = document.querySelectorAll(".picturecontainer");
+    console.log(queryAllSelectors);
+
+    let queryAllTags = document.querySelectorAll("img");
+    console.log(queryAllTags);
+
+    let changeText = document.querySelector("h1");
+    changeText.textContent = "Oppa Gangam Style!!";
+
+    console.log(changeText.getAttribute("id"))*/
+    
+    let myElement = document.querySelector("#superman");
+    myElement.style.backgroundColor = "#D93600";
+
+    let myElements = document.querySelectorAll(".picturecontainer");
+    for(let i = 0; i<myElements.length; i++){
+        myElements[i].style.opacity = 0;
+    }
+
+    myElement.style.transform =`translate3d(${xPos}px, ${yPos}px, 0)`
+
     </script>
 </body>
 </html>
