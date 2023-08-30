@@ -85,3 +85,63 @@ header div{
 .after_head div:nth-child(3){
     flex-direction: column;
 }
+
+.bestsellers{
+    padding-left:98px;
+    padding-top:140px;
+    display:flex;
+    flex-direction: row;
+}
+
+.bestsellers div:first-child p:first-child{
+    color: #122947;
+    font-family: Raleway;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    padding-top:50px /* 41.6px */
+}
+
+.bestsellers div:first-child  p:nth-child(2){
+    color: #122947;
+    font-family:'M PLUS 1p', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 145%;
+    padding-top: 30px;
+    background-color: red;
+    /* 26.1px */
+}
+
+.bestsellers button{
+    padding-top:15px;
+    padding-bottom:15px;
+    margin-top:30px;
+    width:150px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 40px;
+    position:relative
+}
+
+.bestsellers div:nth-child(2){
+    position:relative;
+}
+
+.bestsellers div:nth-child(2) p:first-child{
+    position:absolute;
+    display: flex;
+    width: 35px;
+    height: 12px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #122947;
+    font-family: Raleway;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 145%; /* 23.2px */
+}
