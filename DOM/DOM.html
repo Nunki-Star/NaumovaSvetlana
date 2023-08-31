@@ -14,11 +14,20 @@
                 background-color:#0099FF
             }
             
-        
+            ul{
+                list-style-type: circle;
+            }
+
+            .disablemenu{
+                color:#0099FF
+            }
     </style>
     
 </head>
-    <!--<div id = "main">
+    
+<body>
+
+<!--<div id = "main">
         <div class="picturecontainer" >
             <img class = "theImage" src="https://i.pinimg.com/236x/45/7c/72/457c7275e7296e17210e05170c4b6353.jpg" height="300" width="300">
         </div>
@@ -37,11 +46,20 @@
     <h1 id="superman">Superman</h1>
     <h1 id="bigMessage" class="highlight">What's happening?</h1>-->
 
-<body>
+    <ul id = "dropdown" class="disablemenu"> 
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+        <li>four</li>
+        <li>five</li>
+        <li>six</li>
+    </ul>
+
+
     <script>
     
 
-    let findSelector = document.querySelector("#main");
+    /*let findSelector = document.querySelector("#main");
     console.log(findSelector);
 
     let findAllSelectors = document.querySelectorAll(".picturecontainer");
@@ -59,9 +77,22 @@
     let changeAllStyle = document.querySelectorAll(".picturecontainer");
     for(let i = 0; i<changeAllStyle.length; i++){
         changeAllStyle[i].style.opacity=0
-    }
-    
+    }*/
 
+    let bodyElement = document.body;
+    console.log(bodyEmenent)
+    let firstElement = bodyElement.firstChild;
+    console.log(firstElement);
+
+    let lastElement = bodyElement.lastChild;
+    console.log(lastElement);
+
+    for(let i = 0; i<bodyElement.children.length; i++){
+        let childElem= bodyElement.children[i];
+        document.writeIn(childElem.tagName)
+    }
     </script>
+
+
 </body>
 </html>

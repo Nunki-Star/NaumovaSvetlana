@@ -46,13 +46,27 @@ app.innerHTML = htmlTags;
 
 
 const parfume = [];
+const add = () => {
+    const brand = document.querySelector("[name='title']").value;
+    //const model = document.querySelector("[name='model']").value;
+    parfume.push({
+        brand
+        })
+
+        console.log(parfume)
+    }
+
+
+/*const cars = [];
 
         const add = () => {
-            const brand = document.querySelector("[name='title']").value;
-            //const model = document.querySelector("[name='model']").value;
+            const brand = document.querySelector("[name='brand']").value;
+            const model = document.querySelector("[name='model']").value;
 
-            parfume.push({
-                brand
-        })
-    }
-console.log(parfume)
+            cars.push({
+                brand, model
+            })
+
+            render()
+        }
+*/
