@@ -18,7 +18,7 @@
     </style>
     
 </head>
-    <div id = "main">
+    <!--<div id = "main">
         <div class="picturecontainer" >
             <img class = "theImage" src="https://i.pinimg.com/236x/45/7c/72/457c7275e7296e17210e05170c4b6353.jpg" height="300" width="300">
         </div>
@@ -33,36 +33,34 @@
         </div>
     </div>
 
-    <!--<img class = "theImage" src="https://omoro.ru/wp-content/uploads/2018/05/smailik-pocelyi-19.jpg" alt="kissing smile" height="300" width="300">-->
+    <img class = "theImage" src="https://omoro.ru/wp-content/uploads/2018/05/smailik-pocelyi-19.jpg" alt="kissing smile" height="300" width="300">
     <h1 id="superman">Superman</h1>
-    <!--<h1 id="bigMessage" class="highlight">What's happening?</h1>-->
+    <h1 id="bigMessage" class="highlight">What's happening?</h1>-->
 
 <body>
     <script>
-    /*let queryId = document.querySelector("#main");
-    console.log(queryId);
-
-
-    let queryAllSelectors = document.querySelectorAll(".picturecontainer");
-    console.log(queryAllSelectors);
-
-    let queryAllTags = document.querySelectorAll("img");
-    console.log(queryAllTags);
-
-    let changeText = document.querySelector("h1");
-    changeText.textContent = "Oppa Gangam Style!!";
-
-    console.log(changeText.getAttribute("id"))*/
     
-    let myElement = document.querySelector("#superman");
-    myElement.style.backgroundColor = "#D93600";
 
-    let myElements = document.querySelectorAll(".picturecontainer");
-    for(let i = 0; i<myElements.length; i++){
-        myElements[i].style.opacity = 0;
+    let findSelector = document.querySelector("#main");
+    console.log(findSelector);
+
+    let findAllSelectors = document.querySelectorAll(".picturecontainer");
+    console.log(findAllSelectors);
+
+    let changeSelector = document.querySelector("#superman");
+    changeSelector.style.backgroundColor = "red";
+    changeSelector.style.fontSize = "80px"
+    console.log(changeSelector)
+
+    let gettingAttr = document.querySelector("h1");
+    console.log(gettingAttr.getAttribute("id"))
+    gettingAttr.setAttribute("class", "new")
+    
+    let changeAllStyle = document.querySelectorAll(".picturecontainer");
+    for(let i = 0; i<changeAllStyle.length; i++){
+        changeAllStyle[i].style.opacity=0
     }
-
-    myElement.style.transform =`translate3d(${xPos}px, ${yPos}px, 0)`
+    
 
     </script>
 </body>

@@ -128,20 +128,24 @@ header div{
 
 .bestsellers div:nth-child(2){
     position:relative;
+    text-align: center;
 }
 
-.bestsellers div:nth-child(2) p:first-child{
-    position:absolute;
+.bestsellers div:nth-child(2) div:first-child p{
+    top:70%;
     display: flex;
     width: 35px;
     height: 12px;
     flex-direction: column;
-    justify-content: center;
+    position:relative;
     flex-shrink: 0;
     color: #122947;
     font-family: Raleway;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 145%; /* 23.2px */
+    line-height: 145%;
+    background-color: red;
+     
+     
 }
