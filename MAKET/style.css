@@ -93,14 +93,15 @@ header div{
     flex-direction: row;
 }
 
-.bestsellers div:first-child p:first-child{
+.bestsellers div:first-child  div:first-child p{
     color: #122947;
     font-family: Raleway;
     font-size: 32px;
     font-style: normal;
     font-weight: 500;
     line-height: 130%;
-    padding-top:50px /* 41.6px */
+    padding-top:50px; /* 41.6px */
+    background-color:green
 }
 
 .bestsellers div:first-child  p:nth-child(2){
@@ -112,6 +113,7 @@ header div{
     line-height: 145%;
     padding-top: 30px;
     background-color: red;
+    
     /* 26.1px */
 }
 
@@ -127,25 +129,17 @@ header div{
 }
 
 .bestsellers div:nth-child(2){
-    position:relative;
-    text-align: center;
+   
+    width:230px;
+    height:321px
+   
 }
 
 .bestsellers div:nth-child(2) div:first-child p{
-    top:70%;
-    display: flex;
-    width: 35px;
-    height: 12px;
-    flex-direction: column;
-    position:relative;
-    flex-shrink: 0;
     color: #122947;
     font-family: Raleway;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 145%;
-    background-color: red;
-     
-     
+     /* 23.2px */
 }

@@ -54,10 +54,30 @@
         <li>five</li>
         <li>six</li>
     </ul>
-
+    <button class="toggle">Toggle button</button>
 
     <script>
     
+    let toggle = document.querySelector(".toggle");
+    toggle.onclick = function(){
+        this.classList.toggle("three");
+    }
+
+    let listSyle = document.querySelector("#dropdown");
+    console.log(listSyle)
+    listSyle.style.backgroundColor = "bisque";
+
+    listSyle.classList.add("one")
+
+    let listStyleWithClass = document.querySelector(".one");
+    console.log(listStyleWithClass)
+    listStyleWithClass.style.fontSize = "64px";
+
+    listStyleWithClass.classList.add("two");
+    let classlistTwo = document.querySelector(".two");
+    classlistTwo.style.borderBottomColor="red";
+    classlistTwo.style.borderBottomWidth="29px";
+    classlistTwo.style.borderBottomStyle="dotted"
 
     /*let findSelector = document.querySelector("#main");
     console.log(findSelector);
@@ -79,7 +99,7 @@
         changeAllStyle[i].style.opacity=0
     }*/
 
-    let bodyElement = document.body;
+    /*let bodyElement = document.body;
     console.log(bodyEmenent)
     let firstElement = bodyElement.firstChild;
     console.log(firstElement);
@@ -90,7 +110,9 @@
     for(let i = 0; i<bodyElement.children.length; i++){
         let childElem= bodyElement.children[i];
         document.writeIn(childElem.tagName)
-    }
+    }*/
+
+
     </script>
 
 
