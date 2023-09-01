@@ -58,12 +58,12 @@
 
     <script>
     
-    let toggle = document.querySelector(".toggle");
+    const toggle = document.querySelector(".toggle");
     toggle.onclick = function(){
         this.classList.toggle("three");
     }
 
-    let listSyle = document.querySelector("#dropdown");
+    /*let listSyle = document.querySelector("#dropdown");
     console.log(listSyle)
     listSyle.style.backgroundColor = "bisque";
 
@@ -111,8 +111,21 @@
         let childElem= bodyElement.children[i];
         document.writeIn(childElem.tagName)
     }*/
+    let checkBody = document.body;
+    console.log(checkBody)
+    /*let last = checkBody.lastChild;
+    console.log(last);
+    let first = checkBody.firstChild;
+    console.log(first);
+    let childN = last.ChildNodes;
+    console.log(childN);
+    let child = first.ChildNodes;
+    console.log(child)*/
 
-
+    let childNbody = checkBody.childNodes;
+    console.log(childNbody)
+    let childBody = checkBody.children;
+    console.log(childBody)
     </script>
 
 
