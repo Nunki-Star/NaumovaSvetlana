@@ -2,6 +2,7 @@ const tomFordParfume = [
 {"id":"card1",
 "url":"https://valorya.by/wp-content/uploads/2021/02/375x500.34893-2.jpg",
 "title":"TOM FORD SOLEIL BLANC",
+"price":"200$",
 "text":"Soleil Blanc Tom Ford — это аромат для мужчин и женщин, он принадлежит к группе восточные цветочные. Soleil Blanc выпущен в 2016 году. Парфюмер: Nathalie Gracia-Cetto. Верхние ноты: Фисташки, Бергамот, Кардамон и Розовый перец; средние ноты: Тубероза, Иланг-иланг и Жасмин; базовые ноты: Кокос, Амбра, Бобы тонка и Бензоин." 
 },
 {"id":"card2",
@@ -39,13 +40,11 @@ const add = () => {
     parfume.push({
         brand
         })
-
-        render = (items) =>{
-            const app = document.getElementById("app");
-            let htmlTags = "";
-            tomFordParfume.forEach(item =>{
-            htmlTags+=`
-            <div class="card" style="width: 18rem;">
+        render(parfume)
+    }
+     function render (item){
+            const html = item.reduce(function(acc, item){;
+            return acc+=`<div class="card" style="width: 18rem;">
             <img src="${item.url}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">${item.title}</h5>
@@ -53,10 +52,11 @@ const add = () => {
                 <a href="#" class="btn btn-primary">place in the basket</a>
             </div>
             </div>`
-            })
-
+            }, "")
+            console.log(html)
+            app.innerHTML = htmlTags;
         }
-    }
+        
 
 
 /*const cars = [];
