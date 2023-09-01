@@ -53,7 +53,7 @@ const add = () => {
             </div>
             </div>`
             }, "")
-            console.log(html)
+            //console.log(html);
             app.innerHTML = htmlTags;
         }
         
