@@ -26,21 +26,8 @@ const tomFordParfume = [
 }
 
 ]
-const app = document.getElementById("app");
-let htmlTags = "";
-tomFordParfume.forEach(item =>{
-    htmlTags+=`
-    <div class="card" style="width: 18rem;">
-    <img src="${item.url}" class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">${item.title}</h5>
-        <p class="card-text">${item.text}</p>
-        <a href="#" class="btn btn-primary">place in the basket</a>
-    </div>
-    </div>`
-})
 
-app.innerHTML = htmlTags;
+
 
 
 
@@ -53,7 +40,22 @@ const add = () => {
         brand
         })
 
-        console.log(parfume)
+        render = (items) =>{
+            const app = document.getElementById("app");
+            let htmlTags = "";
+            tomFordParfume.forEach(item =>{
+            htmlTags+=`
+            <div class="card" style="width: 18rem;">
+            <img src="${item.url}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">${item.title}</h5>
+                <p class="card-text">${item.text}</p>
+                <a href="#" class="btn btn-primary">place in the basket</a>
+            </div>
+            </div>`
+            })
+
+        }
     }
 
 
