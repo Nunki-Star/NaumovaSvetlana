@@ -42,7 +42,7 @@ var a  = [null, "66666", 77777]
 a.forEach(myFunc)*/
 
 
-function accum(s){
+/*function accum(s){
     const result = []
   const lowerStr = s.toLowerCase()
 
@@ -56,5 +56,21 @@ function accum(s){
     return result
 }   
 
-console.log(accum("abcd"))
+console.log(accum("abcd"))*/
 
+let a = [1, 2, 3, 4];
+
+let sum = 0;
+
+for(let i = 0; i<a.length; i++){
+  sum+=a[i]
+}
+console.log(sum)
+
+
+
+let b = a.reduce((prev, item, index) => {
+  return prev+item
+}, 0);
+
+console.log(b)
