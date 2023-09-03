@@ -58,19 +58,21 @@ a.forEach(myFunc)*/
 
 console.log(accum("abcd"))*/
 
-let a = [1, 2, 3, 4];
+let numbers = [1, 2, 3, 4];
+function getAverage(numbers){
+  const total = numbers.reduce((total, number) =>{
+    return total + number
+  })
+  return total/numbers.length;
 
-let sum = 0;
-
-for(let i = 0; i<a.length; i++){
-  sum+=a[i]
 }
-console.log(sum)
 
 
+const myArray = [2, 2, 2];
+function multiply(myArray){
+  const multiple = myArray.reduce((total, number)=>{
+    return total * number
+  })
+}
 
-let b = a.reduce((prev, item, index) => {
-  return prev+item
-}, 0);
-
-console.log(b)
+console.log(multiply(myArray))

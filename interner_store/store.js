@@ -55,9 +55,9 @@ const add = () => {
 
 
 
-function render(items){
+function render(parfumeList){
        
-        const html = items.reduce(function(acc, item){
+        const html = parfumeList.reduce(function(acc, item){
         
             return acc+=`
         <div class="card" style="width: 18rem;">
