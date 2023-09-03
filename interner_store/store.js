@@ -38,7 +38,7 @@ const tomFordParfume = [
 
 ]
 
-const parfumeList = []; //empty arr
+const parfumeList = []; 
 const app = document.getElementById("app"); //link to html app taken
 //add button 
 const add = () => {

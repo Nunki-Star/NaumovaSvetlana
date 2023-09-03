@@ -58,6 +58,11 @@ a.forEach(myFunc)*/
 
 console.log(accum("abcd"))*/
 
+function onclickFunction(){
+  alert("thats how it works")
+}
+
+
 let numbers = [1, 2, 3, 4];
 function getAverage(numbers){
   const total = numbers.reduce((total, number) =>{
@@ -76,3 +81,15 @@ function multiply(myArray){
 }
 
 console.log(multiply(myArray))
+
+
+
+const a = [1, 2, 3, 4, 5, 6];
+const b = a.slice(1, 4);
+console.log(b)
+
+
+const v = [7, 3, 5, 7, 4, 1, 7, 4, 6, 7, 8, 44,3 ];
+const n = v.slice(5, 9);
+console.log(n)
+
