@@ -93,3 +93,7 @@ const v = [7, 3, 5, 7, 4, 1, 7, 4, 6, 7, 8, 44,3 ];
 const n = v.slice(5, 9);
 console.log(n)
 
+const temp = [4, 7, 8, 9, 1, 7, 8];
+let tf = temp.map(item => {
+  console.log(item)
+})
