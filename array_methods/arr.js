@@ -58,7 +58,7 @@ a.forEach(myFunc)*/
 
 console.log(accum("abcd"))*/
 
-function onclickFunction(){
+/*function onclickFunction(){
   alert("thats how it works")
 }
 
@@ -97,3 +97,51 @@ const temp = [4, 7, 8, 9, 1, 7, 8];
 let tf = temp.map(item => {
   console.log(item)
 })
+
+const myArr = ["practice", 2, 3, 4, 5, 6];
+
+const letsMap = myArr.map(item=>{
+  console.log(item * 2)
+})
+
+
+const newArr = ["aaa", 2, 3];
+
+let mapping = newArr.map(item =>{
+  console.log(item*2)
+})*/
+
+
+const myArr = [1, 2, 3, 4, 5, 6, 7, 8];
+
+
+let b = myArr.slice(2, 5);
+
+console.log(b);
+
+
+const myArr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+let c = myArr2.splice(3, 2, "hi");
+
+console.log(myArr2);
+
+
+const myArr3 = [1, 2, 3, 4, 5, 6, 7, 8];
+
+
+let d = myArr3.map(item =>{
+  return item + 1
+})
+
+console.log(d)
+
+
+
+let newArr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let mapping = newArr.map(item=>{
+  return item * 3
+})
+
+console.log(mapping)
+
