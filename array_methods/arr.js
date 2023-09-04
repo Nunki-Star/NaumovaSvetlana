@@ -157,7 +157,7 @@ let myReduceMethod = myReduceArr.reduce((accum, item)=>{
 
 console.log(myReduceMethod)*/
 
-let a  = [1, 2, 3, -4, -5, -6, 7];
+/*let a  = [1, 2, 3, -4, -5, -6, 7];
 
 let b = a.reduce((accum, item)=>{
   if(item > 0){
@@ -169,3 +169,25 @@ let b = a.reduce((accum, item)=>{
 
 console.log(b)
 
+let c = a.map(item=>{
+  if(item >0){
+    return item + item
+  }
+})
+
+console.log(c)*/
+
+
+let a = [-3, 2, 4, 5, -2];
+
+
+let b = a.reduce((accum, item)=>{
+  if(item > 0){
+    return accum+item
+  }else{
+    return accum
+  }
+}, 0);
+
+
+console.log(b)
