@@ -112,7 +112,7 @@ let mapping = newArr.map(item =>{
 })*/
 
 
-const myArr = [1, 2, 3, 4, 5, 6, 7, 8];
+/*const myArr = [1, 2, 3, 4, 5, 6, 7, 8];
 
 
 let b = myArr.slice(2, 5);
@@ -144,4 +144,28 @@ let mapping = newArr.map(item=>{
 })
 
 console.log(mapping)
+
+
+
+
+const myReduceArr = [1, 2, 3];
+
+let myReduceMethod = myReduceArr.reduce((accum, item)=>{
+  accum = accum + item;
+  return accum
+})
+
+console.log(myReduceMethod)*/
+
+let a  = [1, 2, 3, -4, -5, -6, 7];
+
+let b = a.reduce((accum, item)=>{
+  if(item > 0){
+    return accum+= item;
+  }else{
+    return item;
+  }
+})
+
+console.log(b)
 
