@@ -1,5 +1,5 @@
 const tomFordParfume = [
-{"id":"app",
+/*{"id":"app",
 "url":"https://valorya.by/wp-content/uploads/2021/02/375x500.34893-2.jpg",
 "brand":"TOM FORD",
 "model":"SOLEIL BLANC",
@@ -34,7 +34,7 @@ const tomFordParfume = [
 "model":"BITTER PEACH",
 "text":"Bitter Peach by Tom Ford is a Amber Vanilla fragrance for women and men. Bitter Peach was launched in 2020. Top notes are Peach, Blood Orange, Cardamom and Heliotrope; middle notes are Rum, Cognac, Davana and Jasmine; base notes are Indonesian Patchouli Leaf, Vanilla, Tonka Bean.",
 "price":"500"
-}
+}*/
 
 ]
 
@@ -45,12 +45,14 @@ const add = () => {
     //variable link for title and model input 
     const brand = document.querySelector("[name='brand']").value;
     const model = document.querySelector("[name='model']").value;
+    const url = document.querySelector("[name ='url']").value;
+    const price = document.querySelector("[name = price]");
     //adding brand and model to parfumelist
     parfumeList.push({
-        brand, model
+        brand, model, url, price
         })
 
-        render(tomFordParfume)
+        render(parfumeList)
 }
 
 
@@ -80,13 +82,11 @@ const parfumePrice = document.querySelector(".form_range");
 
 
 let priceRange = {
-    min: 100,
-    max: 1000
+    min: 10,
+    max: 100
 };
 
-let priceFiltered = menu.filter(function (tomFordParfume) {
-    return tomFordParfume.price >= this.min && tomFordParfume.price <= this.mx;
-}, priceRange);
+
   
 console.log(priceFiltered);
     
