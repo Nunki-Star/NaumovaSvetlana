@@ -46,12 +46,12 @@ const add = () => {
     const brand = document.querySelector("[name='brand']").value;
     const model = document.querySelector("[name='model']").value;
     const url = document.querySelector("[name ='url']").value;
-    const price = document.querySelector("[name = price]");
+    const price = document.querySelector("[name = 'price']").value
     //adding brand and model to parfumelist
     parfumeList.push({
         brand, model, url, price
         })
-
+        console.log(parfumeList)
         render(parfumeList)
 }
 
@@ -78,17 +78,20 @@ function render(parfumeList){
         app.innerHTML = html;
 }
 
-const parfumePrice = document.querySelector(".form_range");
+const filteredItems = [];
+
+function sorted(sortedItem){
+    const myRange = document.getElementsByClassName("form-range");
+    sortedItem = parfumeList.sort((item)=>{
+        if(item > 10 && item < 100){
+            return item
+        }
+    
+    })
+}
 
 
-let priceRange = {
-    min: 10,
-    max: 100
-};
 
-
-  
-console.log(priceFiltered);
     
 
 
