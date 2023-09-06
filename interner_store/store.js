@@ -78,17 +78,13 @@ function render(parfumeList){
         app.innerHTML = html;
 }
 
-const filteredItems = [];
+const filteredItems = parfumeList.filter(item =>{
+    const myRange = document.querySelector(".form_range")
+    if(item  myRange.max )
+})
 
-function sorted(sortedItem){
-    const myRange = document.getElementsByClassName("form-range");
-    sortedItem = parfumeList.sort((item)=>{
-        if(item > 10 && item < 100){
-            return item
-        }
-    
-    })
-}
+
+
 
 
 
