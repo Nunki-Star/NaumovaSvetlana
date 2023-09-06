@@ -29,54 +29,102 @@
     
     
     <div class="buttons">
-        <input type="button" id="set-info" value="Drinks info input button" onclick="setInfo()">
-        <input type="button" id="get-info" value="Drinks info receive button" onclick="getInfo()">
-        <input type="button" id="delete-info" value="Drinks info delete button" onclick="deleteInfo()">
-        <input type="button" id="list-of-buttons" value="List of the drinks" onclick="list()">
+        <input type="button" id="set-info" value="Drinks info input button" onclick="addValue()">
+        <input type="button" id="get-info" value="Drinks info receive button" onclick="getValue()">
+        <input type="button" id="delete-info" value="Drinks info delete button" onclick="deleteValue()">
+        <input type="button" id="list-of-drinks" value="List of the drinks" onclick="getKeys()">
            
     </div>
     <script>
 
 
         function HashStorageFunk(key, value){
-            var self=this
+            let self=this;
+            let storage = {};
+            
+            self.storage = storage;
             self.key = key;
             self.value = value;
-            self.addValue = function(){
-                return this.key + this.value
+            self.addValues = function(key, value){
+               return  self.storage[key] = value
             }
-            self.getValue = function(){
-                return this.value
+            self.getValues = function(key){
+                if(key in storage !== true){
+                    return self.storage[key]
+                }
+                return self.storage[key]
             }
-            self.deleteValue = function(){
-                return this.value
+            self.deleteValues = function(key){
+                if(key in storage){
+                    return true
+                }
+                return delete self.storage[key]
             }
             self.getKeys = function(){
-                return arrOfKeys.push(this.key)
+                return self.key
             }
         }
 
 
-        var drinkStorage = new HashStorageFunk("drink name", "drink info");
-        drinkStorage.addValue();
-        drinkStorage.deleteValue();
-        drinkStorage.deleteValue();
-        drinkStorage.getKeys();
+        let drinkStorage = new HashStorageFunk(); 
+        //console.log(drinkStorage instanceof HashStorageFunk)
+
+        const add = document.getElementById("set-info"); //input button
+        add.onclick = function () {
+        let drinkName = prompt("Please enter the name of the drink");
+        let containsAlcohol = prompt("Does the drink contain alcohol?");
+        let drinkComposition = prompt("Kindly enter composition of your drink");
+        let drinkRecepie = prompt("Finally enter your recepie");
+        drinkStorage.addValues(drinkName, {drinkName, containsAlcohol, drinkComposition, drinkRecepie});
+        console.log(drinkStorage.getValues(drinkName));
+        }
+
+        const get = document.getElementById("get-info");//receive bitton
+        get.onclick = function (){
+            let drinkName = prompt("please enter the name of the drink");
+            console.log(drinkStorage.getValues(drinkName));
+        }
 
 
-        /*var drinkStorage={};    
+        const deleteKey = document.getElementById("delete-info"); //delete button
+        deleteKey.onclick = function(){
+            let drinkName = prompt ("please enter the name of the drink");
+            console.log(drinkStorage.deleteValues(drinkName));
+           
+        }
 
-        function setInfo(drinkName, alcoholicBeverage, drinkRecepie) {
-        var drinkName = prompt("Please enter the name of the drink");
-        var alcoholicBeverage = prompt("Please enter the capital of the country");
-        var drinkRecepie = prompt("Please enter the recepie")
-        drinksInfoStorage[drinkName] = drinkRecepie;
-        console.log(drinksIndoStorage);
-    }
+
+
+
+
+
+        
+        
+
+        
+        
+
+        
+
+       
+
+   
+
+        /*function addValue() {
+            let drinkName = prompt("Please enter the name of the drink");
+            let containsAlcohol = prompt("Does the drink contain alcohol?");
+            let drinkComposition = prompt("Kindly enter composition of your drink");
+            let drinkRecepie = prompt("Finally enter your recepie");
+            //drinksStorage[drinkName] = drinkRecepie;
+            //console.log(drinksIndoStorage);
+            drinkStorage.addValues(drinkName, {containsAlcohol, drinkComposition, drinkRecepie})
+            console.log(drinkStorage)
+        }
     
-        function getInfo(drinkName) {
+    
+        function getValue() {
             var drinkName=prompt('Enter the name of the drink');
-        if (drinkName in drinksIndoStorage )
+        if (drinkName in drinkStorage )
             alert( 'drink: ' + drinkName + ' alcoholic: ' + countryInfo[сountryName] );
         else
             alert( 'Unfortunately there is no any info about such a drink as ' + drinkName + ' in the list!' );
@@ -91,8 +139,8 @@
 
         function countriesList() {
             for ( var i in countryInfo )
-            console.log('country: ' + i + '  capital: ' + countryInfo[i])
-        }*/HashStorageFunk
+            console.log('drink: ' + i + '  drinkComposition: ' + countryInfo[i])*/
+        
 
 
 
