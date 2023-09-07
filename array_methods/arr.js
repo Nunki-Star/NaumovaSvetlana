@@ -178,7 +178,7 @@ let c = a.map(item=>{
 console.log(c)*/
 
 
-let a = [-3, 2, 4, 5, -2];
+/*let a = [-3, 2, 4, 5, -2];
 
 
 let b = a.reduce((accum, item)=>{
@@ -190,4 +190,59 @@ let b = a.reduce((accum, item)=>{
 }, 0);
 
 
-console.log(b)
+console.log(b)*/
+
+
+/*let arr = [1, 2, 3, 4, 5, 6, 7];
+let mapping = arr.map(item=>{
+
+  return item * 2
+})
+
+console.log(mapping);
+
+
+let arr2 = [2, 3, 4];
+let reduceArr = arr2.reduce(accum(item=>{
+  return accum
+}))*/
+
+
+
+
+const arr = [1, 2, 3, 4, 5, 6, 7];
+const arr2=["one", "two", "three"]
+
+console.log(arr.length);
+
+console.log(arr.concat(arr2));
+const arr3 = [1, 2, 3]
+arr3.push("hi")
+console.log(arr3);
+arr3.pop();
+console.log(arr3)
+
+const arr4=[1, 2, 3, 4];
+console.log(arr4.shift());
+console.log(arr4);
+ 
+let arr5 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log(arr5.slice(1, 4));
+
+console.log(arr5.slice(3));
+
+
+
+let arr6 = [1, 2, 3, 4, 5];
+
+console.log(arr6.splice(1, 2, "hi"))
+
+console.log(arr6);
+
+const arr7 = ["a", 1, "why"];
+
+function forEach((i)=>{
+    i+ "hi"
+})
+console.log(forEach(m))
+
