@@ -241,8 +241,76 @@ console.log(arr6);
 
 const arr7 = ["a", 1, "why"];
 
-function forEach((i)=>{
-    i+ "hi"
+function f(v, i, a){
+  console.log(i + "/" + v)
+}
+arr7.forEach(f)
+
+
+
+
+const arr8= ["hi", "why"];
+
+
+const foreachArr = arr8.forEach((v, i, a)=>{
+  console.log(i + "/" + v)
 })
-console.log(forEach(m))
+
+
+const arr9 = ["one", "two", "three"];
+
+let myArr = arr9.forEach((i, v)=>{
+  return i+ "/" + v
+})
+
+
+
+const newArr = [1, 2, 3];
+
+const newArrEvery = newArr.every((v, i)=>{
+  return v > 0
+})
+
+console.log(newArrEvery);
+
+
+
+const myArr2 = [2, 3, 4, 5, 6];
+
+const myarr2Some = myArr2.some((v, i)=>{
+  return i > 10
+})
+
+console.log(myarr2Some);
+
+const arrFilter = [2, 3, 4, 5, 6 ];
+
+const myFilter = arrFilter.filter((v, i)=>{
+  return v > 4
+})
+
+console.log(myFilter);
+
+
+const mynewArr = [1, 3, 5, 6];
+
+const arrMap = mynewArr.map((v, i, a)=>{
+  return 
+});
+
+console.log(arrMap);
+
+const arrReduce = [-21, 2, 3, 4, 5, 6,8];
+
+const newReduce = arrReduce.reduce((acc, v)=>{
+  return acc+= v
+},0)
+
+console.log(newReduce);
+
+const myNewArr = [1, 2, 3, 4, 5, 6, 7, 8];
+
+const myJoin = myNewArr.join();
+console.log(typeof myJoin);
+
 
