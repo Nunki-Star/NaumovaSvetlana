@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;;
+        
+
+        }
+        .container{
+            margin-left:50px;
+            margin-top:50px;
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .one{
+            height:200px;
+            width:200px;
+            background: salmon;;
+            margin-bottom:50px
+
+        }
+        .two{
+            height:200px;
+            width:200px;
+            background: skyblue;
+        }
+        .three{
+            height:200px;
+            width:200px;
+            background: lightgoldenrodyellow;
+        }
+
+        .four{
+            height:200px;
+            width:200px;
+            background: lightseagreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+    </div>
+
+  <script>
+    document.querySelector(".one").onclick = function(event){
+        console.log(event);
+        console.log("click")
+    }
+
+
+    //document.querySelector(".two").onclick = function(mouseEvent){
+     //   console.log(mouseEvent);
+     //   console.log("click")
+    //}
+
+    document.querySelector(".two").ondblclick = ()=>{
+        console.log("double");
+        console.log(1)
+    }
+
+
+    document.querySelector(".two").oncontextmenu = () =>{
+        console.log("context menu")
+    }
+
+
+    document.querySelector(".three").onmousemove = ()=>{
+        console.log("+")
+    }
+
+    document.querySelector(".four").onmouseenter = ()=>{
+        document.querySelector(".four").style.background = "pink";
+        console.log(1)
+    }
+
+    document.querySelector('.four').onmouseleave = ()=>{
+        document.querySelector(".four").style.background="purple"
+    }
+
+  </script>
+</body>
+</html> 
