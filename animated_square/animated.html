@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            position:relative
+        }
+        #square{
+            position:absolute;
+            width:100px;
+            height:100px;
+            background: lightpink;;
+            margin-top:100px;
+            margin-left:100px
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="square"></div>
+    </div>
+    <script>
+let x = 10;
+let y = 10;
+let square = document.querySelector("#square");
+
+
+
+window.addEventListener("keydown", (e) =>{
+    console.log(e)
+    switch(e.keyCode){
+        case 37:
+                square.style.left = (x-=10 )+ 'px';
+                break;
+        case 38:
+                square.style.top = (y-=10)+"px";;
+                break;
+       
+        case 39:
+                square.style.left=(x+=10) + "px";
+                break;
+       
+        case 40:
+                square.style.top=(y+=10)+"px";
+                break;
+       
+    }
+})
+
+
+    </script>
+</body>
+</html>
