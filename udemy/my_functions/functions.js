@@ -215,7 +215,7 @@ if(myNumber>0){
     return andISayHello();
 }
 let smth = youSayGoodbye()*/
-function stopWatch(){
+/*function stopWatch(){
     var startTime = Date.now();
     function getDelay(){
         var elapsetTime = Date.now() - startTime;
@@ -227,4 +227,8 @@ let timer = stopWatch();
 for (let i = 0; i < 1000000; i++){
     let foo = Math.random()*10000;
 }
-timer();
+timer();*/
+
+let text = document.querySelector(".one")
+text.innerHTML = "<i>text</i>"
+text.style.color="red"
