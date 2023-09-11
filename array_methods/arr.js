@@ -213,23 +213,23 @@ let reduceArr = arr2.reduce(accum(item=>{
 const arr = [1, 2, 3, 4, 5, 6, 7];
 const arr2=["one", "two", "three"]
 
-console.log(arr.length);
+console.log(arr.length);//7
 
-console.log(arr.concat(arr2));
+console.log(arr.concat(arr2));//[1, 2, 3, 4, 5, 6, 7, "one", "two", "three"]
 const arr3 = [1, 2, 3]
-arr3.push("hi")
+arr3.push("hi")//[1, 2, 3, "hi"]
 console.log(arr3);
-arr3.pop();
+arr3.pop();//[1, 2, 3]
 console.log(arr3)
 
 const arr4=[1, 2, 3, 4];
 console.log(arr4.shift());
-console.log(arr4);
+console.log(arr4);//[2, 3, 4]
  
 let arr5 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-console.log(arr5.slice(1, 4));
+console.log(arr5.slice(1, 4));//2, 3, 4
 
-console.log(arr5.slice(3));
+console.log(arr5.slice(3));//3, 4, 5, 6, 7, 8 9
 
 
 

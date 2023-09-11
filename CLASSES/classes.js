@@ -664,7 +664,7 @@ var showColorFunc = myCar.info;
 showColorFunc()*/
 
 
-function ff(a, b){
+/*function ff(a, b){
     console.log(a + " " + b);
     console.log(this);
     console.log(this.c)
@@ -694,7 +694,10 @@ var another = {c  : 55};
 Planet.call(another, 3, 4);
 Planet.apply(another, [3, 4]);
 
-var anyother = Planet.bind(another, 3, 4)
+var anyother = Planet.bind(another, 3, 4)*/
+
+
+console.log(0 || 1 && 2 || 3)
 
 
 
@@ -702,4 +705,10 @@ var anyother = Planet.bind(another, 3, 4)
 
 
 
+console.log([] + 1 + 2)
 
+f.call(f);
+
+function f() {
+  alert( this );
+}
