@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            position:relative;
+            
+        }
+        #square{
+            position:absolute;
+            width:100px;
+            height:100px;
+            background: lightpink;;
+            margin-top:0px;
+            margin-left:0px
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="square"></div>
+    </div>
+    <script>
+let x = 0;
+let y = 0;
+let square = document.querySelector("#square");
+let container = document.querySelector("#container")
+container.style.width = "500px";
+container.style.height = "500px";
+container.style.background = "salmon"
+
+
+
+window.addEventListener("keydown", (e) =>{
+    console.log(e)
+    switch(e.keyCode){
+        case 37:
+                square.style.left = (x-=10 )+ 'px';
+                break
+               
+
+        case 38:
+                square.style.top = (y-=10)+"px";;
+                break;
+       
+        case 39:
+                square.style.left=(x+=10)+"px";
+                break;
+       
+        case 40:
+                square.style.top=(y+=10)+"px";
+                break;
+       
+    }
+   
+})
+
+()
+
+  
+
+
+
+    </script>
+</body>
+</html>
+</body>
+</html>
