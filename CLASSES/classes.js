@@ -594,7 +594,7 @@ let myBird = new Birds("talk", "parrots");
 myBird.showBird()*/
 
 
-class Car{
+/*class Car{
     constructor(model, color){
         this.model = model;
         this.color = color;
@@ -621,14 +621,80 @@ class carOfMyDream extends Car{
 
 let dreamCar = new carOfMyDream("mereceres", "white", 50000);
 dreamCar.dreamCar();
-dreamCar.showCar()
+dreamCar.showCar()*/
 
 
 
 
+/*function Car(carNum){
+    var self = this;
+    self.carNum = carNum; //публичное свойство
+    self.maxSpeed = 160; //публичное свойство
+    var wheels = 4;// приватное свойство
+    function getMaxedSpeed(){ //приватный метод
+        return self.maxSpeed;
+    }
+
+    self.beep = function(){ //публичный метод
+        console.log("number " + self.carNum  
+                    + "wheels " + wheels
+                    +"maxspeed " + getMaxedSpeed()
+                    + "beep!!!")
+    }
+}*/
+
+/*function Car(model, color){
+    //let self = this;
+     //this.model = model;
+     //this.color = color;
+     this.wheels = 4;
+     this.info = function(){
+        //console.log(`my car is a ${self.color}  ${self.model}`);
+        console.log(`this  ` + this);
+        console.log(`wheels ` + this.wheels)
+     }
+}
+
+var myCar = new Car('mercedes', "white");
+myCar.info();
 
 
 
+var showColorFunc = myCar.info;
+showColorFunc()*/
+
+
+function ff(a, b){
+    console.log(a + " " + b);
+    console.log(this);
+    console.log(this.c)
+}
+
+
+ff(3, 4)
+
+var summa = {c:77};
+ff.call(summa, 5, 6);
+
+ff.apply(summa, [5, 6]);
+
+var bb = ff.bind(summa)
+
+
+function Planet(a, b){
+    console.log(a + " " + b);
+    console.log(this);
+    console.log(this.c)
+}
+
+
+
+Planet(3, 4)
+var another = {c  : 55};
+Planet.call(another, 3, 4);
+Planet.apply(another, [3, 4]);
+
+var anyother = Planet.bind(another, 3, 4)
 
 
 
