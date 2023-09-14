@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRINK HASH FUNK</title>
+   <style>
+    .buttons{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top:50px
+    }
+    input{
+        height:100px;
+        width:250px;
+        color:blanchedalmond;
+        background-color: #0099FF;
+        font-size:20px;
+        border-radius: 20px;
+    }
+   </style>
+   
+
+</head>
+<body>
+    <div class="buttons">
+        <input type="button" id="set-info" value="Drinks info input button" onclick="addValue()">
+        <input type="button" id="get-info" value="Drinks info receive button" onclick="getValue()">
+        <input type="button" id="delete-info" value="Drinks info delete button" onclick="deleteValue()">
+        <input type="button" id="list-of-drinks" value="List of the drinks" onclick="getKeys()">
+           
+    </div>
+    <script>
+
+
+        let HashStorageFunk = function (key, value){
+            let self=this;
+            let storage = {};
+            
+            self.storage = storage;
+            self.key = key;
+            self.value = value;
+            self.addValues = function(key, value){
+               return  self.storage[key] = value
+            }
+            self.getValues = function(key){
+                if(key in storage !== true){
+                    return storage[key]
+                }
+                return storage[key]
+            }
+            self.deleteValues = function(key){
+                if(key in storage === true) {
+                    return delete storage[key];
+                }
+                
+            }
+            self.getKeys = function(){
+                const keys = Object.keys(storage);
+                return keys
+
+            }
+        }
+
+
+        let drinkStorage = new HashStorageFunk(); 
+        //console.log(drinkStorage instanceof HashStorageFunk)
+
+        const add = document.getElementById("set-info"); //input button
+        add.onclick = function () {
+        let drinkName = prompt("Please enter the name of the drink");
+        let containsAlcohol = prompt("Does the drink contain alcohol?");
+        let drinkComposition = prompt("Kindly enter composition of your drink");
+        let drinkRecepie = prompt("Finally enter your recepie");
+        drinkStorage.addValues(drinkName, {drinkName, containsAlcohol, drinkComposition, drinkRecepie});
+        console.log(drinkStorage.getValues(drinkName));
+        }
+
+        const get = document.getElementById("get-info");//receive bitton
+        get.onclick = function (){
+            let drinkName = prompt("please enter the name of the drink");
+            console.log(drinkStorage.getValues(drinkName));
+        }
+
+
+        const deleteKey = document.getElementById("delete-info"); //delete button
+        deleteKey.onclick = function(){
+            let drinkName = prompt ("please enter the name of the drink");
+            console.log(drinkStorage.deleteValues(drinkName));
+            
+        }
+
+        const drinksList = document.getElementById("list-of-drinks"); //list of drinks
+        drinksList.onclick = function(){
+            console.log(drinkStorage.getKeys())
+        }
+    
+
+       
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

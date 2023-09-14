@@ -3,25 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DRINK HASH FUNK</title>
-   <style>
-    .buttons{
-        display:flex;
-        flex-direction: row;
-        justify-content: space-around;
-        margin-top:50px
-    }
-    input{
-        height:100px;
-        width:250px;
-        color:blanchedalmond;
-        background-color: #0099FF;
-        font-size:20px;
-        border-radius: 20px;
-    }
-   </style>
-   
-
+    <title>drink_funk</title>
+    <style>
+        .buttons{
+            display:flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-top:50px
+        }
+        input{
+            height:100px;
+            width:250px;
+            color:palegreen;
+            background-color:deeppink;
+            font-size:20px;
+            border-radius: 20px;
+        }
+       </style>
+       
 </head>
 <body>
     <div class="buttons">
@@ -31,43 +30,45 @@
         <input type="button" id="list-of-drinks" value="List of the drinks" onclick="getKeys()">
            
     </div>
+
     <script>
-
-
-        function HashStorageFunk(key, value){
-            let self=this;
-            let storage = {};
-            
-            self.storage = storage;
-            self.key = key;
-            self.value = value;
-            self.addValues = function(key, value){
-               return  self.storage[key] = value
+        class HashStorageClass{
+            constructor(key, value){
+               let storage = {};
+               this.storage = storage; 
+               this.key = key;
+               this.value = value ;
             }
-            self.getValues = function(key){
+            addValues(key, value, storage){
+               
+                return  this.storage[this.key] = this.value
+            }
+            getValues(key){
                 if(key in storage !== true){
                     return storage[key]
                 }
                 return storage[key]
             }
-            self.deleteValues = function(key){
+
+            deleteValues(key){
                 if(key in storage === true) {
                     return delete storage[key];
                 }
-                
             }
-            self.getKeys = function(){
+
+            getKeys(){
                 const keys = Object.keys(storage);
                 return keys
-
             }
+
+
         }
 
 
-        let drinkStorage = new HashStorageFunk(); 
+        let drinkStorage = new HashStorageClass(); 
         //console.log(drinkStorage instanceof HashStorageFunk)
 
-        const add = document.getElementById("set-info"); //input button
+        const add = document.getElementById("set-info"); 
         add.onclick = function () {
         let drinkName = prompt("Please enter the name of the drink");
         let containsAlcohol = prompt("Does the drink contain alcohol?");
@@ -77,33 +78,25 @@
         console.log(drinkStorage.getValues(drinkName));
         }
 
-        const get = document.getElementById("get-info");//receive bitton
+        const get = document.getElementById("get-info");
         get.onclick = function (){
             let drinkName = prompt("please enter the name of the drink");
             console.log(drinkStorage.getValues(drinkName));
         }
 
 
-        const deleteKey = document.getElementById("delete-info"); //delete button
+        const deleteKey = document.getElementById("delete-info"); 
         deleteKey.onclick = function(){
             let drinkName = prompt ("please enter the name of the drink");
             console.log(drinkStorage.deleteValues(drinkName));
             
         }
 
-        const drinksList = document.getElementById("list-of-drinks"); //list of drinks
+        const drinksList = document.getElementById("list-of-drinks");
         drinksList.onclick = function(){
             console.log(drinkStorage.getKeys())
         }
     
-
-       
-
-
-
-
-
-
 
 
     </script>
