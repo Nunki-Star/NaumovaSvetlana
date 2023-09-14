@@ -4,33 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .container{
+            background: grey;
+            height:600px;
+            text-align: center;
+            
+            display:flex;
+            flex-direction: row;
+            
+            justify-items: center;
+           
+        }
+        .out-1{
+            background: lightblue;
+            height:100px;
+            width:800px;
+            
+            
+        
+        }
+        .out-2{
+            background: cyan;
+            height:100px;
+            width:800px;
+            
+            
+        }
+    </style>
 </head>
 <body>
-    <!--<h1 id = "listen">hello</h1>
-    <h2 id = "second">two</h2>-->
-
-    <input type="button" value="button" class="button">
+    <div class="container">
+        <div class="out-1 bg-lightblie">div out-1</div>
+        <div class="out-2 bg-lightred">div out-2</div>
+    </div>
+    
     <script>
-        /*document.querySelector("#listen").onclick = function(){
-            console.log("my first onclick");
-        }*/
-
-
-        const  myButton = document.querySelector(".button")
-
-        myButton.addEventListener("click", function(e){
-            console.log("click")
-        });
-
-
-
-
-        myButton.addEventListener("click",function(e){
-            console.log("clack")
-        })
-
-
-        
-            </script>
+       document.querySelector(".out-1").onclick = () =>{
+        console.log(".out-1")
+       }
+       document.querySelector(". container").onclick = () =>{
+        console.log(".container")
+       }
+       document.querySelector("body").onclick = () =>{
+        console.log("body")
+       }
+       document.querySelector("html").onclick = () =>{
+        console.log("html")
+       }
+    </script>
 </body>
 </html>
