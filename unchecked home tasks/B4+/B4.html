@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>b4+</title>
+</head>
+<body>
+    <div class = "carrir"></div>
+    <script>
+        const carrir = document.querySelector(".carrir");
+        function buildWrapper(tag){
+            return function(text){
+                return`<${tag}>${text}</${tag}>`
+            }
+        }
+
+        let wrapH1 = buildWrapper("H1");
+        let wrapP = buildWrapper("P");
+        let hElem = wrapH1("Poems");
+        //let pElem = pTag("Once at winter time");
+        let pElem = wrapP("Tasty M&M's");
+
+
+        console.log(hElem);
+        console.log(pElem)
+
+        let replaceP1 = pElem.replaceAll("&", "&#38");
+        let replaceP2 = replaceP1.replaceAll("'", "&#39");
+        let replaceP3 = replaceP2.replaceAll('"', "&#34");
+
+
+        let replaceH1 = hElem.replaceAll("&", "&#38");
+        let replaceH2 = replaceH1.replaceAll("'", "&#39");
+        let replaceH3 = replaceH2.replaceAll('"', "&#34");
+
+        console.log(replaceH3)
+        console.log(replaceP3);
+
+        
+
+        /*function replaceM(sign) {
+            const dict = {
+                //"<": "&#60",
+                //">": "&#62",
+                "'": "&#39",
+                '"': "&#34",
+                "&": "&#38",
+                
+            }
+
+        }   
+        console.log(replaceM("'"))
+
+        
+        for (let i of splitedH) {
+            stringH += replaceM(i)
+        }
+        
+        console.log(stringH)
+
+        for (let k of splitedP) {
+            stringP += replaceM(k)
+
+        }*/
+
+
+
+
+        
+
+        
+
+        
+        
+       
+
+
+
+        //console.log(stringH);
+        //console.log(stringP)
+        
+        
+    </script>
+</body>
+</html>
