@@ -24,14 +24,17 @@ console.log(isPalindrom("Искать такси"))*/
 function isPalindrom(str){
     let lettersToLowerCase = str.toLowerCase();
     let replaceSpace = lettersToLowerCase.replace(" ", "");
+
     let replacedPunctuationMarks = replaceSpace.replaceAll(/[\.,%!?]/g, '');
+    let replaceRusYo = replacedPunctuationMarks.replaceAll("ё", "е");
+    let replaceRusLet = replaceRusYo.replaceAll("Ъ","ь")
     let revercedStr = ""
-    for(let i = replacedPunctuationMarks.length - 1; i>=0; i--){
-        revercedStr += replacedPunctuationMarks[i];
+    for(let i = replaceRusLet.length - 1; i>=0; i--){
+        revercedStr += replaceRusLet[i];
     }
-    for( let i = 0; i < replacedPunctuationMarks.length; i++){
+    for( let i = 0; i < replaceRusLet.length; i++){
         for (let k = 0; k < revercedStr.length; k++){
-            if(replacedPunctuationMarks[i] === revercedStr[k]){
+            if(replaceRusLet[i] === revercedStr[k]){
                 return `Your string "${str}" is palindrom`
             }else{
                 return `Your string "${str}" is not a palindrom`

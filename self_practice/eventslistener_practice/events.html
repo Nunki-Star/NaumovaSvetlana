@@ -40,7 +40,8 @@
     </div>
     
     <script>
-       document.querySelector(".out-1").onclick = () =>{
+       document.querySelector(".out-1").onclick = (event) =>{
+        event.stopPropagation();
         console.log(".out-1")
        }
        document.querySelector(". container").onclick = () =>{
