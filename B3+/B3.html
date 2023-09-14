@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>b3+</title>
+</head>
+<body>
+    <div class = "carrir"></div>
+    <script>
+        const carrir = document.querySelector(".carrir");
+        function buildWrapper(tag){
+            return function(text){
+                return`<${tag}>${text}</${tag}>`
+            }
+        }
+
+        let wrapH1 = buildWrapper("H1");
+        let wrapP = buildWrapper("P");
+        let hElem = wrapH1("Poems");
+        //let pElem = pTag("Once at winter time");
+        let pElem = wrapP("Tasty M&M's")
+
+
+        carrir.innerHTML = hElem;
+        carrir.innerHTML += pElem;
+
+
+
+        function change(letter) {
+            const dict = {
+                "<": "&#60",
+                ">": "&#62",
+                "'": "&#39",
+                '"': "&#34",
+                "&": "&#38",
+                
+            };
+
+            if (letter in hElem || letter in pElem) {
+                return dict[letter];
+            }
+            return letter
+        }
+
+        const splitedH=hElem.split("");
+        const splitedP =pElem.split("")
+        
+        console.log(hElem);
+        console.log(pElem)
+    </script>
+</body>
+</html>
