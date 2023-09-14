@@ -11,9 +11,9 @@
         let carry2 = document.querySelector(".carry2");
 
 
-        function buildWrapper(tag){
+        function buildWrapper(tag, myClass){
             return function(text){
-                return`<${tag}>${text}</${tag}>`
+                return`<${tag} class="${myClass.join(" ")}">${text}</${tag}>`
             }
         }
     </script>
