@@ -34,13 +34,34 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <!--<div class="container">
         <div class="out-1 bg-lightblie">div out-1</div>
         <div class="out-2 bg-lightred">div out-2</div>
-    </div>
+    </div>-->
+
+    <button onclick = "console.log('click1!!!!!')">button1</button>
+    <button id="button">button2</button>
+    <button class="button">button3</button>
+   
     
     <script>
-       document.querySelector(".out-1").onclick = (event) =>{
+        let button3 = document.querySelector(".button");
+        button3.addEventListener("click", function(){
+            console.log("click!")
+        });
+
+        button3.addEventListener("click", function(){
+            console.log("clack!!!!")
+        })
+
+        /*let button = document.querySelector("#button");
+        button.onclick=()=>{
+            console.log("click2!!!!")
+        }*/
+
+
+        
+       /*document.querySelector(".out-1").onclick = (event) =>{
         event.stopPropagation();
         console.log(".out-1")
        }
@@ -52,7 +73,9 @@
        }
        document.querySelector("html").onclick = () =>{
         console.log("html")
-       }
+       }*/
+
+
     </script>
 </body>
 </html>
