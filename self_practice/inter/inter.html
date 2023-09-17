@@ -4,41 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        .container{
-            margin-left:50px;
-            margin-top:50px
-        }
-        #input1{
-            width:200px;
-            height:20px;
-            margin-bottom:10px;
-            background: lightgrey;
-        }
-        #input2{
-            width:200px;
-            height:20px;
-            background: lightgrey;
-
-        }
-        button{
-            width:50px;
-            height:20px;
-            
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <!--<div class="container">
         <input type="text" id="input1">
-        <button value="H1">H1</button><br>
+        <button value="H1" class="h1">H1</button><br>
         <input type="text" id="input2">
-        <button>P</button><br>
+        <button value ="p" class="p">P</button><br>
+        <button value="one" class="one">ONE</button><br>
+        <button value="two" class="two">TWO</button><br>
+        <button value="three" class="three">THREE</button><br>
+        <button class="create">LIST</button><br>
+        <div class="text"></div>
+    </div>-->
+
+    <!--<div class = "test" data="privet">my test</div>
+    <button class="toggle">toggle</button>-->
+
+
+    <!--<p>choose the type of fuel:</p>
+    <input type="text" class="galons">
+    <div>
+        <button class="gas" data="1.2">A92</button>
+        <button class="gas" data="1.6">A95</button>
+        <button class="gas" data="1.9">A98</button>
+    </div>-->
+    
+
+
+    <!--<p>count the price</p>
+    <input type="text" class="myinput">
+    <div>
+        <button class="button" data="1">1</button>
+        <button class="button" data="2">2</button>
+        <button class="button" data="3">3</button>
+    </div>-->
+    
+
+    <!--<p>please count</p>
+    <input type="text" class="myinput">
+    <div>
+        <button class="button" data="5">five</button>
+        <button class="button" data="10">ten</button>
+        <button class="button" data="100">one hundred</button>
     </div>
+
+    <div class="create"></div>-->
+    
+   
+    <script>
+    
+    
+
+
+    /*let myDiv = document.createElement("div");
+    myDiv.innerHTML = "hello";
+    myDiv.classList.add("first")
+    console.log(myDiv);
+
+    let mysecondDiv = document.createElement("div");
+    mysecondDiv.innerHTML = "hi";
+    mysecondDiv.classList.add("second");
+    console.log(mysecondDiv)
+
+    document.querySelector(".create").appendChild(myDiv)
+
+    /*for(let i = 0; i<myButton.length; i++){
+        myButton[i].onclick = function(){
+            let myInput = document.querySelector(".myinput").value;
+            let myData = this.getAttribute("data");
+            console.log(myInput*myData);
+        }
+    }*/
+        
+
+    /*let button = document.querySelectorAll(".button");
+    for (let k = 0; k<button.length; k++){
+        button[k].onclick = function(){
+            let myInput = document.querySelector(".myinput").value;
+            let total = this.getAttribute("data");
+            console.log(myInput*total)
+        }
+    }*/
+
+       /*let gas = document.querySelectorAll(".gas")
+        for(let i = 0; i<gas.length; i++ ){
+            gas[i].onclick = function(){
+                let galons = document.querySelector(".galons").value;
+                let amount = this.getAttribute("data");
+                console.log(galons*amount)
+
+            }
+        }
+        const a = document.querySelector(".test");
+        a.style.width="200px";
+        a.style.background = "orange";
+        a.style.paddingBottom = "100px";
+        
+        a.classList.add("test2");
+        const b = document.querySelector(".test2");
+        b.style.borderRadius="20px";
+
+        const toggle = document.querySelector(".toggle")
+        toggle.onclick=function(){
+            this.classList.toggle("three")
+        }
+
+
+        
+
+
+        /*document.querySelector(".h1").onclick=myClick;
+        function myClick(){
+            let input1 = document.querySelector("#input1").value;
+            console.log(input1)
+            document.querySelector(".text").innerHTML = input1
+        }
+
+        document.querySelector(".p").onclick=myClick2;
+        function myClick2(){
+            let input2 = document.querySelector("#input2").value;
+            console.log(input2);
+            document.querySelector(".text").innerHTML = input2
+        }
+
+      console.log(a.getAttribute("data"));
+      console.log(document.querySelector("link").getAttribute("href"))
+
+      a.setAttribute("bla-bla", 777)*/
+    </script>
 </body>
 </html>
