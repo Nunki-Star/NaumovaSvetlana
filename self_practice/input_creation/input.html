@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const bodyLink = document.querySelector("body");
+        const scriptElement = document.querySelector("script");
+        const divH1 = document.createElement("div");
+        
+        bodyLink.insertBefore(divH1, scriptElement)
+        
+        const elementH1 = document.createElement("input");
+        const buttonH1 = document.createElement("button");
+        divH1.append(elementH1);
+        divH1.append(buttonH1);
+        console.log(bodyLink);
+
+        buttonH1.style.width = "100px";
+        buttonH1.style.marginLeft = "10px";
+        buttonH1.innerHTML = "H1 button";
+        buttonH1.style.background = "azure"
+
+
+        const divP = document.createElement("div");
+        divP.style.marginTop = "20px"
+        bodyLink.insertBefore(divP, scriptElement);
+
+
+        const inputP = document.createElement("input");
+        divP.append(inputP);
+        const buttonP = document.createElement("button");
+        divP.append(buttonP);
+        buttonP.style.background = "azure";
+        buttonP.innerHTML = "P button";
+        buttonP.style.marginLeft = "10px";
+        buttonP.style.width = "100px";
+        
+
+
+
+        const divlist = document.createElement("div");
+        divlist.style.marginTop = "20px"
+        bodyLink.insertBefore(divlist, scriptElement);
+
+        const buttonOne = document.createElement("button");
+        divlist.append(buttonOne);
+        buttonOne.style.width = "60px";
+        buttonOne.style.height = "30px";
+        buttonOne.innerHTML = "Button one";
+
+
+
+        const buttonTwo = document.createElement("button");
+        divlist.append(buttonTwo)
+        buttonTwo.style.width = "60px";
+        buttonTwo.style.height = "30px";
+        buttonTwo.style.marginLeft = "10px";
+        buttonTwo.innerHTML = "Button two"
+
+
+        
+        /*document.querySelector
+        const inputH1 = document.createElement("input");
+        divH1.append(inputH1);
+        inputH1.setAttribute("type", "text");
+        inputH1.style.width = "300px";
+        inputH1.style.height = "30px"*/
+        
+        
+        
+    </script>
+</body>
+</html>

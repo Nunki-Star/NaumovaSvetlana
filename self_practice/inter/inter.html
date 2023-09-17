@@ -51,12 +51,38 @@
     </div>
 
     <div class="create"></div>-->
-    
+    <div class="h1"></div>
+    <div class="p"></div>
+    <div class="list"></div>
    
     <script>
-    
+
+    const linkH1 = document.querySelector(".h1");
+
+    const createdInputH1 = document.createElement("input");
+    const apInputH1 = linkH1.appendChild(createdInputH1);
+    apInputH1.style.marginTop = "50px";
+    apInputH1.style.marginLeft = "50px";
+    apInputH1.style.width = "200px";
+    apInputH1.style.height = "25px";
+
     
 
+    const createdButtonH1 = document.createElement("button");
+    const apButtonH1 = linkH1.appendChild(createdButtonH1);
+    apButtonH1.innerHTML = "H1";
+    apButtonH1.style.width = "200px";
+    apButtonH1.style.height = "20px";
+    apButtonH1.style.marginLeft = "50px";
+    apButtonH1.style.marginTop = "5px";
+    apButtonH1.style.background = "lightblue";
+    apButtonH1.style.borderRadius = "20px"
+
+    
+
+   const linkP = document.querySelector(".p");
+   const createdInputP = document.createElement("input");
+   const apInputP = linkP.after(createdInputP)
 
     /*let myDiv = document.createElement("div");
     myDiv.innerHTML = "hello";
