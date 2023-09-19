@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getCount(input) {
+            let countOfVowels = 0;
+            let myStr = input.split("");
+            
+            const vowels = ["a","i","e","u","o"];
+            
+            vowels.forEach(function(vowel) {
+                myStr.forEach(function(inpLetter) {
+      if (inpLetter === vowel) {
+        countOfVowels++;
+      }
+    });
+  });
+  
+  return countOfVowels;
+}
+
+console.log(getCount("svetlana"));
+console.log(getCount("programming"))
+    </script>
+</body>
+</html>
