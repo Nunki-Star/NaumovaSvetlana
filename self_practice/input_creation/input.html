@@ -6,23 +6,52 @@
     <title>Document</title>
 </head>
 <body>
+    <!--<div class="container">
+        <input type="text" id="input1">
+        <button value="H1" class="h1">H1</button><br>
+        <input type="text" id="input2">
+        <button value ="p" class="p">P</button><br>
+        <button value="one" class="one">ONE</button><br>
+        <button value="two" class="two">TWO</button><br>
+        <button value="three" class="three">THREE</button><br>
+        <button class="create">LIST</button><br>
+        <div class="text"></div>
+    </div>-->
     <script>
         const bodyLink = document.querySelector("body");
         const scriptElement = document.querySelector("script");
+
         const divH1 = document.createElement("div");
-        
         bodyLink.insertBefore(divH1, scriptElement)
         
-        const elementH1 = document.createElement("input");
-        const buttonH1 = document.createElement("button");
+        const elementH1 = document.createElement("input");//input h1
+        elementH1.style.width = "200px";
+        const buttonH1 = document.createElement("button"); //button h1
         divH1.append(elementH1);
         divH1.append(buttonH1);
         console.log(bodyLink);
 
+
         buttonH1.style.width = "100px";
         buttonH1.style.marginLeft = "10px";
+        buttonH1.setAttribute("value", "H1");
+        buttonH1.setAttribute("class", "myInput")
+
         buttonH1.innerHTML = "H1 button";
         buttonH1.style.background = "azure"
+
+        buttonH1.onclick = myClick; //вешаем онклик на кнопку
+        function myClick(){
+            console.log("hi");
+            let hInfo = elementH1.value;//получаем из инпута инфо
+            console.log(hInfo);
+            divGet.innerHTML = hInfo
+        }
+
+        function total(){
+            hInfo.value + pInfo.value
+        }
+
 
 
         const divP = document.createElement("div");
@@ -30,23 +59,51 @@
         bodyLink.insertBefore(divP, scriptElement);
 
 
-        const inputP = document.createElement("input");
+        const inputP = document.createElement("input");//input p
+        inputP.style.width = "200px"
         divP.append(inputP);
-        const buttonP = document.createElement("button");
+        const buttonP = document.createElement("button");//button p
         divP.append(buttonP);
+        buttonP.setAttribute("value", "P");
+        buttonP.setAttribute("class", "myInput")
         buttonP.style.background = "azure";
         buttonP.innerHTML = "P button";
         buttonP.style.marginLeft = "10px";
         buttonP.style.width = "100px";
+
+        
         
 
+        
 
+       /*let a = document.getElementsByClassName("myInput");
+       console.log(a);
+       let inputElements = document.querySelectorAll("input");
+       console.log(inputElements, "aaa")
+       for(let i = 0; i<a.lenght; i++){
+        a[i].onclick = myClick;
+        function myClick(){
+            let allValues = inputElements[1].value;
+            console.log(allValues)
+        }
+       } */   
+                
+       
 
+        
+       
+
+        
+        
+        
         const divlist = document.createElement("div");
         divlist.style.marginTop = "20px"
         bodyLink.insertBefore(divlist, scriptElement);
 
+
+        //list of buttons section
         const buttonOne = document.createElement("button");
+        buttonOne.setAttribute("value","Button one");
         divlist.append(buttonOne);
         buttonOne.style.width = "60px";
         buttonOne.style.height = "30px";
@@ -55,11 +112,90 @@
 
 
         const buttonTwo = document.createElement("button");
-        divlist.append(buttonTwo)
+        divlist.append(buttonTwo);
+        buttonTwo.setAttribute("value", "Button two")
         buttonTwo.style.width = "60px";
         buttonTwo.style.height = "30px";
         buttonTwo.style.marginLeft = "10px";
-        buttonTwo.innerHTML = "Button two"
+        buttonTwo.innerHTML = "Button two";
+
+        const buttonThree = document.createElement("button");
+        divlist.append(buttonThree);
+        buttonThree.style.marginLeft = "10px";
+        buttonThree.style.width = "60px";
+        buttonThree.style.height = "30px";
+        buttonThree.innerHTML = "Button three";
+        buttonThree.setAttribute("value", "Button three")
+
+        const listofButtons = document.createElement("button");
+        divlist.append(listofButtons);
+        listofButtons.style.width = "80px";
+        listofButtons.style.marginLeft = "30px";
+        listofButtons.style.height = "30px";
+        listofButtons.innerHTML = "List of buttons";
+        listofButtons.setAttribute("value", "list of buttons")
+
+
+        const divGet = document.createElement("div");
+
+        bodyLink.insertBefore(divGet, scriptElement);
+
+        divGet.style.marginTop = "10px";
+        divGet.className = "divGet"
+
+        divGet.style.borderColor = "grey";
+        divGet.style.borderStyle = "solid";;
+        
+
+        divGet.style.width = "350px";
+        divGet.style.height = "300px";
+
+
+        buttonH1.onclick = myClick; //вешаем онклик на кнопку
+        function myClick(){
+            console.log("hi");
+            let hInfo = elementH1.value;//получаем из инпута инфо
+            console.log(hInfo);
+            divGet.innerHTML += hInfo
+        }
+
+
+        buttonP.onclick = myClick2;
+        function myClick2(){
+            console.log("hello");
+            let pInfo =  inputP.value;
+            divGet.innerHTML += pInfo
+        }
+
+
+        /*let allValues = document.getElementsByTagName("button");
+        allValues.onclick = myClick;
+        for(let i = 0; i<allValues.length; i++){
+            let certainButton = allValues[i].value
+            console.log(certainButton)
+
+        }*/
+
+
+         /*document.querySelector(".h1").onclick=myClick;
+        function myClick(){
+            let input1 = document.querySelector("#input1").value;
+            console.log(input1)
+            document.querySelector(".text").innerHTML = input1
+        }
+
+        document.querySelector(".p").onclick=myClick2;
+        function myClick2(){
+            let input2 = document.querySelector("#input2").value;
+            console.log(input2);
+            document.querySelector(".text").innerHTML = input2
+        }
+
+      console.log(a.getAttribute("data"));
+      console.log(document.querySelector("link").getAttribute("href"))
+
+      a.setAttribute("bla-bla", 777)*/
+
 
 
         
