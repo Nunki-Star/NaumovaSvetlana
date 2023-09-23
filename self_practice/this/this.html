@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const car = {
+            model:"mers",
+            year:2012,
+            showModel : function(color, engine){
+                console.log(this.model, color, engine)
+                
+            },
+            showYear : function(){
+                console.log(this.year)
+            }
+        }
+        car.showModel();
+        car.showYear()
+
+
+        const  anotherCar = {
+            model : "bmw",
+            year : 2020,
+
+        }
+
+        car.showModel.call(anotherCar, "red", "diesel");
+        car.showModel.apply(anotherCar, ["blue", "foil"])
+        const bindMethod = car.showModel.bind(anotherCar);
+        bindMethod("black", "diesel")
+
+
+
+
+        const myCar = {
+            model : "mercedes",
+            color : "white", 
+            showCar : function (year, engine){
+                console.log(this.model, year, engine)
+            }
+        }
+
+
+        myCar.showCar();
+
+
+        const myAnothercar = {
+            model : "toyota prada",
+            color : "white",
+            
+        }
+
+        myCar.showCar.call(myAnothercar, "2020", "fuel");
+        myCar.showCar.apply(myAnothercar, ["2023", "black"]);
+        const myBind = myCar.showCar.bind(myAnothercar, "2010", "blue");
+        myBind()
+
+    </script>
+</body>
+</html>
