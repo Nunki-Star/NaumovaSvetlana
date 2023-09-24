@@ -8,7 +8,63 @@
 <body>
 
     <script>
-        const planetEarth
+        const planetEarth = {
+            "name":"earth",
+            "color":"blue",
+            "showColor" :function(population, howfar){
+                console.log(this.color, population, howfar)
+            },
+            "showName" : function(){
+                console.log(this.name)
+            }
+        }
+
+        planetEarth.showColor("7777", "9999");
+        planetEarth.showName();
+
+        const planetJupiter = {
+            /*"name" :"jupiter", 
+            "color" : "yellow",*/
+            __proto__:planetEarth
+
+        }
+
+        planetEarth.showColor.call(planetJupiter, "94732949", "67532656273");
+        planetEarth.showColor.apply(planetJupiter, ["3333333", "22222222"]);
+        const bindMethod = planetEarth.showColor.bind(planetJupiter, "7777777777777777777", "00000000000000");
+        bindMethod()
+
+
+        class User{
+            constructor(name){
+                this.name = name
+            }
+            showName(){
+                console.log(this.name)
+            }
+        }
+
+        const alex = new User("Alex");
+        alex.showName();
+
+
+        class Person extends User{
+            constructor(name, age){
+                super(name)
+                this.name = name;
+                this.age = age
+            }
+        }
+
+        const myPerson = new Person("Svetlana", "36");
+        console.log(myPerson);
+
+
+
+
+        
+
+
     </script>
     <!--<script>
         /*const car = {
