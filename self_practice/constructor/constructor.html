@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class User {
+            constructor(username, password){
+                this.username = username;
+                this.password = password;
+            }
+        }
+        const a = "Halina";
+        const b = "8888"
+        const person = new User("Svetlana", "7777");
+        const person_two = new User(a, b)
+        console.log(person);
+        console.log(person_two);
+
+
+
+        class Car {
+            constructor(color, year){
+                this.color = color;
+                this.year = year;
+            }
+                showCar(){
+                    console.log("i have " + this.color, this.year)
+                }
+            }
+        const myCar = new Car ("white", "2020");
+        console.log(myCar.showCar())
+
+        class anotherCar {
+            constructor(model){
+                this.model = model
+            }
+        }
+
+        Car.showCar.call(anotherCar, "black", "2023");
+        console.log(anotherCar)
+    </script>
+</body>
+</html>
