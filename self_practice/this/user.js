@@ -3,10 +3,10 @@ let user = {
     "password" : "",
     "validatePassword" : function(){
         if(this.password.length > 6){
-            return true
+            return true;
         }
         else{
-            return false
+            return false;
         }
     }
 }
