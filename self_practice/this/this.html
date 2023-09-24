@@ -59,6 +59,47 @@
         const myBind = myCar.showCar.bind(myAnothercar, "2010", "blue");
         myBind()
 
+
+
+        const a  = {
+            "color":"red",
+            "text":"hello",
+            "showColor":function(){
+                console.log(this.color)
+            },
+            "showText":function(){
+                console.log(this.text)
+            },
+            __proto__ : c
+            
+        }
+        console.log(a)
+
+        const b = {
+            "fonSize" : "24px", 
+            __proto__ : a
+        }
+
+        console.log(b)
+
+        b.text = "hihi";
+
+        console.log(b);
+
+        const c = {
+            "fontFamily" : "Verdana",
+            "text" : "constC",
+            "showOwntext": function(){
+                console.log(this.ownText)
+            },
+
+            __proto__:b
+        }
+
+        console.log(a);
+        console.log(b);
+        console.log(c.text)
+
     </script>
 </body>
 </html>
