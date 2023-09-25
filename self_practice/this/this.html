@@ -60,9 +60,66 @@
         console.log(myPerson);
 
 
+        class Car{
+            constructor(model, color){
+                this.model = model;
+                this.color = color
+            }
+            showCar(){
+                console.log(this.model, this.color)
+            }
+        }
+
+        const myCar = new Car("mers", "white");
+        myCar.showCar()
+
+        class Anotherсar extends Car{
+            constructor(model, color, year){
+                super(model, color);
+                this.model = model;
+                this.color = color;
+                this.year = year
+            }
+            showAnothercar(){
+                console.log(this.model, this.color, this.year)
+            }
+        }
+
+        const dreamсar = new Anotherсar("mers", "white", "2023");
+        console.log(dreamсar);
+        dreamсar.showAnothercar();
 
 
-        
+
+        class Parfume{
+            constructor(brand, volume){
+                this.brand = brand;
+                this.volume = volume;
+            }
+            showParfume(color){
+                console.log(this.brand, this.volume, this.color)
+            }
+        }
+
+        const myParfume = new Parfume("tom ford", "5oml", "pink");
+        myParfume.showParfume();
+
+
+        class anotherParfume extends Parfume{
+            constructor(brand, volume, season){
+                super(brand, volume);
+                this.brand = brand;
+                this.volume = volume;
+                this.season = season
+            }
+
+        }
+
+    const fav = new anotherParfume("dg", "100ml", "summer");
+    console.log(fav)
+
+
+
 
 
     </script>
