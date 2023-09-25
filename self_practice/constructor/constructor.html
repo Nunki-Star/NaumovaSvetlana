@@ -7,7 +7,7 @@
 </head>
 <body>
     <script>
-        class User {
+        /*class User {
             constructor(username, password){
                 this.username = username;
                 this.password = password;
@@ -41,7 +41,43 @@
         }
 
         Car.showCar.call(anotherCar, "black", "2023");
-        console.log(anotherCar)
+        console.log(anotherCar);*/
+
+
+        class User{
+            constructor(){
+
+            }
+            set name(name){
+                this._name = name.trim().toLowerCase()
+            }
+            get name(){
+                return this._name
+            }
+        }
+
+
+        const student = new User();
+        student.name = "       ALEX";
+        console.log(student);
+        console.log(student.name);
+
+
+
+
+        class Parfume{
+            constructor(){
+
+            }
+            set brand(brand){
+                this._brand = brand
+            }
+            get brand(){
+                return this._brand
+            }
+        }
+
+
     </script>
 </body>
 </html>
