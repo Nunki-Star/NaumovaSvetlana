@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sayHello(text){
+            console.log(text)
+        }
+
+        setTimeout(sayHello, 5000, 'hello');
+
+        const a = setTimeout(sayHello, 5000, 'hello');
+        setInterval(sayHello, 3000, "hi");
+        const b = setInterval(sayHello, 3000, "hi");
+        console.log(a);
+        console.log(b)
+    </script>
+</body>
+</html>
