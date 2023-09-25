@@ -39,34 +39,31 @@
                this.key = key;
                this.value = value ;
             }
-            addValues(key, value, storage){
-               
-                return  this.storage[this.key] = this.value
+            
+            addValues(key, value){
+               return  this.storage[key] = value
             }
             getValues(key){
-                if(key in storage !== true){
+                if(key in this.storage !== true){
                     return storage[key]
                 }
-                return storage[key]
+                return this.storage[key]
             }
-
             deleteValues(key){
-                if(key in storage === true) {
-                    return delete storage[key];
+                if(key in this.storage === true) {
+                    return delete this.storage[key];
                 }
+                
             }
-
             getKeys(){
-                const keys = Object.keys(storage);
+                const keys = Object.keys(this.storage);
                 return keys
+
             }
-
-
         }
 
-
         let drinkStorage = new HashStorageClass(); 
-        //console.log(drinkStorage instanceof HashStorageFunk)
+        console.log(drinkStorage instanceof HashStorageClass)
 
         const add = document.getElementById("set-info"); 
         add.onclick = function () {
