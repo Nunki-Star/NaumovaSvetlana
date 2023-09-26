@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       class Dreamhouse{
+
+        constructor(location, price){
+            this.location = location;
+            this.price = price;
+        }
+        set location(value){
+            this.mylocation = value.toUpperCase()
+        }
+        set price(value){
+            this.myprice = value.toUpperCase()
+        }
+        get luckywinner(){
+            return this.mylocation + " " +this.myprice
+        }
+    }
+
+
+    let myDreamHouse = new Dreamhouse("Minsk New Borovaya","250000$")
+
+    console.log(myDreamHouse.luckywinner)
+
+
+    class Planet{
+        constructor(planet, color){
+            this.planet = planet;
+            this.color = color;
+        }
+        set planet(value){
+            this.myplanet = value.toUpperCase()
+        }
+        set color(value){
+            this.mycolor = value.toUpperCase()
+        }
+        get together(){
+            return this.myplanet + " " + this.mycolor
+        }
+    }
+
+    let favplanet = new Planet("jupiter", "yellow");
+    console.log(favplanet.together);
+
+
+
+    class Today{
+        constructor(donestaff, todostaff){
+            this.donestaff = donestaff;
+            this.todostaff = todostaff
+        }
+        set donestaff(value){
+            this.mydone = value.toUpperCase().trim()
+        }
+        set todostaff(value){
+            this.mytodo = value.trim().toUpperCase()
+        }
+        get plan(){
+            return this.mydone + " " + this.mytodo
+        }
+
+    }
+
+    let myPlan = new Today("     study   ", "  relax    ");
+    console.log(myPlan.plan)
+    </script>
+</body>
+</html>
