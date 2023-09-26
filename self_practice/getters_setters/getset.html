@@ -17,7 +17,78 @@
         }
         user.firstName = "svetlana";
         user.lastName = "naumova"
-        console.log(showname())
+        console.log(user.showname())
+
+
+
+
+        let car = {
+            color:"",
+            model:"",
+            showcar:function(){
+                return this.color+" "+this.model
+            }
+        }
+
+
+        car.color="white";
+        car.model="mers";
+        console.log(car.showcar());
+
+
+
+        let parfume = {
+            brand:"",
+            volume:"",
+            describe:function(){
+                return this.brand+" "+this.volume
+            }
+        }
+        parfume.brand = "tom ford";
+        parfume.volume="50ml";
+        console.log(parfume.describe());
+
+
+        let appartment = {
+            location:"",
+            price:"",
+            showAppartment:function(){
+                return this.location+" "+this.price
+            }
+        }
+
+        appartment.location="minsk";
+        appartment.price="200000$";
+        console.log(appartment.showAppartment())
+
+
+        let myLuck = {
+            howBig:"",
+            when:"",
+            set ammount(value){
+                this.howBig = value.toUpperCase();
+            },
+            set time(value){
+                this.when = value.toUpperCase();
+            },
+            get total(){
+                return this.howBig + " " + this.when
+            }
+        }
+
+       myLuck.ammount = "huge";
+        myLuck.time = "now";
+        console.log(myLuck.total);
+
+
+        
+
+
+
+
+
+
+
     </script>
 </body>
 </html>
