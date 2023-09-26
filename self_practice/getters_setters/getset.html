@@ -7,7 +7,7 @@
 </head>
 <body>
     <script>
-        let user = {
+       /* let user = {
             firstName :"",
             lastName  :"", 
             showname : function(){
@@ -81,10 +81,88 @@
         console.log(myLuck.total);
 
 
-        
+        let user2 = {
+            firstname:"",
+            lastname:"",
+            set first(value){
+                this.firstname = value.toUpperCase()
+            },
+            set last(value){
+                this.lastname = value.toUpperCase()
+            },
+            get fullname(){
+                return this.firstname + " " + this.lastname
+            }
+        }
+        user2.first = "Svetlana";
+        user2.last = "Naumova";
+        console.log(user2.fullname)
 
 
 
+
+        let user3 = {
+            firstname:"",
+            lastname:"",
+            set first(value){
+                this.firstname = value.toUpperCase()
+            },
+            set last(value){
+                this.lastname = value.toUpperCase()
+            },
+            get full(){
+                return this.firstname + " " + this.lastname
+            }
+        }
+
+        user3.first = "svetlana";
+        user3.last = "naumova";
+        console.log(user3.full)
+
+
+        class myCar{
+            constructor(myModel, myColor){
+                this.myModel = myModel;
+                this.myColor = myColor
+            }
+            set myModel(value){
+               this.model = value.toUpperCase()
+            }
+            set myColor(value){
+                this.color = value.toUpperCase()
+            }
+            get dreamcar(){
+                return this.model + " " + this.color
+            }
+        }
+
+        let dreamCAr = new myCar("mers", "white")
+        console.log(dreamCAr.dreamcar)
+
+*/
+
+
+
+    class Dreamhouse{
+        constructor(mylocation, myprice){
+            this.mylocation = mylocation;
+            this.myprice = myprice;
+        }
+        set mylocation(value){
+            this.mylocation = value.toUpperCase()
+        }
+        set myprice(value){
+            this.myprice = value.toUpperCase()
+        }
+        get luckywinner(){
+            return this.mylocation + " " +this.myprice
+        }
+    }
+
+
+    let myDreamHouse = new Dreamhouse("Minsk New Borovaya","250000$")
+
+    console.log(myDreamHouse.luckywinner)
 
 
 
