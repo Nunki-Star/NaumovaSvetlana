@@ -6,18 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <p>dom tree</p>
-    </div>
-    <div>
-        <ul>
-            <li>one</li>
-            <li>two</li>
-            <li>three</li>
-        </ul>
+    
     </div>
     <script>
-        let exploreBody = document.body;
+        /*let exploreBody = document.body;
         console.log(exploreBody);
         let exploreBodyFirst = exploreBody.firstChild;
         console.log(exploreBodyFirst);
@@ -30,7 +22,17 @@
         findFirsDiv.classList.add("first_class");
         findFirsDiv.style.color = "#0099FF";
         findFirsDiv.style.fontSize = "64px";
-        findFirsDiv.textContent = "done";
+        findFirsDiv.textContent = "done";*/
+
+
+
+
+        let newElement = document.createElement("input");
+        document.body.appendChild(newElement)
+        console.log(newElement)
+
+
+
         
 
 
