@@ -59,17 +59,59 @@ let objectsInArr1 = formDef1.forEach(function(item){
       getFirstForm.append(createdSelect)
       const devider = document.createElement("br");
       getFirstForm.append(devider);
-      
-      
+
+      item.variants.forEach(function(variantItems){
+        const createdOptions = document.createElement("option");
+        createdOptions.setAttribute("value", variantItems.value);
+        createdOptions.textContent = variantItems.text;
+        createdSelect.appendChild(createdOptions)
+      })
+    }
+
+
+    
+
+    if(item[key] === "radio"){
+      item.variants.forEach(function(radioElem){
+        const createdRadio = document.createElement("input");
+        createdRadio.type = "radio";
+        createdRadio.name = "payment";
+        createdRadio.setAttribute("value", radioElem.value);
+        let radioOptions = document.createElement("span");
+        radioOptions.textContent = radioElem.text;
+        createdRadio.innerHTML = item;
+        const getFirstForm = document.querySelector("#first");
+        getFirstForm.append(createdRadio);
+        getFirstForm.appendChild(radioOptions);
+        const devider = document.createElement("br");
+        getFirstForm.append(devider);
+      })
       
     }
-    if(item[key]==="submit"){
-      const createdSub = document.createElement("input");
-      createdSub.innerHTML = item;
-      createdSub.type = "submit"
+
+    if(item[key]==="check"){
+      const createdCheckBox = document.createElement("input");
+      createdCheckBox.type = "checkbox";
+      createdCheckBox.name = "votes";
+      createdCheckBox.innerHTML = item;
       const getFirstForm = document.querySelector("#first");
-      getFirstForm.append(createdSub)
+      getFirstForm.append(createdCheckBox);
+      const devider = document.createElement("br");
+      getFirstForm.append(devider);
     }
+
+
+    
+
+
+      if(item[key]==="submit"){
+        const createdSub = document.createElement("input");
+        createdSub.innerHTML = item;
+        createdSub.type = "submit"
+        const getFirstForm = document.querySelector("#first");
+        getFirstForm.append(createdSub);
+        
+      }
 
 
    
