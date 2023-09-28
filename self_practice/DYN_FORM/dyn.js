@@ -1,5 +1,3 @@
-
-
 const formDef1 = [
     {label:'Название сайта:',kind:'longtext',name:'sitename'},
     {label:'URL сайта:',kind:'longtext',name:'siteurl'},
@@ -28,7 +26,8 @@ const formDef2 = [
 }*/
 
 
-let objectsInArr1 = formDef1.forEach(function(item){
+function createdDynamicForm(arr1, arr2){
+formDef1.forEach(function(item){
   console.log(item);
   for(key in item){
     console.log(key+" znacheniye");
@@ -101,7 +100,17 @@ let objectsInArr1 = formDef1.forEach(function(item){
     }
 
 
-    
+    if(item[key]==="memo"){
+      const createdMemo = document.createElement("textarea");
+      createdMemo.name = "description";
+      createdMemo.style.width = "300px";
+      createdMemo.style.height = "200px";
+      createdMemo.html = item;
+      const getFirstForm = document.querySelector("#first");
+      getFirstForm.append(createdMemo);
+      const devider = document.createElement("br");
+      getFirstForm.append(devider);
+    }
 
 
       if(item[key]==="submit"){
@@ -110,17 +119,52 @@ let objectsInArr1 = formDef1.forEach(function(item){
         createdSub.type = "submit"
         const getFirstForm = document.querySelector("#first");
         getFirstForm.append(createdSub);
+        const devider = document.createElement("br");
+        getFirstForm.append(devider);
         
       }
+    }
+  });
 
 
-   
-    
-    
 
+    formDef2.forEach(function(item2){
+      console.log(item2);
+      for(key in item2){
+        console.log(key+" znacheniye");
+        console.log(item2[key] + " key");
+        if(key === "label"){
+          const createdLabel = document.createElement("label");
+          createdLabel.innerHTML = item2[key];
+          const getFirstForm = document.querySelector("#first");
+          getFirstForm.appendChild(createdLabel);
+          
+        }
+        if(item2[key] === "longtext" || item2[key]==="number"){
+          const createdInput = document.createElement("input");
+          createdInput.innerHTML = item2;
+          const getFirstForm = document.querySelector("#first");
+          getFirstForm.append(createdInput)
+          const devider = document.createElement("br");
+          getFirstForm.append(devider);
+          const createdAttrType =document.createAttribute("type");
+          createdAttrType.value = "text"
+          createdInput.setAttributeNode(createdAttrType)
+        }
+        if(item2[key]==="submit"){
+            const createdSub = document.createElement("input");
+            createdSub.innerHTML = item2;
+            createdSub.type = "submit"
+            const getFirstForm = document.querySelector("#first");
+            getFirstForm.append(createdSub);
+            const devider = document.createElement("br");
+            getFirstForm.append(devider);
+            
+          }
+        }
     
-  }
   
 });
 
-
+}
+createdDynamicForm(formDef1, formDef2, document.forms.firstForm, document.forms.secondForm);
