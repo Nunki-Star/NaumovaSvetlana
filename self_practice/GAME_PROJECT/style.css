@@ -3,8 +3,17 @@
     margin: 0;
     box-sizing: border-box;
 }
+@font-face {
+    font-family: Jelantik;
+    src: url(Jelantik\ demo.ttf);
+}
 body{
     background-image: url(images/gradient-forest-landscape_52683-77405.jpg.avif);
     background-size: 100%;
-    
+
+}
+
+.container .title{
+    color: #FF7F50;
+    font-size:100px
 }
