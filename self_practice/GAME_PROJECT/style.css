@@ -3,6 +3,8 @@
     margin: 0;
     box-sizing: border-box;
 }
-.container{
-    background-image: url(gradient-forest-landscape_52683-77405.jpg.avif);
+body{
+    background-image: url(images/gradient-forest-landscape_52683-77405.jpg.avif);
+    background-size: 100%;
+    
 }
