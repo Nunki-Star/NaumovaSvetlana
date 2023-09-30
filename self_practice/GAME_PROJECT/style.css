@@ -15,5 +15,11 @@ body{
 
 .container .title{
     color: #FF7F50;
-    font-size:100px
+    font-size:100px;
+   
 }
+
+.animate__animated.animate__bounce {
+    --animate-duration: 5s;
+  }
+  
