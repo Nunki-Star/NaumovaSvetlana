@@ -10,16 +10,33 @@
 body{
     background-image: url(images/gradient-forest-landscape_52683-77405.jpg.avif);
     background-size: 100%;
+    background-repeat: no-repeat;
+    
 
 }
 
-.container .title{
-    color: #FF7F50;
+.container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.container .title p:first-child{
+    /*color: #FF7F50;*/
+    /*color:#F88379;*/
+    color:#FF5F1F;
+    opacity: 0.8;
     font-size:100px;
-   
+    margin-top:150px;
+    text-shadow: 0px 4px 0px lightyellow;
 }
-
-.animate__animated.animate__bounce {
-    --animate-duration: 5s;
+.animate__animated.animate__bounceInDown{
+    --animate-duration: 3s;
+    color:#FF5F1F;
+    opacity:0.9;
+    font-size:150px;
+    text-shadow: 0px 4px 0px lightyellow;
   }
-  
+
+
+
