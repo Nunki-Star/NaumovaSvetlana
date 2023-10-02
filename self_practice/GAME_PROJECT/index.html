@@ -6,7 +6,7 @@
     <title>GAME</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 
@@ -17,23 +17,35 @@
 
     <div class="container">
         <div class="title">
-            <p style="font-family:Jelantik" id="weirdtext">Welcome to</p>
+            <p style="font-family:Jelantik"   class="animate_animated animate__backInLeft"  id="weirdtext">Welcome to</p>
             <p style="font-family: Jelantik" class="animate__animated animate__bounceInDown">Memory Boxes</h2>
         </div>
    
     </div>
-    <div class="buttons">
+    <div class="buttons" class="">
         <button>
-            <span style="background-image: url();"></span>
+            <i class="fa-solid fa-music fa-bounce fa-2xl" style="color: lightgoldenrodyellow"></i>
         </button>
-        <button></button>
-        <button></button>
+        <button>
+            <i class="fa-solid fa-face-smile fa-bounce fa-2xl" style="color:lightgoldenrodyellow"></i>
+        </button>
+        <button onclick="change()" id="changePicture">
+            <i class="fa-solid fa-moon fa-bounce fa-2xl" style="color:lightgoldenrodyellow"></i>
+        </button>
     </div>
     
     <audio autoplay>
-        <source src="soft-piano-logo-141290.ogg" type='audio/ogg; codecs=vorbis'>
-        <source src="soft-piano-logo-141290.mp3" type="audio/mpeg">
-        
+        <source src="sonic-wave-134902.mp3"/>
     </audio>
+   
+    <script>
+        
+          
+        
+
+
+
+    </script>
+    
 </body>
 </html>
