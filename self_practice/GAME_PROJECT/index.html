@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="fly.js"></script>
 
 
     
@@ -18,21 +19,21 @@
     <div class="container">
         <div class="title">
             <p style="font-family:Jelantik"   class="animate_animated animate__backInLeft"  id="weirdtext">Welcome to</p>
-            <p style="font-family: Jelantik" class="animate__animated animate__bounceInDown">Memory Boxes</h2>
+            <p style="font-family: Jelantik" class="animate__animated animate__bounceInDown" id="largeText">Memory Boxes</h2>
         </div>
    
     </div>
     <div class="buttons">
-        <button value="PLAY" onclick="play(), mute(), change()" class="bubbly-button">
+        <button value="PLAY" onclick="play(), mute(), change()" class="bubbly-button" id="btn">
             <audio id="audio" src="twinkles_cutted.mp3"></audio>
             <i class="fa-solid fa-volume-xmark fa-bounce fa-2xl" style="color: lightgoldenrodyellow"></i>
             <!--<i class="fa-solid fa-music fa-bounce fa-2xl" id="img2" onClick="chg(this.id)" style="color: #fefcdd; display:none"></i>-->
         </button>
-        <button value="PLAY" onclick="play()" class="bubbly-button">
+        <button value="PLAY" onclick="play()" class="bubbly-button" id="btn"><a href=""></a>
             <audio id="audio" src="twinkles_cutted.mp3"></audio>
             <i class="fa-solid fa-face-smile fa-bounce fa-2xl" style="color:lightgoldenrodyellow"></i>
         </button>
-        <button value="PLAY" onclick="play(), changeBg()" class="bubbly-button" id="changeBg">
+        <button value="PLAY" onclick="play(), changeBg()" class="bubbly-button" id="btn">
             <audio id="audio" src="twinkles_cutted.mp3"></audio>
             <i class="fa-solid fa-moon fa-bounce fa-2xl" style="color:lightgoldenrodyellow"></i>
         </button>
@@ -40,12 +41,131 @@
     <audio id="background_audio" autoplay loop>
         <source src="sonic-wave-134902.mp3"/>
     </audio>
-   
+
+
+    <script type="text/javascript" src="fly.js"></script>
     <script>
+
+
+        (function($) { 
+    
+    let defaults = {
+            total : 70,
+            ofTop: 0,
+            ofLeft: 0,
+            on:'document.body',
+            twinkle: 0.1,
+            minPixel: 1,
+            maxPixel: 2,
+            color: '#fc0'
+    };
+    $.firefly = function(settings) {
+ 
+            $.firefly.settings = $.extend({}, defaults, settings);
+            $.firefly.eleHeight = $($.firefly.settings.on).height();
+            $.firefly.eleWidth = $($.firefly.settings.on).width();
+            if($.firefly.settings.on!=='document.body'){
+                var off = $($.firefly.settings.on).offset();
+                $.firefly.offsetTop = off.top;
+                $.firefly.offsetLeft = off.left;
+                $.firefly.eleHeight = $($.firefly.settings.on).height();
+                $.firefly.eleWidth = $($.firefly.settings.on).width();
+            }
+            else{
+                $.firefly.offsetTop = 0;
+                $.firefly.offsetLeft = 0;
+                $.firefly.eleHeight = $(document.body).height();
+                $.firefly.eleWidth = $(document.body).width();
+ 
+            }
+ 
+             
+         
+ 
+            for (i = 0; i < $.firefly.settings.total; i++){
+ 
+                $.firefly.fly($.firefly.create($.firefly.randomPixel($.firefly.settings.minPixel, $.firefly.settings.maxPixel)));
+            }
+ 
+            return;
+    };
+     
+    /*
+     * PUBLIC FUNCTIONS
+     */
+ 
+     $.firefly.create = function(pixelSize){
+        spark = $('<div>').hide();
+ 
+        if($.firefly.settings.on === 'document.body')
+            $(document.body).append(spark);
+        else
+            $($.firefly.settings.on).append(spark);
+         
+ 
+ 
+ 
+        return spark.css({'position':'absolute',    
+                        'width' : pixelSize, 
+                        'height': pixelSize,
+                        'background-color': $.firefly.settings.color,
+                        'z-index': $.firefly.random(20), //UNDER ALL THE STUFF
+                        top: $.firefly.offsetTop + $.firefly.random(($.firefly.eleHeight-50)),  //OFFSETS
+                        left:  $.firefly.offsetLeft + $.firefly.random(($.firefly.eleWidth-50)) //OFFSETS
+                        }).show();
+ 
+     }
+     
+ 
+ 
+        $.firefly.fly = function(sp) {
+        
+        $(sp).animate({
+            top: $.firefly.offsetTop + $.firefly.random(($.firefly.eleHeight-50)),    //OFFSETS
+            left: $.firefly.offsetLeft + $.firefly.random(($.firefly.eleWidth-50)),
+            opacity: $.firefly.opacity($.firefly.settings.twinkle)
+        }, (($.firefly.random(10) + 5) * 2000),function(){  $.firefly.fly(sp) } );
+        };
+        
+        $.firefly.stop = function(sp) {
+        $(sp).stop();
+        };
+ 
+ 
+ 
+        $.firefly.randomPixel = function(min, max) {
+            return Math.floor(Math.random()*(max-min+1)+min);
+        }
+        $.firefly.random = function(max) {
+            return Math.ceil(Math.random() * max) - 1;
+        }
+        // SET TWINKLE.
+        $.firefly.opacity = function(min)
+        {
+        op= Math.random();
+        if(op < min)
+                return 0;
+        else
+                return 1;
+}       
+        })(jQuery);
+                $(document).ready(function() {
+            $.firefly();    
+        });
+
+
+
         function changeBg(){
-            document.querySelector("body").style.backgroundImage = "url(images/night.jpg)"
+            document.querySelector("body").style.backgroundImage = "url(images/night.jpg)";
+            document.querySelector("p").style.color="#ffd8f7";
+            document.querySelector("p").style.textShadow="0px 3px 0px #f0799d";
+            document.querySelector("#largeText").style.color="#ffd8f7";
+            document.querySelector("#largeText").style.textShadow="0px 6px 0px #f0799d";
+            document.querySelectorAll("button").style.color="#f0799d"
         }
     
+        
+
         function change(){
             const musicOn = document.getElementsByTagName("i");
             if(musicOn[0].class==="fa-solid fa-volume-xmark fa-bounce fa-2xl"){
@@ -66,10 +186,10 @@
         function mute(){
               if(document.getElementById('background_audio').muted == false){
 
-                document.getElementById('background_audio').muted == true;
+                document.getElementById('background_audio').muted = true;
                 
               } else {
-                document.getElementById('background_audio').muted == false;
+                document.getElementById('background_audio').muted = false;
                
         }
     }
