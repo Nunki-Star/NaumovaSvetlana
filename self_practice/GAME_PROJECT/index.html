@@ -23,44 +23,56 @@
    
     </div>
     <div class="buttons">
-        <button value="PLAY" onclick="play(), mute()" class="bubbly-button">
+        <button value="PLAY" onclick="play(), mute(), change()" class="bubbly-button">
             <audio id="audio" src="twinkles_cutted.mp3"></audio>
-            <i class="fa-solid fa-music fa-bounce fa-2xl" style="color: lightgoldenrodyellow"></i>
-            <i class="fa-solid fa-volume-xmark fa-bounce" style="color: #fefcdd; display:none"></i>
+            <i class="fa-solid fa-volume-xmark fa-bounce fa-2xl" style="color: lightgoldenrodyellow"></i>
+            <!--<i class="fa-solid fa-music fa-bounce fa-2xl" id="img2" onClick="chg(this.id)" style="color: #fefcdd; display:none"></i>-->
         </button>
         <button value="PLAY" onclick="play()" class="bubbly-button">
             <audio id="audio" src="twinkles_cutted.mp3"></audio>
             <i class="fa-solid fa-face-smile fa-bounce fa-2xl" style="color:lightgoldenrodyellow"></i>
         </button>
-        <button value="PLAY" onclick="play()" class="bubbly-button">
+        <button value="PLAY" onclick="play(), changeBg()" class="bubbly-button" id="changeBg">
             <audio id="audio" src="twinkles_cutted.mp3"></audio>
             <i class="fa-solid fa-moon fa-bounce fa-2xl" style="color:lightgoldenrodyellow"></i>
         </button>
     </div>
-
-
-    
-    
     <audio id="background_audio" autoplay loop>
         <source src="sonic-wave-134902.mp3"/>
     </audio>
    
     <script>
+        function changeBg(){
+            document.querySelector("body").style.backgroundImage = "url(images/night.jpg)"
+        }
+    
+        function change(){
+            const musicOn = document.getElementsByTagName("i");
+            if(musicOn[0].class==="fa-solid fa-volume-xmark fa-bounce fa-2xl"){
+                musicOn[0].setAttribute("class", "fa-solid fa-music fa-bounce fa-2xl")
+            } else {
+                musicOn[0].setAttribute("class", "fa-solid fa-music fa-bounce fa-2xl")
+            }
+        }
+                
+        
+
         function play() {
          let audio = document.getElementById("audio");
             audio.play();
-        }
+        };
         
 
         function mute(){
               if(document.getElementById('background_audio').muted == false){
-                document.getElementById('background_audio').muted = true;
+
+                document.getElementById('background_audio').muted == true;
+                
               } else {
-                document.getElementById('background_audio').muted = false;
-              }
-
+                document.getElementById('background_audio').muted == false;
+               
+        }
     }
-
 
 
     let animateButton = function(e) {

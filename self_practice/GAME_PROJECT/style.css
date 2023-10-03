@@ -8,9 +8,11 @@
     src: url(Jelantik\ demo.ttf);
 }
 body{
-    background-image: url(images/gradient-forest-landscape_52683-77405.jpg.avif);
+    background-image: url(images/gradient-forest-landscape.jpg.avif);
     background-size: 100%;
     background-repeat: no-repeat;
+    
+    
     
 
 }
