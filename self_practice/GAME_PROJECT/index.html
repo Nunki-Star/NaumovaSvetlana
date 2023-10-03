@@ -22,28 +22,64 @@
         </div>
    
     </div>
-    <div class="buttons" class="">
-        <button>
+    <div class="buttons">
+        <button value="PLAY" onclick="play(), mute()" class="bubbly-button">
+            <audio id="audio" src="twinkles_cutted.mp3"></audio>
             <i class="fa-solid fa-music fa-bounce fa-2xl" style="color: lightgoldenrodyellow"></i>
+            <i class="fa-solid fa-volume-xmark fa-bounce" style="color: #fefcdd; display:none"></i>
         </button>
-        <button>
+        <button value="PLAY" onclick="play()" class="bubbly-button">
+            <audio id="audio" src="twinkles_cutted.mp3"></audio>
             <i class="fa-solid fa-face-smile fa-bounce fa-2xl" style="color:lightgoldenrodyellow"></i>
         </button>
-        <button onclick="change()" id="changePicture">
+        <button value="PLAY" onclick="play()" class="bubbly-button">
+            <audio id="audio" src="twinkles_cutted.mp3"></audio>
             <i class="fa-solid fa-moon fa-bounce fa-2xl" style="color:lightgoldenrodyellow"></i>
         </button>
     </div>
+
+
     
-    <audio autoplay>
+    
+    <audio id="background_audio" autoplay loop>
         <source src="sonic-wave-134902.mp3"/>
     </audio>
    
     <script>
-        
-          
+        function play() {
+         let audio = document.getElementById("audio");
+            audio.play();
+        }
         
 
+        function mute(){
+              if(document.getElementById('background_audio').muted == false){
+                document.getElementById('background_audio').muted = true;
+              } else {
+                document.getElementById('background_audio').muted = false;
+              }
 
+    }
+
+
+
+    let animateButton = function(e) {
+
+        e.preventDefault;
+        //reset animation
+        e.target.classList.remove('animate');
+
+        e.target.classList.add('animate');
+        setTimeout(function(){
+        e.target.classList.remove('animate');
+        },700);
+    };
+
+    let bubblyButtons = document.getElementsByClassName("bubbly-button");
+
+    for (let i = 0; i < bubblyButtons.length; i++) {
+        bubblyButtons[i].addEventListener('click', animateButton, false);
+    }
 
     </script>
     
