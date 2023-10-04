@@ -52,15 +52,7 @@
 
         
 
-        /*function changeBg(){
-            document.querySelector("body").style.backgroundImage = "url(images/night.jpg)";
-            document.querySelector("p").style.color="#ffd8f7";
-            document.querySelector("p").style.textShadow="0px 3px 0px #f0799d";
-            document.querySelector("#largeText").style.color="#ffd8f7";
-            document.querySelector("#largeText").style.textShadow="0px 6px 0px #f0799d";
-            document.querySelectorAll("button").style.color="#f0799d"
-        }*/
-    
+        
         
         
         function change(){
@@ -73,33 +65,31 @@
                 musicOn[0].setAttribute("class", "fa-solid fa-volume-xmark fa-bounce fa-2xl")
             }
         };
-        const bgImage = document.getElementsByTagName("body")
-        console.log(bgImage.getAttribute("style")==="url(images/gradient-forest-landscape.jpg.avif)")
+        
         function changeDayToNight(){
             const dayOrNight = document.getElementsByTagName("i");
-            const bgImage = document.getElementsByTagName("body")
+            
             if(dayOrNight[2].getAttribute("class")=== "fa-solid fa-moon fa-bounce fa-2xl"){
                 dayOrNight[2].removeAttribute("class");
                 dayOrNight[2].setAttribute("class", "fa-solid fa-sun fa-bounce fa-2xl")
+                document.querySelector("body").style.backgroundImage = "url(images/night.jpg)";
+                document.querySelector("p").style.color="#ffd8f7";
+                document.querySelector("p").style.textShadow="0px 3px 0px #f0799d";
+                document.querySelector("#largeText").style.color="#ffd8f7";
+                document.querySelector("#largeText").style.textShadow="0px 6px 0px #f0799d";
+                document.querySelectorAll("button").style.color="#f0799d"
+                
             } else {
                 dayOrNight[2].removeAttribute("class");
-                dayOrNight[2].setAttribute("class", "fa-solid fa-moon fa-bounce fa-2xl")
+                dayOrNight[2].setAttribute("class", "fa-solid fa-moon fa-bounce fa-2xl");
+                document.querySelector("body").style.backgroundImage = "url(images/gradient-forest-landscape.jpg.avif)";
+                document.querySelector("p").style.color="#ffd8f7";
+                document.querySelector("p").style.textShadow="0px 3px 0px #f0799d";
+                document.querySelector("#largeText").style.color="#ffd8f7";
+                document.querySelector("#largeText").style.textShadow="0px 6px 0px #f0799d";
+                document.querySelectorAll("button").style.color="#f0799d"
             }
         };
-
-        
-        /*function changeDayToNight(){
-            const dayOrNight = document.getElementsByTagName("i");
-            if(dayOrNight[2].getAttribute("class")=== "fa-solid fa-moon fa-bounce fa-2xl"){
-                dayOrNight[2].removeAttribute("class");
-                dayOrNight[2].setAttribute("class", "fa-solid fa-sun fa-bounce fa-2xl")
-            } else {
-                dayOrNight[2].removeAttribute("class");
-                dayOrNight[2].setAttribute("class", "fa-solid fa-moon fa-bounce fa-2xl")
-            }
-        }*/
-                
-        
 
         function play() {
          let audio = document.getElementById("audio");
