@@ -29,15 +29,16 @@
             <i class="fa-solid fa-volume-xmark fa-bounce fa-2xl" style="color: lightgoldenrodyellow"></i>
             <!--<i class="fa-solid fa-music fa-bounce fa-2xl" id="img2" onClick="chg(this.id)" style="color: #fefcdd; display:none"></i>-->
         </button>
-        <button value="PLAY" onclick="play()" class="bubbly-button" id="btn">
+        <button  onclick="" class="bubbly-button" id="btn">
             <a href="play_page.html"></a>
             <audio id="audio" src="twinkles_cutted.mp3"></audio>
             <i class="fa-solid fa-face-smile fa-bounce fa-2xl" style="color:lightgoldenrodyellow"></i>
 
         </button>
-        <button value="PLAY" onclick="play(), changeBg()" class="bubbly-button" id="btn">
+        <button  onclick="changeDayToNight()" class="bubbly-button" id="btn">
             <audio id="audio" src="twinkles_cutted.mp3"></audio>
             <i class="fa-solid fa-moon fa-bounce fa-2xl" style="color:lightgoldenrodyellow"></i>
+            <!--<<i class="fa-solid fa-sun fa-bounce fa-2xl" style="color: #f8fadb;"></i>"></i>-->
         </button>
     </div>
     <audio id="background_audio" autoplay loop>
@@ -51,26 +52,52 @@
 
         
 
-        function changeBg(){
+        /*function changeBg(){
             document.querySelector("body").style.backgroundImage = "url(images/night.jpg)";
             document.querySelector("p").style.color="#ffd8f7";
             document.querySelector("p").style.textShadow="0px 3px 0px #f0799d";
             document.querySelector("#largeText").style.color="#ffd8f7";
             document.querySelector("#largeText").style.textShadow="0px 6px 0px #f0799d";
             document.querySelectorAll("button").style.color="#f0799d"
-        }
+        }*/
     
-        const musicOn = document.getElementsByTagName("i"); 
-        console.log(musicOn)       
+        
         
         function change(){
             const musicOn = document.getElementsByTagName("i");
-            if(musicOn[0].class==="fa-solid fa-volume-xmark fa-bounce fa-2xl"){
+            if(musicOn[0].getAttribute("class")=== "fa-solid fa-volume-xmark fa-bounce fa-2xl"){
+                musicOn[0].removeAttribute("class");
                 musicOn[0].setAttribute("class", "fa-solid fa-music fa-bounce fa-2xl")
             } else {
-                musicOn[0].setAttribute("class", "fa-solid fa-music fa-bounce fa-2xl")
+                musicOn[0].removeAttribute("class");
+                musicOn[0].setAttribute("class", "fa-solid fa-volume-xmark fa-bounce fa-2xl")
             }
-        }
+        };
+        const bgImage = document.getElementsByTagName("body")
+        console.log(bgImage.getAttribute("style")==="url(images/gradient-forest-landscape.jpg.avif)")
+        function changeDayToNight(){
+            const dayOrNight = document.getElementsByTagName("i");
+            const bgImage = document.getElementsByTagName("body")
+            if(dayOrNight[2].getAttribute("class")=== "fa-solid fa-moon fa-bounce fa-2xl"){
+                dayOrNight[2].removeAttribute("class");
+                dayOrNight[2].setAttribute("class", "fa-solid fa-sun fa-bounce fa-2xl")
+            } else {
+                dayOrNight[2].removeAttribute("class");
+                dayOrNight[2].setAttribute("class", "fa-solid fa-moon fa-bounce fa-2xl")
+            }
+        };
+
+        
+        /*function changeDayToNight(){
+            const dayOrNight = document.getElementsByTagName("i");
+            if(dayOrNight[2].getAttribute("class")=== "fa-solid fa-moon fa-bounce fa-2xl"){
+                dayOrNight[2].removeAttribute("class");
+                dayOrNight[2].setAttribute("class", "fa-solid fa-sun fa-bounce fa-2xl")
+            } else {
+                dayOrNight[2].removeAttribute("class");
+                dayOrNight[2].setAttribute("class", "fa-solid fa-moon fa-bounce fa-2xl")
+            }
+        }*/
                 
         
 

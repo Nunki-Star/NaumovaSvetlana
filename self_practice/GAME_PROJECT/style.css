@@ -26,7 +26,7 @@ body{
 .container .title p:first-child{
     /*color: #FF7F50;*/
     /*color:#F88379;*/
-    color:#FF5F1F;
+    color:#fca72f;
     opacity: 0.8;
     font-size:100px;
     margin-top:150px;
@@ -35,7 +35,7 @@ body{
 }
 .animate__animated.animate__bounceInDown{
     --animate-duration: 3s;
-    color:#FF5F1F;
+    color:#fca72f;
     opacity:0.9;
     font-size:150px;
     text-shadow: 0px 4px 0px lightyellow;
@@ -54,7 +54,7 @@ button{
     height:60px;
     border-radius:50%;
     opacity:0.8;
-    background-color:#FF5F1F;
+    background-color:#fca72f;
     box-shadow: 0px 4px 0px lightyellow;
     border: 1px;
 }
@@ -73,7 +73,7 @@ button:nth-child(2), button:nth-child(3){
     margin-bottom: 60px;
     -webkit-appearance: none;
     appearance: none;
-    background-color: #FF5F1F;
+    background-color: #fca72f;
     color: #fff;
     border-radius: 10px;
     border: none;
