@@ -11,10 +11,6 @@ body{
     background-image: url(images/gradient-forest-landscape.jpg.avif);
     background-size: 100%;
     background-repeat: no-repeat;
-    
-    
-    
-
 }
 
 .container{
@@ -23,22 +19,27 @@ body{
     justify-content: center;
     text-align: center;
 }
-.container .title p:first-child{
+.container .title p:first-child {
     /*color: #FF7F50;*/
     /*color:#F88379;*/
-    color:#fca72f;
+    color:#F04A00;
     opacity: 0.8;
     font-size:100px;
     margin-top:150px;
-    text-shadow: 0px 4px 0px lightyellow;
+    text-shadow: 2px 20px 25px lightyellow;
+   
     
 }
+
+
+
 .animate__animated.animate__bounceInDown{
     --animate-duration: 3s;
-    color:#fca72f;
+    color:#F04A00;
     opacity:0.9;
-    font-size:150px;
-    text-shadow: 0px 4px 0px lightyellow;
+    font-size:180px;
+    text-shadow: 2px 20px 25px lightyellow;
+    
   }
 .animate_animated.animate__backInLeft{
     --animate-duration: 3s;
@@ -54,8 +55,7 @@ button{
     height:60px;
     border-radius:50%;
     opacity:0.8;
-    background-color:#fca72f;
-    box-shadow: 0px 4px 0px lightyellow;
+    box-shadow: 2px 20px 25px lightyellow;
     border: 1px;
 }
 button:nth-child(2), button:nth-child(3){
@@ -73,14 +73,14 @@ button:nth-child(2), button:nth-child(3){
     margin-bottom: 60px;
     -webkit-appearance: none;
     appearance: none;
-    background-color: #fca72f;
+    background-color: #ff0081;
     color: #fff;
     border-radius: 10px;
     border: none;
     cursor: pointer;
     position: relative;
     transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
-    box-shadow: 0 10px 25px lightgoldenrodyellow
+    box-shadow: 2px 20px 25px lightgoldenrodyellow
   }
   .bubbly-button:focus {
     outline: 0;
@@ -100,13 +100,13 @@ button:nth-child(2), button:nth-child(3){
     display: none;
     top: -75%;
     background-image: radial-gradient(circle, #ff0081 40%, transparent 20%), radial-gradient(circle, transparent 20%, #ff0081 40%, transparent 30%), radial-gradient(circle, #ff0081 40%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
-    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+    background-size: 20% 20%, 30% 30%, 20% 20%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 30% 30%, 18% 18%;
   }
   .bubbly-button:after {
     display: none;
     bottom: -75%;
     background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
-    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+    background-size: 15% 15%, 30% 30%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
   }
   .bubbly-button:active {
     transform: scale(0.9);
@@ -131,7 +131,7 @@ button:nth-child(2), button:nth-child(3){
     }
     100% {
       background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
-      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+      background-size: 10% 10%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
     }
   }
   @keyframes bottomBubbles {

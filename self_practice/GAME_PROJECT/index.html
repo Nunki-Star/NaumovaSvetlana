@@ -23,21 +23,24 @@
         </div>
    
     </div>
+    <div>
+        <input type = "text" class="input">
+    </div>
     <div class="buttons">
-        <button value="PLAY" onclick="play(), mute(), change()" class="bubbly-button" id="btn">
+        <button value="PLAY" onclick="play(), mute(), change()" class="bubbly-button" >
             <audio id="audio" src="twinkles_cutted.mp3"></audio>
-            <i class="fa-solid fa-volume-xmark fa-bounce fa-2xl" style="color: lightgoldenrodyellow"></i>
+            <i class="fa-solid fa-volume-xmark fa-bounce fa-2xl"></i>
             <!--<i class="fa-solid fa-music fa-bounce fa-2xl" id="img2" onClick="chg(this.id)" style="color: #fefcdd; display:none"></i>-->
         </button>
-        <button  onclick="" class="bubbly-button" id="btn">
+        <button value="PLAY" onclick="play(), changeCoordinates()" class="bubbly-button" id="play">
             <a href="play_page.html"></a>
             <audio id="audio" src="twinkles_cutted.mp3"></audio>
-            <i class="fa-solid fa-face-smile fa-bounce fa-2xl" style="color:lightgoldenrodyellow"></i>
+            <i class="fa-solid fa-face-smile fa-bounce fa-2xl"></i>
 
         </button>
-        <button  onclick="changeDayToNight()" class="bubbly-button" id="btn">
+        <button value="PLAY" onclick="play(), changeDayToNight()" class="bubbly-button" >
             <audio id="audio" src="twinkles_cutted.mp3"></audio>
-            <i class="fa-solid fa-moon fa-bounce fa-2xl" style="color:lightgoldenrodyellow"></i>
+            <i class="fa-solid fa-moon fa-bounce fa-2xl"></i>
             <!--<<i class="fa-solid fa-sun fa-bounce fa-2xl" style="color: #f8fadb;"></i>"></i>-->
         </button>
     </div>
@@ -51,7 +54,12 @@
 
 
         
+        function changeCoordinates(){
+            const playButton = document.querySelector("#play");
+            if(document.querySelectorAll(".container").style.justifyContent ==="center" && document.querySelectorAll(".container").textAlign ==="center"){
 
+            }
+        }
         
         
         
@@ -66,28 +74,31 @@
             }
         };
         
+
         function changeDayToNight(){
             const dayOrNight = document.getElementsByTagName("i");
-            
+           
+
             if(dayOrNight[2].getAttribute("class")=== "fa-solid fa-moon fa-bounce fa-2xl"){
                 dayOrNight[2].removeAttribute("class");
                 dayOrNight[2].setAttribute("class", "fa-solid fa-sun fa-bounce fa-2xl")
-                document.querySelector("body").style.backgroundImage = "url(images/night.jpg)";
+                document.querySelector("body").style.backgroundImage ="url(images/night.jpg)";
                 document.querySelector("p").style.color="#ffd8f7";
-                document.querySelector("p").style.textShadow="0px 3px 0px #f0799d";
+                document.querySelector("p").style.textShadow="2px 20px 25px #f0799d";
                 document.querySelector("#largeText").style.color="#ffd8f7";
-                document.querySelector("#largeText").style.textShadow="0px 6px 0px #f0799d";
-                document.querySelectorAll("button").style.color="#f0799d"
+                document.querySelector("#largeText").style.textShadow="2px 20px 25px #f0799d";
+                document.querySelectorAll("#btn").style.backgroundColor = "ffd8f7"
+                
                 
             } else {
                 dayOrNight[2].removeAttribute("class");
                 dayOrNight[2].setAttribute("class", "fa-solid fa-moon fa-bounce fa-2xl");
                 document.querySelector("body").style.backgroundImage = "url(images/gradient-forest-landscape.jpg.avif)";
-                document.querySelector("p").style.color="#ffd8f7";
-                document.querySelector("p").style.textShadow="0px 3px 0px #f0799d";
-                document.querySelector("#largeText").style.color="#ffd8f7";
-                document.querySelector("#largeText").style.textShadow="0px 6px 0px #f0799d";
-                document.querySelectorAll("button").style.color="#f0799d"
+                document.querySelector("p").style.color="#F04A00";
+                document.querySelector("p").style.textShadow="2px 20px 25px lightyellow";
+                document.querySelector("#largeText").style.color="#F04A00";
+                document.querySelector("#largeText").style.textShadow="2px 20px 25px lightyellow";
+                document.querySelectorAll("#btn").style.backgroundColor = "#F04A00"
             }
         };
 
