@@ -22,9 +22,8 @@
             <p style="font-family: Jelantik" class="animate__animated animate__bounceInDown" id="largeText">Memory Boxes</h2>
         </div>
    
-    </div>
-    <div>
-        <input type = "text" class="input">
+    
+        
     </div>
     <div class="buttons">
         <button value="PLAY" onclick="play(), mute(), change()" class="bubbly-button" >
@@ -36,6 +35,7 @@
             <a href="play_page.html"></a>
             <audio id="audio" src="twinkles_cutted.mp3"></audio>
             <i class="fa-solid fa-face-smile fa-bounce fa-2xl"></i>
+            <!--<i class="fa-solid fa-house fa-bounce fa-2xl" style="color: #f2f7b7;"></i>-->
 
         </button>
         <button value="PLAY" onclick="play(), changeDayToNight()" class="bubbly-button" >
@@ -52,17 +52,6 @@
     <script type="text/javascript" src="fly.js"></script>
     <script>
 
-
-        
-        function changeCoordinates(){
-            const playButton = document.querySelector("#play");
-            if(document.querySelectorAll(".container").style.justifyContent ==="center" && document.querySelectorAll(".container").textAlign ==="center"){
-
-            }
-        }
-        
-        
-        
         function change(){
             const musicOn = document.getElementsByTagName("i");
             if(musicOn[0].getAttribute("class")=== "fa-solid fa-volume-xmark fa-bounce fa-2xl"){
@@ -74,6 +63,16 @@
             }
         };
         
+
+
+        function changeCoordinates(){
+            const smiley = document.getElementsByTagName("i");
+            if(smiley[1].getAttribute("class")==="fa-solid fa-face-smile fa-bounce fa-2xl"){
+                smiley[1].removeAttribute("class");
+                smiley[1].setAttribute("class", "fa-solid fa-house fa-bounce fa-2xl")
+            }
+
+        }
 
         function changeDayToNight(){
             const dayOrNight = document.getElementsByTagName("i");
@@ -137,6 +136,8 @@
     for (let i = 0; i < bubblyButtons.length; i++) {
         bubblyButtons[i].addEventListener('click', animateButton, false);
     }
+
+    
 
     </script>
     
