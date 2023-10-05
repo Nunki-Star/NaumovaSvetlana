@@ -63,13 +63,18 @@
             }
         };
         
-
+        console.log(document.getElementsByClassName("container"))
 
         function changeCoordinates(){
             const smiley = document.getElementsByTagName("i");
             if(smiley[1].getAttribute("class")==="fa-solid fa-face-smile fa-bounce fa-2xl"){
                 smiley[1].removeAttribute("class");
-                smiley[1].setAttribute("class", "fa-solid fa-house fa-bounce fa-2xl")
+                smiley[1].setAttribute("class", "fa-solid fa-house fa-bounce fa-2xl");
+                document.querySelector(".container").style.marginBottom = "50px"
+                document.querySelector(".container").style.textAlign = "left";
+                document.querySelector(".container").style.marginLeft = "50px"
+                document.querySelector("#weirdtext").style.fontSize = "80px";
+                document.querySelector("#largeText").style.fontSize = "100px"
             }
 
         }
