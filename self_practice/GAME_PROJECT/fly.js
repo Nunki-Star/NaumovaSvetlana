@@ -1,6 +1,6 @@
 (function($) { 
     let defaults = {
-    total : 50,
+    total : 80,
     ofTop: 0,
     ofLeft: 0,
     on:'document.body',

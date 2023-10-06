@@ -23,6 +23,7 @@ body{
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    margin-top:150px
 }
 .container .title p:first-child {
     /*color: #FF7F50;*/
@@ -30,23 +31,10 @@ body{
     color:#F04A00;
     opacity: 0.8;
     font-size:100px;
-    margin-top:150px;
     text-shadow: 2px 20px 25px lightyellow;
    
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 .animate__animated.animate__bounceInDown{
     --animate-duration: 3s;
@@ -79,7 +67,7 @@ button{
 }
 
 
-button:nth-child(2), button:nth-child(3){
+button:nth-child(2), button:nth-child(3), button:nth-child(4){
     margin-left:15px
 }
    

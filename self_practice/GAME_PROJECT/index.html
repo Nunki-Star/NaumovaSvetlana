@@ -25,10 +25,13 @@
     
         
     </div>
-    <div class="buttons">
-        <button value="PLAY" onclick="play(), mute(), change()" class="bubbly-button" >
+    <div class="buttons" id="con">
+        <button value="PLAY" onclick="play(), mute(), change()" class="bubbly-button" id="con-tooltip left">
             <audio id="audio" src="twinkles_cutted.mp3"></audio>
             <i class="fa-solid fa-volume-xmark fa-bounce fa-2xl"></i>
+            <div class="tooltip ">
+                <p>Left</p>
+            </div>
             <!--<i class="fa-solid fa-music fa-bounce fa-2xl" id="img2" onClick="chg(this.id)" style="color: #fefcdd; display:none"></i>-->
         </button>
         <button value="PLAY" onclick="play(), changeCoordinates()" class="bubbly-button" id="play">
@@ -43,9 +46,16 @@
             <i class="fa-solid fa-moon fa-bounce fa-2xl"></i>
             <!--<<i class="fa-solid fa-sun fa-bounce fa-2xl" style="color: #f8fadb;"></i>"></i>-->
         </button>
+
+        <button value="PLAY" onclick="play()" class="bubbly-button" >
+            <audio id="audio" src="twinkles_cutted.mp3"></audio>
+            <i class="fa-solid fa-star fa-bounce fa-2xl"></i>
+            <!--<<i class="fa-solid fa-sun fa-bounce fa-2xl" style="color: #f8fadb;"></i>"></i>-->
+        </button>
+        
     </div>
     <audio id="background_audio" autoplay loop>
-        <source src="sonic-wave-134902.mp3"/>
+        <source src="lady-of-the-80x27s-128379.mp3"/>
     </audio>
 
 
@@ -72,9 +82,28 @@
                 smiley[1].setAttribute("class", "fa-solid fa-house fa-bounce fa-2xl");
                 document.querySelector(".container").style.marginBottom = "50px"
                 document.querySelector(".container").style.textAlign = "left";
-                document.querySelector(".container").style.marginLeft = "50px"
-                document.querySelector("#weirdtext").style.fontSize = "80px";
-                document.querySelector("#largeText").style.fontSize = "100px"
+                document.querySelector(".container").style.justifyContent = "flex-start"
+                document.querySelector(".container").style.marginLeft = "50px";
+                document.querySelector(".container").style.marginTop = "50px";
+                document.querySelector("#weirdtext").style.fontSize = "50px";
+                document.querySelector("#largeText").style.fontSize = "80px";
+                document.querySelector(".buttons").style.justifyContent= "left";
+                document.querySelector(".buttons").style.marginLeft = "50px";
+                document.createElement("div")
+
+            }else{
+                smiley[1].removeAttribute("class");
+                smiley[1].setAttribute("class", "fa-solid fa-face-smile fa-bounce fa-2xl");
+                document.querySelector(".container").style.justifyContent = "center";
+                document.querySelector(".container").style.textAlign = "center";
+                document.querySelector(".buttons").style.justifyContent= "center";
+                document.querySelector("#weirdtext").style.fontSize = "100px";
+                document.querySelector("#largeText").style.fontSize = "180px";
+                document.querySelector(".container").style.marginTop = "150px"
+                
+
+
+
             }
 
         }
