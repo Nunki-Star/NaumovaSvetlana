@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;500;700;800&family=Quicksand:wght@300;400&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    
+   
     <script type="text/javascript" src="fly.js"></script>
 
 
@@ -19,64 +25,141 @@
     <div class="container">
         <div class="title">
             <p style="font-family:Jelantik"   class="animate_animated animate__backInLeft"  id="weirdtext">Welcome to</p>
-            <p style="font-family: Jelantik" class="animate__animated animate__bounceInDown" id="largeText">Memory Boxes</h2>
+            <p style="font-family: Jelantik" class="animate__animated animate__bounceInDown" id="largeText">Memoryify</h2>
         </div>
    
     
         
     </div>
-    <div class="buttons" id="con">
-        <button value="PLAY" onclick="play(), mute(), change()" class="bubbly-button" id="con-tooltip left">
+
+    /<div class="buttons">
+        
+        <button value="PLAY" onclick="play(), mute(), change()" class="bubbly-button">
+            <span class="tooltip">Mute</span>
             <audio id="audio" src="twinkles_cutted.mp3"></audio>
             <i class="fa-solid fa-volume-xmark fa-bounce fa-2xl"></i>
-            <div class="tooltip ">
-                <p>Left</p>
-            </div>
+           
             <!--<i class="fa-solid fa-music fa-bounce fa-2xl" id="img2" onClick="chg(this.id)" style="color: #fefcdd; display:none"></i>-->
         </button>
-        <button value="PLAY" onclick="play(), changeCoordinates()" class="bubbly-button" id="play">
-            <a href="play_page.html"></a>
+        <button value="PLAY" onclick="play(), changeCoordinates()" class="bubbly-button">
+            <span class="tooltip">Play</span>
             <audio id="audio" src="twinkles_cutted.mp3"></audio>
             <i class="fa-solid fa-face-smile fa-bounce fa-2xl"></i>
             <!--<i class="fa-solid fa-house fa-bounce fa-2xl" style="color: #f2f7b7;"></i>-->
 
         </button>
         <button value="PLAY" onclick="play(), changeDayToNight()" class="bubbly-button" >
+            <span class="tooltip">Night</span>
             <audio id="audio" src="twinkles_cutted.mp3"></audio>
             <i class="fa-solid fa-moon fa-bounce fa-2xl"></i>
             <!--<<i class="fa-solid fa-sun fa-bounce fa-2xl" style="color: #f8fadb;"></i>"></i>-->
         </button>
 
         <button value="PLAY" onclick="play()" class="bubbly-button" >
+            <span class="tooltip">Scores</span>
             <audio id="audio" src="twinkles_cutted.mp3"></audio>
             <i class="fa-solid fa-star fa-bounce fa-2xl"></i>
             <!--<<i class="fa-solid fa-sun fa-bounce fa-2xl" style="color: #f8fadb;"></i>"></i>-->
         </button>
-        
-    </div>
+
+       
+
+
+        <button value="PLAY" onclick="play()" class="bubbly-button" id="myBtn">
+            
+            <span class="tooltip">Info</span>
+            
+            <audio id="audio" src="twinkles_cutted.mp3"></audio>
+            <i class="fa-solid fa-info fa-bounce fa-2xl"></i>
+            <a href="#ex1" rel="modal:open"></a>
+            <!--<<i class="fa-solid fa-sun fa-bounce fa-2xl" style="color: #f8fadb;"></i>"></i>-->
+        </button>
+
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="modal-body">
+                <span class="close">&times;</span>
+                <p style="font-family: Quicksand;">Hi Friend!!!<br>
+                                                  So here is some info for you to read before you start your journey with Memoryify.
+                                                  This game was created to test your ability to retain information. Play it to improve your 
+                                                  attention, concentration, and focus. Hope you'll enjoy it!<br>
+                                                </p>
+              </div>
+              
+            </div>
+          
+          </div>
+
+
+     </div>
+
     <audio id="background_audio" autoplay loop>
         <source src="lady-of-the-80x27s-128379.mp3"/>
     </audio>
 
+    
 
+
+    
     <script type="text/javascript" src="fly.js"></script>
     <script>
 
+
+
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+
+
+        const toolTips = document.querySelectorAll("span");
+        console.log(toolTips[2])
+        
         function change(){
             const musicOn = document.getElementsByTagName("i");
-            if(musicOn[0].getAttribute("class")=== "fa-solid fa-volume-xmark fa-bounce fa-2xl"){
+            const toolTips = document.querySelectorAll("span")
+            if(musicOn[0].getAttribute("class")=== "fa-solid fa-volume-xmark fa-bounce fa-2xl" ){
                 musicOn[0].removeAttribute("class");
-                musicOn[0].setAttribute("class", "fa-solid fa-music fa-bounce fa-2xl")
+                musicOn[0].setAttribute("class", "fa-solid fa-music fa-bounce fa-2xl");
+                toolTips[0].innerHTML = "SoundOn"
             } else {
                 musicOn[0].removeAttribute("class");
                 musicOn[0].setAttribute("class", "fa-solid fa-volume-xmark fa-bounce fa-2xl")
+                toolTips[0].innerHTML = "Mute"
             }
         };
         
-        console.log(document.getElementsByClassName("container"))
-
+        
+        
+       
         function changeCoordinates(){
             const smiley = document.getElementsByTagName("i");
+            const toolTips = document.querySelectorAll("span");
+            const buttonToREmove = document.querySelectorAll("button");
             if(smiley[1].getAttribute("class")==="fa-solid fa-face-smile fa-bounce fa-2xl"){
                 smiley[1].removeAttribute("class");
                 smiley[1].setAttribute("class", "fa-solid fa-house fa-bounce fa-2xl");
@@ -88,8 +171,13 @@
                 document.querySelector("#weirdtext").style.fontSize = "50px";
                 document.querySelector("#largeText").style.fontSize = "80px";
                 document.querySelector(".buttons").style.justifyContent= "left";
-                document.querySelector(".buttons").style.marginLeft = "50px";
-                document.createElement("div")
+                document.querySelector(".buttons").style.marginLeft = "60px";
+               
+                
+                buttonToREmove[3].style.visibility = "hidden";
+                buttonToREmove[4].style.visibility = "hidden"
+                toolTips[1].innerHTML="Home";
+                
 
             }else{
                 smiley[1].removeAttribute("class");
@@ -100,17 +188,17 @@
                 document.querySelector("#weirdtext").style.fontSize = "100px";
                 document.querySelector("#largeText").style.fontSize = "180px";
                 document.querySelector(".container").style.marginTop = "150px"
+                toolTips[1].innerHTML="Play";
+                buttonToREmove[3].style.visibility = "visible";
+                buttonToREmove[4].style.visibility = "visible"
                 
-
-
-
             }
 
         }
 
         function changeDayToNight(){
             const dayOrNight = document.getElementsByTagName("i");
-           
+            const toolTips = document.querySelectorAll("span")
 
             if(dayOrNight[2].getAttribute("class")=== "fa-solid fa-moon fa-bounce fa-2xl"){
                 dayOrNight[2].removeAttribute("class");
@@ -120,8 +208,8 @@
                 document.querySelector("p").style.textShadow="2px 20px 25px #f0799d";
                 document.querySelector("#largeText").style.color="#ffd8f7";
                 document.querySelector("#largeText").style.textShadow="2px 20px 25px #f0799d";
-                document.querySelectorAll("#btn").style.backgroundColor = "ffd8f7"
                 
+                toolTips[2].innerHTML = "Light"
                 
             } else {
                 dayOrNight[2].removeAttribute("class");
@@ -131,7 +219,8 @@
                 document.querySelector("p").style.textShadow="2px 20px 25px lightyellow";
                 document.querySelector("#largeText").style.color="#F04A00";
                 document.querySelector("#largeText").style.textShadow="2px 20px 25px lightyellow";
-                document.querySelectorAll("#btn").style.backgroundColor = "#F04A00"
+                
+                toolTips[2].innerHTML = "Dark"
             }
         };
 
