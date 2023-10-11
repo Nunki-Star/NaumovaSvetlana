@@ -7,137 +7,180 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+   
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;500;700;800&family=Quicksand:wght@300;400&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
     
-   
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script type="text/javascript" src="fly.js"></script>
 
 
     
 </head>
 <body>
-   
-
-    <div class="container">
-        <div class="title">
-            <p style="font-family:Jelantik"   class="animate_animated animate__backInLeft"  id="weirdtext">Welcome to</p>
-            <p style="font-family: Jelantik" class="animate__animated animate__bounceInDown" id="largeText">Memoryify</h2>
-        </div>
-   
-    
-        
-    </div>
-
-    /<div class="buttons">
-        
-        <button value="PLAY" onclick="play(), mute(), change()" class="bubbly-button">
-            <span class="tooltip">Mute</span>
-            <audio id="audio" src="twinkles_cutted.mp3"></audio>
-            <i class="fa-solid fa-volume-xmark fa-bounce fa-2xl"></i>
-           
-            <!--<i class="fa-solid fa-music fa-bounce fa-2xl" id="img2" onClick="chg(this.id)" style="color: #fefcdd; display:none"></i>-->
-        </button>
-        <button value="PLAY" onclick="play(), changeCoordinates()" class="bubbly-button">
-            <span class="tooltip">Play</span>
-            <audio id="audio" src="twinkles_cutted.mp3"></audio>
-            <i class="fa-solid fa-face-smile fa-bounce fa-2xl"></i>
-            <!--<i class="fa-solid fa-house fa-bounce fa-2xl" style="color: #f2f7b7;"></i>-->
-
-        </button>
-        <button value="PLAY" onclick="play(), changeDayToNight()" class="bubbly-button" >
-            <span class="tooltip">Night</span>
-            <audio id="audio" src="twinkles_cutted.mp3"></audio>
-            <i class="fa-solid fa-moon fa-bounce fa-2xl"></i>
-            <!--<<i class="fa-solid fa-sun fa-bounce fa-2xl" style="color: #f8fadb;"></i>"></i>-->
-        </button>
-
-        <button value="PLAY" onclick="play()" class="bubbly-button" >
-            <span class="tooltip">Scores</span>
-            <audio id="audio" src="twinkles_cutted.mp3"></audio>
-            <i class="fa-solid fa-star fa-bounce fa-2xl"></i>
-            <!--<<i class="fa-solid fa-sun fa-bounce fa-2xl" style="color: #f8fadb;"></i>"></i>-->
-        </button>
-
-       
-
-
-        <button value="PLAY" onclick="play()" class="bubbly-button" id="myBtn">
-            
-            <span class="tooltip">Info</span>
-            
-            <audio id="audio" src="twinkles_cutted.mp3"></audio>
-            <i class="fa-solid fa-info fa-bounce fa-2xl"></i>
-            <a href="#ex1" rel="modal:open"></a>
-            <!--<<i class="fa-solid fa-sun fa-bounce fa-2xl" style="color: #f8fadb;"></i>"></i>-->
-        </button>
-
-        <div id="myModal" class="modal">
-
-            <!-- Modal content -->
-            <div class="modal-content">
-              <div class="modal-body">
-                <span class="close">&times;</span>
-                <p style="font-family: Quicksand;">Hi Friend!!!<br>
-                                                  So here is some info for you to read before you start your journey with Memoryify.
-                                                  This game was created to test your ability to retain information. Play it to improve your 
-                                                  attention, concentration, and focus. Hope you'll enjoy it!<br>
-                                                </p>
-              </div>
-              
+    <div class="main">
+        <div class=play_left">
+            <div class="container">
+                <div class="title">
+                    <p style="font-family:Jelantik"   class="animate_animated animate__backInLeft"  id="weirdtext">Welcome to</p>
+                    <p style="font-family: Jelantik" class="animate__animated animate__bounceInDown" id="largeText">Memoryify</h2>
+                </div>
             </div>
-          
-          </div>
+
+            <div class="buttons">
+                <button value="PLAY" onclick="play(), mute(), change()" class="bubbly-button">
+                    <span class="tooltip">Mute</span>
+                    <audio id="audio" src="twinkles_cutted.mp3"></audio>
+                    <i class="fa-solid fa-volume-xmark fa-bounce fa-2xl"></i>
+                    <!--<i class="fa-solid fa-music fa-bounce fa-2xl" id="img2" onClick="chg(this.id)" style="color: #fefcdd; display:none"></i>-->
+                </button>
+                <button value="PLAY" onclick="play(), changeCoordinates()" class="bubbly-button">
+                    <span class="tooltip">Play</span>
+                    <audio id="audio" src="twinkles_cutted.mp3"></audio>
+                    <i class="fa-solid fa-face-smile fa-bounce fa-2xl"></i>
+                    <!--<i class="fa-solid fa-house fa-bounce fa-2xl" style="color: #f2f7b7;"></i>-->
+                </button>
+                <button value="PLAY" onclick="play(), changeDayToNight()" class="bubbly-button" >
+                    <span class="tooltip">Night</span>
+                    <audio id="audio" src="twinkles_cutted.mp3"></audio>
+                    <i class="fa-solid fa-moon fa-bounce fa-2xl"></i>
+                    <!--<<i class="fa-solid fa-sun fa-bounce fa-2xl" style="color: #f8fadb;"></i>"></i>-->
+                </button>
+                <a>
+                    <button value="PLAY" onclick="play()" class="bubbly-button" id="scoreBtn">
+                        <span class="tooltip">Scores</span>
+                        <audio id="audio" src="twinkles_cutted.mp3"></audio>
+                        <i class="fa-solid fa-star fa-bounce fa-2xl"></i>
+                    <!--<<i class="fa-solid fa-sun fa-bounce fa-2xl" style="color: #f8fadb;"></i>"></i>-->
+                    </button>
+                </a>
+
+                <button value="PLAY" onclick="play()" class="bubbly-button" id="myBtn">
+                    <span class="tooltip">Info</span>
+                    <audio id="audio" src="twinkles_cutted.mp3"></audio>
+                    <i class="fa-solid fa-info fa-bounce fa-2xl"></i>
+                    <a href="#ex1" rel="modal:open"></a>
+                    <!--<<i class="fa-solid fa-sun fa-bounce fa-2xl" style="color: #f8fadb;"></i>"></i>-->
+                </button>
+            </div>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <span class="close">&times;</span>
+                        <p style="font-family: Quicksand;">Hi Friend!!!<br>
+                                                    So here is some info for you to read before you start your journey with Memoryify.
+                                                    This game was created to test your ability to retain information. Play it to improve your 
+                                                    attention, concentration, and focus. To start please proceed to smily button. Hope you'll enjoy it!<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        
+
+            <div id="myModal2" class="modal2">
+                <div class="modal-content2">
+                <div class="modal-body2">
+                    <span class="close2">&times;</span>
+                        <table class="zigzag" style="border-collapse:separate; border-spacing:.25em 1em;transform:rotate(6deg); border:beige 2px solid; border-radius:5px">
+                            <thead>
+                                <tr style="background-color: darkgray;transform:rotate(2deg); border-radius: 5px;">
+                                    <th class="header" style="width:70%"; border-radius: 5px;>Player</th>
+                                    <th class="header" style="width:10%">Score</th>
+                                    <th class="header" style="width:20%">Date</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="background-color: lightgrey;transform:rotate(-2deg)">
+                                    <td>aaaa</td>
+                                    <td>bbbb</td>
+                                    <td>cccc</td>
+                                    
+                                </tr>
+                                <tr  style="background-color: lightgrey;transform:rotate(2deg)">
+                                    <td>aaa</td>
+                                    <td>bbb</td>
+                                    <td>ccc</td>
+                                </tr>
+                                <tr  style="background-color: lightgrey;transform:rotate(-2deg)">
+                                    <td>aaa</td>
+                                    <td>bbb</td>
+                                    <td>ccc</td>
+                                </tr>
+                                <tr style="background-color: lightgrey;transform:rotate(2deg)">
+                                    <td>aaa</td>
+                                    <td>bbb</td>
+                                    <td>ccc</td>
+                                </tr>
+                                <tr style="background-color: lightgrey;transform:rotate(-2deg)">
+                                    <td>aaa</td>
+                                    <td>bbb</td>
+                                    <td>ccc</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
 
 
-     </div>
 
-    <audio id="background_audio" autoplay loop>
-        <source src="lady-of-the-80x27s-128379.mp3"/>
-    </audio>
-
-    
-
-
-    
+            <audio id="background_audio" autoplay loop>
+                <source src="sonic-wave-134902.mp3"/>
+            </audio>
+        </div><!--the end of play_left page-->
+        <div class="play_right">
+            
+        </div><!--the end of play_right page-->
+    </div>
     <script type="text/javascript" src="fly.js"></script>
     <script>
+        document.addEventListener("click", elem => {
+            if(elem.target.tagName === "a"){
+                route(elem);
+            }
+            elem.preventDefault()
+        })
+        const route = (elem) => {
+            window.history.pushState({}, "", elem.target.href);
+            handleLocation()
+        }
 
 
-
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+        let modal = document.getElementById("myModal");
+        let btn = document.getElementById("myBtn");
+        let span = document.getElementsByClassName("close")[0];
+        btn.onclick = function() {
+        modal.style.display = "block";
+        }
+        span.onclick = function() {
+        modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            }
+        }
 
 
+        let modal2 = document.getElementById("myModal2");
+        let btn2 = document.getElementById("scoreBtn");
+        let span2 = document.getElementsByClassName("close2")[0];
+        btn2.onclick = function() {
+        modal2.style.display = "block";
+        }
 
+        span2.onclick = function() {
+        modal2.style.display = "none";
+        }
+         window.onclick = function(event2) {
+        if (event2.target == modal2) {
+            modal2.style.display = "none";
+        }
+        }
 
-        const toolTips = document.querySelectorAll("span");
-        console.log(toolTips[2])
         
         function change(){
             const musicOn = document.getElementsByTagName("i");
@@ -155,11 +198,14 @@ window.onclick = function(event) {
         
         
         
-       
+        
+
+
         function changeCoordinates(){
             const smiley = document.getElementsByTagName("i");
             const toolTips = document.querySelectorAll("span");
             const buttonToREmove = document.querySelectorAll("button");
+            const mainDiv = document.getElementsByClassName("main")
             if(smiley[1].getAttribute("class")==="fa-solid fa-face-smile fa-bounce fa-2xl"){
                 smiley[1].removeAttribute("class");
                 smiley[1].setAttribute("class", "fa-solid fa-house fa-bounce fa-2xl");
@@ -172,12 +218,10 @@ window.onclick = function(event) {
                 document.querySelector("#largeText").style.fontSize = "80px";
                 document.querySelector(".buttons").style.justifyContent= "left";
                 document.querySelector(".buttons").style.marginLeft = "60px";
-               
-                
                 buttonToREmove[3].style.visibility = "hidden";
                 buttonToREmove[4].style.visibility = "hidden"
                 toolTips[1].innerHTML="Home";
-                
+                mainDiv.style.flexDirection = "row"
 
             }else{
                 smiley[1].removeAttribute("class");

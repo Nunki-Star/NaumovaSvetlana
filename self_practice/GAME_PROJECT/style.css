@@ -10,16 +10,15 @@
 }
 body{
     background-image: url(images/gradient-forest-landscape.jpg.avif);
-
     background-size: 100%;
     background-repeat: no-repeat;
 }
 
 
 .bubbly-button:hover{
-  width:60px;
+  width:70px;
   transition:0.5s;
-  height:60px;
+  height:70px;
 
 }
 
@@ -62,29 +61,19 @@ body{
 }
 
 
-
-
-
-
-
-
-
-
-
-
 .container{
     display:flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    margin-top:150px
+    margin-top:170px
 }
 .container .title p:first-child {
     /*color: #FF7F50;*/
     /*color:#F88379;*/
     color:#F04A00;
     opacity: 0.8;
-    font-size:100px;
+    font-size:150px;
     text-shadow: 2px 20px 25px lightyellow;
    
     
@@ -112,8 +101,8 @@ body{
 
 
 button{
-    width:50px;
-    height:50px;
+    width:65px;
+    height:65px;
     border-radius:50%;
     opacity:0.8;
     box-shadow: 2px 20px 25px lightyellow;
@@ -121,17 +110,11 @@ button{
     position:relative
 }
 
-
 button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(5){
     margin-left:15px
 }
-   
-
-
-/*rgba(255, 0, 130, 0.5);*/
 
 .bubbly-button {
-    
     display: inline-block;
     font-size: 1em;
     margin-bottom: 60px;
@@ -146,8 +129,10 @@ button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(
     transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
     box-shadow: 2px 20px 25px lightgoldenrodyellow
   }
+
   .bubbly-button:focus {
     outline: 0;
+
   }
   .bubbly-button:before, .bubbly-button:after {
     position: absolute;
@@ -159,6 +144,7 @@ button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(
     z-index: -1000;
     transition: all ease-in-out 0.5s;
     background-repeat: no-repeat;
+
   }
   .bubbly-button:before {
     display: none;
@@ -166,21 +152,25 @@ button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(
     background-image: radial-gradient(circle, #ff0081 40%, transparent 20%), radial-gradient(circle, transparent 20%, #ff0081 40%, transparent 30%), radial-gradient(circle, #ff0081 40%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
     background-size: 20% 20%, 30% 30%, 20% 20%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 30% 30%, 18% 18%;
   }
+
   .bubbly-button:after {
     display: none;
     bottom: -75%;
     background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
     background-size: 15% 15%, 30% 30%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
   }
+
   .bubbly-button:active {
     transform: scale(0.9);
     background-color: #e60074;
     box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
   }
+
   .bubbly-button.animate:before {
     display: block;
     animation: topBubbles ease-in-out 0.75s forwards;
   }
+
   .bubbly-button.animate:after {
     display: block;
     animation: bottomBubbles ease-in-out 0.75s forwards;
@@ -198,6 +188,7 @@ button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(
       background-size: 10% 10%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
     }
   }
+
   @keyframes bottomBubbles {
     0% {
       background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
@@ -210,8 +201,6 @@ button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(
       background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
     }
   }
-
-  
 
   .modal {
     display: none; /* Hidden by default */
@@ -228,7 +217,6 @@ button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(
    
   }
   
-  /* Modal Content */
   .modal-content {
     position: relative;
     background-color: gainsboro;
@@ -244,7 +232,7 @@ button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(
     border-radius:25px
   }
   
-  /* Add Animation */
+
   @-webkit-keyframes animatetop {
     from {top:-300px; opacity:0} 
     to {top:0; opacity:1}
@@ -255,7 +243,7 @@ button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(
     to {top:0; opacity:1}
   }
   
-  /* The Close Button */
+ 
   .close {
     color: white;
     float: right;
@@ -287,9 +275,102 @@ button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(
     border: 1px;
 
   }
+
+.modal2 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+   
+  }
   
+
+  .modal-content2 {
+    position: relative;
+    background-color: gainsboro;
+    margin: auto;
+    padding: 0;
+    border: 1px solid beige;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    border-radius:25px
+  }
   
+ 
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
   
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+
+  .close2 {
+    color: white;
+    float: right;
+    font-family:Jelantik;
+    font-size: 50px;
+    font-weight: bold;
+  }
   
+  .close2:hover,
+  .close2:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
   
+.modal2{
+  border-radius:25px;
   
+}
+
+  .modal-body2 {
+    padding: 2px 16px;
+    background-color: #C8C8C8;
+    color: beige;
+    font-family:Jelantik;
+    font-size:30px;
+    border-radius:25px;
+    box-shadow: 2px 20px 25px lightyellow;
+    border: 1px;
+
+  }
+  
+  h1 {
+    font-family:sans-serif;
+    font-size:1em;
+    margin-bottom:0;
+  }
+  
+  table {  
+    font-family:sans-serif;
+    th, td {
+      padding:.25em .5em;
+      text-align:left;
+      &:nth-child(2) {
+        text-align:right;
+      }
+    }
+    td {
+      background-color:#eee;    
+    }
+  }
+
+  .main{
+    display:flex; 
+    flex-direction: column;
+  }
