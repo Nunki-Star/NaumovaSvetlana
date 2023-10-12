@@ -36,26 +36,27 @@
                     <i class="fa-solid fa-volume-xmark fa-bounce fa-2xl"></i>
                     <!--<i class="fa-solid fa-music fa-bounce fa-2xl" id="img2" onClick="chg(this.id)" style="color: #fefcdd; display:none"></i>-->
                 </button>
-                <button value="PLAY" onclick="play(), changeCoordinates()" class="bubbly-button">
-                    <span class="tooltip">Play</span>
-                    <audio id="audio" src="twinkles_cutted.mp3"></audio>
-                    <i class="fa-solid fa-face-smile fa-bounce fa-2xl"></i>
-                    <!--<i class="fa-solid fa-house fa-bounce fa-2xl" style="color: #f2f7b7;"></i>-->
-                </button>
+                <a href="/playpage.html" value="PLAY" class="bubbly-button">
+                    <!--<input type="button" value="PLAY" onclick="play()" class="bubbly-button">-->
+                        <span class="tooltip">Play</span>
+                        <audio id="audio" src="twinkles_cutted.mp3"></audio>
+                        <i class="fa-solid fa-face-smile fa-bounce fa-2xl"></i>
+                        <!--<i class="fa-solid fa-house fa-bounce fa-2xl" style="color: #f2f7b7;"></i>-->
+                </a>
                 <button value="PLAY" onclick="play(), changeDayToNight()" class="bubbly-button" >
                     <span class="tooltip">Night</span>
                     <audio id="audio" src="twinkles_cutted.mp3"></audio>
                     <i class="fa-solid fa-moon fa-bounce fa-2xl"></i>
                     <!--<<i class="fa-solid fa-sun fa-bounce fa-2xl" style="color: #f8fadb;"></i>"></i>-->
                 </button>
-                <a>
-                    <button value="PLAY" onclick="play()" class="bubbly-button" id="scoreBtn">
-                        <span class="tooltip">Scores</span>
-                        <audio id="audio" src="twinkles_cutted.mp3"></audio>
-                        <i class="fa-solid fa-star fa-bounce fa-2xl"></i>
+              
+                <button value="PLAY" onclick="play()" class="bubbly-button" id="scoreBtn">
+                    <span class="tooltip">Scores</span>
+                    <audio id="audio" src="twinkles_cutted.mp3"></audio>
+                    <i class="fa-solid fa-star fa-bounce fa-2xl"></i>
                     <!--<<i class="fa-solid fa-sun fa-bounce fa-2xl" style="color: #f8fadb;"></i>"></i>-->
                     </button>
-                </a>
+                
 
                 <button value="PLAY" onclick="play()" class="bubbly-button" id="myBtn">
                     <span class="tooltip">Info</span>
@@ -131,22 +132,36 @@
                 <source src="sonic-wave-134902.mp3"/>
             </audio>
         </div><!--the end of play_left page-->
-        <div class="play_right">
-            
-        </div><!--the end of play_right page-->
+  
     </div>
     <script type="text/javascript" src="fly.js"></script>
+
     <script>
-        document.addEventListener("click", elem => {
-            if(elem.target.tagName === "a"){
-                route(elem);
+       document.addEventListener('click', e => {
+        if (e.target.tagName === 'A') {
+                route(e);
             }
-            elem.preventDefault()
-        })
-        const route = (elem) => {
-            window.history.pushState({}, "", elem.target.href);
-            handleLocation()
+            e.preventDefault();
+        });
+
+        const route = (e) => {
+            window.history.pushState({}, '', e.target.href);
+            handleLocation();
         }
+
+        const routers = {
+            'self_practice/GAME_PROJECT/playpage.html': 'playpage.html',
+        }
+
+        const handleLocation = async () => {
+        const path = window.location.pathname;
+        const html = await fetch(routers[path]).then((data) => data.text());
+        
+}
+
+        window.onpopstate = handleLocation;
+        window.route = route;
+        handleLocation();
 
 
         let modal = document.getElementById("myModal");
@@ -163,6 +178,8 @@
             modal.style.display = "none";
             }
         }
+
+
 
 
         let modal2 = document.getElementById("myModal2");
@@ -201,7 +218,7 @@
         
 
 
-        function changeCoordinates(){
+        /*function changeCoordinates(){
             const smiley = document.getElementsByTagName("i");
             const toolTips = document.querySelectorAll("span");
             const buttonToREmove = document.querySelectorAll("button");
@@ -238,7 +255,7 @@
                 
             }
 
-        }
+        }*/
 
         function changeDayToNight(){
             const dayOrNight = document.getElementsByTagName("i");
