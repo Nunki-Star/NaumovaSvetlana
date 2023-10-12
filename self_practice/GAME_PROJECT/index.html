@@ -36,7 +36,7 @@
                     <i class="fa-solid fa-volume-xmark fa-bounce fa-2xl"></i>
                     <!--<i class="fa-solid fa-music fa-bounce fa-2xl" id="img2" onClick="chg(this.id)" style="color: #fefcdd; display:none"></i>-->
                 </button>
-                <a href="/playpage.html" value="PLAY" class="bubbly-button">
+                <button value="PLAY"  onclick="play()", class="bubbly-button">
                     <!--<input type="button" value="PLAY" onclick="play()" class="bubbly-button">-->
                         <span class="tooltip">Play</span>
                         <audio id="audio" src="twinkles_cutted.mp3"></audio>
@@ -137,32 +137,8 @@
     <script type="text/javascript" src="fly.js"></script>
 
     <script>
-       document.addEventListener('click', e => {
-        if (e.target.tagName === 'A') {
-                route(e);
-            }
-            e.preventDefault();
-        });
-
-        const route = (e) => {
-            window.history.pushState({}, '', e.target.href);
-            handleLocation();
-        }
-
-        const routers = {
-            'self_practice/GAME_PROJECT/playpage.html': 'playpage.html',
-        }
-
-        const handleLocation = async () => {
-        const path = window.location.pathname;
-        const html = await fetch(routers[path]).then((data) => data.text());
+      
         
-}
-
-        window.onpopstate = handleLocation;
-        window.route = route;
-        handleLocation();
-
 
         let modal = document.getElementById("myModal");
         let btn = document.getElementById("myBtn");
