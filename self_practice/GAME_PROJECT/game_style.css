@@ -1,0 +1,30 @@
+@font-face {
+    font-family: Fredoka;
+    src: url(./FredokaOne-Regular.ttf);
+}
+
+
+.game {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button {
+    cursor: pointer;
+}
+
+.disabled {
+    color: #757575;
+}
+
+
+.card {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+
