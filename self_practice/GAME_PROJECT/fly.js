@@ -1,10 +1,10 @@
 (function($) { 
     let defaults = {
-    total : 50,
+    total : 40,
     ofTop: 0,
     ofLeft: 0,
     on:'document.body',
-    twinkle: 0.1,
+    twinkle: 0.2,
     minPixel: 1,
     maxPixel: 2,
     color: '#fc0'};

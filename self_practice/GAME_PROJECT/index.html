@@ -7,11 +7,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;500;700;800&family=Quicksand:wght@300;400&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
-    
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script type="text/javascript" src="fly.js"></script>
@@ -32,27 +30,27 @@
             <div class="buttons">
                 <button value="PLAY" onclick="play(), mute(), change()" class="bubbly-button">
                     <span class="tooltip">Mute</span>
-                    <audio id="audio" src="twinkles_cutted.mp3"></audio>
+                    <audio id="audio" src="sounds_and_music/twinkles_cutted.mp3"></audio>
                     <i class="fa-solid fa-volume-xmark fa-bounce fa-2xl"></i>
                     <!--<i class="fa-solid fa-music fa-bounce fa-2xl" id="img2" onClick="chg(this.id)" style="color: #fefcdd; display:none"></i>-->
                 </button>
-                <button value="PLAY"  onclick="play()", class="bubbly-button">
+                <button value="PLAY"  onclick="play(), changeCoordinates()", class="bubbly-button">
                     <!--<input type="button" value="PLAY" onclick="play()" class="bubbly-button">-->
                         <span class="tooltip">Play</span>
-                        <audio id="audio" src="twinkles_cutted.mp3"></audio>
+                        <audio id="audio" src="sounds_and_music/twinkles_cutted.mp3"></audio>
                         <i class="fa-solid fa-face-smile fa-bounce fa-2xl"></i>
                         <!--<i class="fa-solid fa-house fa-bounce fa-2xl" style="color: #f2f7b7;"></i>-->
-                </a>
+                </button>
                 <button value="PLAY" onclick="play(), changeDayToNight()" class="bubbly-button" >
                     <span class="tooltip">Night</span>
-                    <audio id="audio" src="twinkles_cutted.mp3"></audio>
+                    <audio id="audio" src="sounds_and_music/twinkles_cutted.mp3"></audio>
                     <i class="fa-solid fa-moon fa-bounce fa-2xl"></i>
                     <!--<<i class="fa-solid fa-sun fa-bounce fa-2xl" style="color: #f8fadb;"></i>"></i>-->
                 </button>
               
                 <button value="PLAY" onclick="play()" class="bubbly-button" id="scoreBtn">
                     <span class="tooltip">Scores</span>
-                    <audio id="audio" src="twinkles_cutted.mp3"></audio>
+                    <audio id="audio" src="sounds_and_music/twinkles_cutted.mp3"></audio>
                     <i class="fa-solid fa-star fa-bounce fa-2xl"></i>
                     <!--<<i class="fa-solid fa-sun fa-bounce fa-2xl" style="color: #f8fadb;"></i>"></i>-->
                     </button>
@@ -60,7 +58,7 @@
 
                 <button value="PLAY" onclick="play()" class="bubbly-button" id="myBtn">
                     <span class="tooltip">Info</span>
-                    <audio id="audio" src="twinkles_cutted.mp3"></audio>
+                    <audio id="audio" src="sounds_and_music/twinkles_cutted.mp3"></audio>
                     <i class="fa-solid fa-info fa-bounce fa-2xl"></i>
                     <a href="#ex1" rel="modal:open"></a>
                     <!--<<i class="fa-solid fa-sun fa-bounce fa-2xl" style="color: #f8fadb;"></i>"></i>-->
@@ -129,16 +127,20 @@
 
 
             <audio id="background_audio" autoplay loop>
-                <source src="sonic-wave-134902.mp3"/>
+                <source src="sounds_and_music/sonic-wave-134902.mp3"/>
             </audio>
         </div><!--the end of play_left page-->
-  
+        <div class="play_right"></div>
     </div>
     <script type="text/javascript" src="fly.js"></script>
-
+   
     <script>
-      
+        const playRight = document.getElementsByClassName("play_right");
+        console.log(playRight, "aaa");
+        const headerDiv = document.createElement("div");
+        console.log(headerDiv.appendChild(playRight))
         
+            
 
         let modal = document.getElementById("myModal");
         let btn = document.getElementById("myBtn");
@@ -155,9 +157,6 @@
             }
         }
 
-
-
-
         let modal2 = document.getElementById("myModal2");
         let btn2 = document.getElementById("scoreBtn");
         let span2 = document.getElementsByClassName("close2")[0];
@@ -171,7 +170,7 @@
          window.onclick = function(event2) {
         if (event2.target == modal2) {
             modal2.style.display = "none";
-        }
+            }
         }
 
         
@@ -194,7 +193,7 @@
         
 
 
-        /*function changeCoordinates(){
+        function changeCoordinates(){
             const smiley = document.getElementsByTagName("i");
             const toolTips = document.querySelectorAll("span");
             const buttonToREmove = document.querySelectorAll("button");
@@ -231,7 +230,7 @@
                 
             }
 
-        }*/
+        }
 
         function changeDayToNight(){
             const dayOrNight = document.getElementsByTagName("i");
@@ -280,11 +279,8 @@
 
 
     let animateButton = function(e) {
-
         e.preventDefault;
-        //reset animation
         e.target.classList.remove('animate');
-
         e.target.classList.add('animate');
         setTimeout(function(){
         e.target.classList.remove('animate');
@@ -297,8 +293,8 @@
         bubblyButtons[i].addEventListener('click', animateButton, false);
     }
 
-    
 
+   
     </script>
     
 </body>
