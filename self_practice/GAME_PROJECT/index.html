@@ -12,9 +12,6 @@
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;500;700;800&family=Quicksand:wght@300;400&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
-    <link rel="stylesheet" href="css/app.css">
     <script type="text/javascript" src="fly.js"></script>
     
 
@@ -37,7 +34,7 @@
                     <i class="fa-solid fa-volume-xmark fa-bounce fa-2xl"></i>
                     <!--<i class="fa-solid fa-music fa-bounce fa-2xl" id="img2" onClick="chg(this.id)" style="color: #fefcdd; display:none"></i>-->
                 </button>
-                <button value="PLAY"  onclick="play(), changeCoordinates()", class="bubbly-button">
+                <button value="PLAY"  onclick="play(), changeCoordinates(), showBlock()", class="bubbly-button">
                     <!--<input type="button" value="PLAY" onclick="play()" class="bubbly-button">-->
                         <span class="tooltip">Play</span>
                         <audio id="audio" src="sounds_and_music/twinkles_cutted.mp3"></audio>
@@ -134,81 +131,7 @@
             </audio>
         </div><!--the end of play_left page-->
         <div class="play_right" id="right">
-            <div >
-                <header>
-                    <h1>Enjoy your Game!</h1>
-                </header>
-                <div class="buttons">
-                    <button value="PLAY" onclick="play(), mute(), change()" class="bubbly-button">
-                        <span class="tooltip">Mute</span>
-                        <audio id="audio" src="sounds_and_music/twinkles_cutted.mp3"></audio>
-                        <i class="fa-solid fa-volume-xmark fa-bounce fa-2xl"></i>
-                        <!--<i class="fa-solid fa-music fa-bounce fa-2xl" id="img2" onClick="chg(this.id)" style="color: #fefcdd; display:none"></i>-->
-                    </button>
-                    <button value="PLAY"  onclick="play()", class="bubbly-button">
-                        <!--<input type="button" value="PLAY" onclick="play()" class="bubbly-button">-->
-                            <span class="tooltip">Play</span>
-                            <audio id="audio" src="sounds_and_music/twinkles_cutted.mp3"></audio>
-                            <i class="fa-solid fa-face-smile fa-bounce fa-2xl"></i>
-                            <!--<i class="fa-solid fa-house fa-bounce fa-2xl" style="color: #f2f7b7;"></i>-->
-                    </button>
-                    <button value="PLAY" onclick="play(), changeDayToNight()" class="bubbly-button" >
-                        <span class="tooltip">Night</span>
-                        <audio id="audio" src="sounds_and_music/twinkles_cutted.mp3"></audio>
-                        <i class="fa-solid fa-moon fa-bounce fa-2xl"></i>
-                        <!--<<i class="fa-solid fa-sun fa-bounce fa-2xl" style="color: #f8fadb;"></i>"></i>-->
-                    </button>
-                  
-                    <button value="PLAY" onclick="play()" class="bubbly-button" id="scoreBtn">
-                        <span class="tooltip">Scores</span>
-                        <audio id="audio" src="sounds_and_music/twinkles_cutted.mp3"></audio>
-                        <i class="fa-solid fa-star fa-bounce fa-2xl"></i>
-                        <!--<<i class="fa-solid fa-sun fa-bounce fa-2xl" style="color: #f8fadb;"></i>"></i>-->
-                        </button>
-                    
-        
-                    <button value="PLAY" onclick="play()" class="bubbly-button" id="myBtn">
-                        <span class="tooltip">Info</span>
-                        <audio id="audio" src="sounds_and_music/twinkles_cutted.mp3"></audio>
-                        <i class="fa-solid fa-info fa-bounce fa-2xl"></i>
-                        <a href="#ex1" rel="modal:open"></a>
-                        <!--<<i class="fa-solid fa-sun fa-bounce fa-2xl" style="color: #f8fadb;"></i>"></i>-->
-                    </button>
-                </div>
-                <section class="score-table">
-                    <ul class="stars">
-                        <li>
-                            <i id="star1" class="fa fa-star"></i>
-                        </li>
-                        <li>
-                            <i id="star2" class="fa fa-star"></i>
-                        </li>
-                        <li>
-                            <i id="star3" class="fa fa-star"></i>
-                        </li>
-                    </ul>
-                    <span class="moves">Moves: 0</span>
-                    <span class="timer">Elapsed Time: 0:00</span>
-                    <div class="restart">
-                        <i class="fa fa-repeat"></i>
-                    </div>
-                </section>
-        
-                <main>
-                    <ul class="deck"></ul>
-                </main>
-        
-                <div class="modal">
-                    <div class="modal-content">
-                        <span class="close-button">x</span>
-                        <i class="fa fa-check-circle tick"></i>
-                        <h1 class="modal-heading">Congratulations! You Won!!</h1>
-                        <h3 class="stats"></h3>
-                        <button class="new-game">Play Again!</button>
-                    </div>
-                </div>
-            </div>
-            </div>
+           aaaaaaa
         </div>
     </div>
     <script type="text/javascript" src="fly.js"></script>
@@ -273,7 +196,7 @@
             const toolTips = document.querySelectorAll("span");
             const buttonToREmove = document.querySelectorAll("button");
             const mainDiv = document.getElementsByClassName("main");
-            const playRightDiv = document.querySelector("#right")
+            const rightDiv = document.getElementsByClassName("play_right")
             if(smiley[1].getAttribute("class")==="fa-solid fa-face-smile fa-bounce fa-2xl"){
                 smiley[1].removeAttribute("class");
                 smiley[1].setAttribute("class", "fa-solid fa-house fa-bounce fa-2xl");
@@ -290,7 +213,6 @@
                 buttonToREmove[4].style.visibility = "hidden"
                 toolTips[1].innerHTML="Home";
                 mainDiv.style.flexDirection = "row";
-                
                 mainDiv.style.justifyContent = "space around";
                 playRightDiv.style.display = "block"
 
