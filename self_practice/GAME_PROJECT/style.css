@@ -242,7 +242,9 @@ button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(
     to {top:0; opacity:1}
   }
   
- 
+ .modal{
+  font-size: 50px;
+ }
   .close {
     color: white;
     float: right;
@@ -339,12 +341,12 @@ button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(
 
   .modal-body {
     padding: 2px 16px;
-    background-color: #C8C8C8;
-    color: beige;
+    background-color: #ebd6d9;
+    color: #e75480;
     font-family:Jelantik;
-    font-size:30px;
+    font-size:16px;
     border-radius:25px;
-    box-shadow: 2px 20px 25px lightyellow;
+    box-shadow: 2px 20px 25px #fadadd;
     border: 1px;
 
   }
@@ -453,6 +455,12 @@ button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(
   
   .moves-counter {
     padding: 0.5em;
+    font-size: 30px;
+    color:lemonchiffon
+  }
+  .moves{
+    font-size: 30px;
+    color:lemonchiffon
   }
   
   .reset-btn {
@@ -463,12 +471,12 @@ button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(
    
     border-radius: 0.5em;
     color: #000;
-    margin: 0.5em;
     padding: 0.5em;
   }
   
   .timer {
-    font-size: 1em;
+    font-size: 30px;
+    color:lemonchiffon
   }
   
   /*----------------------------------  
@@ -480,7 +488,7 @@ button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(
   */
   
   /* Modal (background) */
-  .modal_game {
+  .modalgame {
     /*Hidden by default */
     display: none;
     position: fixed;
@@ -501,12 +509,13 @@ button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color: #FFFACD;
     /* 5% from the top and centered */
     margin: 5% auto;
     border: 0.8em solid lightgoldenrodyellow;
     padding-right: 2em;
     width: 80%;
+    border-radius: 15px;
   }
   
   /* The Close Button */
@@ -539,8 +548,10 @@ button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(
   }
   
   .play-again-btn {
-    background: #28e;
+    background: #ff0081;
     margin-bottom: 1em;
+    width:100px;
+    height:80px
   }
   
   /*----------------------------------  
@@ -566,7 +577,7 @@ button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(
   }
   
   .card {
-    background:#fffedf;
+    background:#F3EAAF;
     
     border-radius: 0.5em;
     height: 7em;
@@ -600,15 +611,13 @@ button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(
   }
   
   .deck .card.match {
-    background: #39d;
+   
     visibility: visible;
     cursor: default;
     animation: pulse 1s;
   }
   
-  .match img {
-    background: #39d;
-  }
+  
   
   @keyframes pulse {
     0% {
@@ -638,7 +647,7 @@ button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(
   
   .footer a:link,
   .footer a:visited {
-    color: #28e;
+    color: #F3EAAF;
     text-decoration: none;
   }
   
@@ -664,7 +673,7 @@ button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(
       width: 9em;
     }
   
-    .modal-content h2 {
+    .modalgamecontent h2 {
       font-size: 4em;
     }
   
@@ -687,13 +696,14 @@ button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(
     }
   
     .deck  {
-      height: 60em;
-      width: 60em;
+      height: 55em;
+      width: 55em;
     }
   
     .card {
-      height: 13em;
-      width: 13em;
+      height: 12em;
+      width: 12em;
+      box-shadow: 1px 1px 1px lightyellow;
     }
   
     .deck img {
@@ -708,7 +718,7 @@ button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(
       font-size: 1.2em;
     }
     
-    .modal-content h2 {
+    .modalgamecontent h2 {
       font-size: 5em;
     }
   
@@ -723,6 +733,95 @@ button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(
   }
 
 
+
+
+
+
+
+  input {
+	
+    border:2px solid rgba(255,255,255,.5);
+    font-size:1.75em;
+    padding:.25em .5em .3125em;
+    color:rgba(255,255,255,.5);
+    border-radius:.25em;
+    background:transparent;
+    transition:all .100s;
+    
+    &:focus{
+      outline:none;
+      color:rgba(255,255,255,.75);
+      border-color:rgba(255,255,255,.75);
+    }
+    
+    &.keyup {
+      color:white;
+      border-color:white;
+      text-shadow:0 0 .125em white;
+      box-shadow:0 0 .25em white,inset 0 0 .25em white;
+    }
+  }
+  
+  
+  canvas {
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    pointer-events:none;
+  }
+  
+  input {
+    font-family: "Jelantik";
+  }
+  
+
+  
+  ::-webkit-input-placeholder {
+   
+    text-shadow:0 0 .125em transparent;
+    transition:all .25s;
+  }
+  input:focus::-webkit-input-placeholder {
+    opacity:.5;
+  }
+  
+  ::-moz-placeholder {
+    color:$placeholder-color;
+    text-shadow:0 0 .125em transparent;
+    transition:all .25s;
+  }
+  input:focus::-moz-placeholder {
+    opacity:.5;
+  }
+  
+  :-ms-input-placeholder {
+    color:$placeholder-color;
+    text-shadow:0 0 .125em transparent;
+    transition:all .25s;
+  }
+  input:focus:-ms-input-placeholder {
+    opacity:.5;
+  }
+  
+  html {
+    height:100%;
+    overflow:hidden;
+  }
+  
+ 
+  
+  
+  
+  input {
+    
+    box-sizing:border-box;
+    bottom: 4em;
+    left:50%;
+    width:11em;
+   margin-left:39%
+  }
   
   
   
