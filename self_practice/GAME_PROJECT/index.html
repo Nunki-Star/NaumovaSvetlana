@@ -23,13 +23,14 @@
             <div class="container">
                 <div class="title">
                     <p style="font-family:Jelantik"   class="animate_animated animate__backInLeft"  id="weirdtext">Welcome to</p>
-                    <p style="font-family: Jelantik" class="animate__animated animate__bounceInDown" id="largeText">Memoryify</h2>
+
+                    <p style="font-family: Jelantik" class="animate__animated animate__bounceInDown" id="largeText">Memoryify</p>
                 </div>
 				<div class="input">
 					<input id="txt" onInput = "getValue()" placeholder="Type your name please..."/><br>
-					
 				</div>
-				<span id = "result"></span>
+				<div id="enjoy">and enjoy playing,</div>
+				<div id = "result"></div>
             </div>
 
 
@@ -93,15 +94,15 @@
                     <span class="close2">&times;</span>
                         <table class="zigzag" style="border-collapse:separate; border-spacing:.25em 1em;transform:rotate(6deg); border:beige 2px solid; border-radius:5px">
                             <thead>
-                                <tr style="background-color: darkgray;transform:rotate(2deg); border-radius: 5px;">
+                                <tr style="background-color: darkgray;transform:rotate(2deg); border-radius: 5px; font-family: 'Jelantik';">
                                     <th class="header" style="width:70%"; border-radius: 5px;>Player</th>
-                                    <th class="header" style="width:10%">Score</th>
-                                    <th class="header" style="width:20%">Date</th>
+                                    <th class="header" style="width:10%">Moves</th>
+                                    <th class="header" style="width:20%">Time</th>
                                     
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr style="background-color: lightgrey;transform:rotate(-2deg)">
+                                <tr style="background-color: lightgrey;transform:rotate(-2deg); border-radius: 20px;">
                                     <td>aaaa</td>
                                     <td>bbbb</td>
                                     <td>cccc</td>
@@ -255,11 +256,11 @@
                 smiley[1].setAttribute("class", "fa-solid fa-house fa-bounce fa-2xl");
                 document.querySelector(".container").style.marginBottom = "50px"
                 document.querySelector(".container").style.textAlign = "left";
-                document.querySelector(".container").style.justifyContent = "flex-start"
+                
                 document.querySelector(".container").style.marginLeft = "-20px";
                 document.querySelector(".container").style.marginTop = "20px";
-                document.querySelector("#weirdtext").style.fontSize = "100px";
-                document.querySelector("#largeText").style.fontSize = "110px";
+                document.querySelector("#weirdtext").style.fontSize = "130px";
+                document.querySelector("#largeText").style.fontSize = "140px";
                 document.querySelector(".buttons").style.justifyContent= "left";
 				document.querySelector(".buttons").style.marginLeft = "-10px";
                 buttonToREmove[3].style.visibility = "hidden";
@@ -267,15 +268,22 @@
                 toolTips[1].innerHTML="Home";
                 myBlock.style.display = "block";
                 document.querySelector(".main").style.flexDirection="row";
-                document.querySelector(".main").style.justifyContent = "center";
+                document.querySelector(".main").style.justifyContent = "space-evenly";
                 document.querySelector(".main").style.marginTop = "20px";
 				document.querySelector(".input").style.display = "none"
 				document.querySelector("#result").style.display = "block";
 				document.querySelector("#result").style.color = "#F04A00";
 				document.querySelector("#result").style.fontFamily = "Jelantik";
-				document.querySelector("#result").style.fontSize = "100px";
+				document.querySelector("#result").style.fontSize = "140px";
 				document.querySelector("#result").style.textShadow = "2px 20px 25px lightyellow";
-				document.querySelector("#result").style.opacity = "0.8"
+				document.querySelector("#result").style.opacity = "0.9"
+				document.querySelector("#enjoy").style.display = "block";
+				document.querySelector("#enjoy").style.color = "#F04A00";
+				document.querySelector("#enjoy").style.fontFamily = "Jelantik";
+				document.querySelector("#enjoy").style.fontSize = "140px";
+				document.querySelector("#enjoy").style.textShadow = "2px 20px 25px lightyellow";
+				document.querySelector("#enjoy").style.opacity = "0.9";
+				document.querySelector("#enjoy").style.marginTop = "-35px";
 				
             }else{
                 smiley[1].removeAttribute("class");
@@ -291,7 +299,8 @@
                 buttonToREmove[4].style.visibility = "visible";
                 myBlock.style.display = "none";
                 document.querySelector(".input").style.display = "block"
-				document.querySelector("#result").style.display = "none"
+				document.querySelector("#result").style.display = "none";
+				document.querySelector("#enjoy").style.display = "none";
             }
 
         }
@@ -308,7 +317,8 @@
                 document.querySelector("p").style.textShadow="2px 20px 25px #f0799d";
                 document.querySelector("#largeText").style.color="#ffd8f7";
                 document.querySelector("#largeText").style.textShadow="2px 20px 25px #f0799d";
-                document.querySelector("#result").style.color = "#ffd8f7"
+                document.querySelector("#result").style.color = "#ffd8f7";
+				document.querySelector("#enjoy").style.color="#ffd8f7"
                 toolTips[2].innerHTML = "Light"
                 
             } else {
@@ -319,7 +329,9 @@
                 document.querySelector("p").style.textShadow="2px 20px 25px lightyellow";
                 document.querySelector("#largeText").style.color="#F04A00";
                 document.querySelector("#largeText").style.textShadow="2px 20px 25px lightyellow";
-                
+                document.querySelector("#result").style.color = "#F04A00";
+                document.querySelector("#result").style.color = "#F04A00";
+
                 toolTips[2].innerHTML = "Dark"
             }
         };
