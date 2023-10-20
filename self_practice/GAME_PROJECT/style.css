@@ -578,7 +578,6 @@ button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(
   
   .card {
     background:#F3EAAF;
-    
     border-radius: 0.5em;
     height: 7em;
     width: 7em;
@@ -704,6 +703,7 @@ button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(
       height: 12em;
       width: 12em;
       box-shadow: 1px 1px 1px lightyellow;
+      background: lemonchiffon;
     }
   
     .deck img {
@@ -751,17 +751,17 @@ button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(
   }
   input {
 	
-    border:2px solid rgba(255,255,255,.5);
-    font-size:1.75em;
+    border:2px solid #e75480;
+    font-size:35px;
     padding:.25em .5em .3125em;
-    color:rgba(255,255,255,.5);
+    color:#e75480;
     border-radius:.25em;
     background:transparent;
     transition:all .100s;
     
     &:focus{
       outline:none;
-      color:rgba(255,255,255,.75);
+      color:#e75480;
       border-color:rgba(255,255,255,.75);
     }
     
@@ -799,7 +799,7 @@ button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(
   }
   
   ::-moz-placeholder {
-    color: $placeholder-color;
+    color:#e75480;
     text-shadow:0 0 .125em transparent;
     transition:all .25s;
   }
@@ -809,7 +809,7 @@ button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(
   }
   
   :-ms-input-placeholder {
-    color:$placeholder-color;
+    color:#e75480;
     text-shadow:0 0 .125em transparent;
     transition:all .25s;
   }

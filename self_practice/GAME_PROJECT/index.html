@@ -27,7 +27,7 @@
                     <p style="font-family: Jelantik" class="animate__animated animate__bounceInDown" id="largeText">Memoryify</p>
                 </div>
 				<div class="input">
-					<input id="txt" onInput = "getValue()" placeholder="Type your name please..."/><br>
+					<input id="txt" onInput = "getValue()" style="color:#e75480" placeholder="Type your name please..."/><br>
 				</div>
 				<div id="enjoy">and enjoy playing,</div>
 				<div id = "result"></div>
@@ -81,7 +81,9 @@
                         <p style="font-family: Quicksand;" class="info">Hi Friend!!!<br>
                                                     So here is some info for you to read before you start your journey with <span style="font-family:'Jelantik'">Memoryify</span>.
                                                     This game was created to test your ability to retain information. Play it to improve your 
-                                                    attention, concentration, and focus. To start please proceed to smily button. Hope you'll enjoy it!<br>
+                                                    attention, concentration, and focus. The idea is to find all 8 pairs of images as fast as your memory will allow you!
+													So lets check how fast you can make it. Remember that you may restart the game any time.
+													To begin please enter your name and click on smily button. Hope you'll enjoy it!<br>
                         </p>
                     </div>
                 </div>
@@ -136,7 +138,7 @@
 
 
 
-            <audio id="background_audio" autoplay loop>
+            <audio id="background_audio" autoplay="autoplay" loop>
                 <source src="sounds_and_music/sonic-wave-134902.mp3"/>
             </audio>
         </div><!--the end of play_left page-->
@@ -318,7 +320,8 @@
                 document.querySelector("#largeText").style.color="#ffd8f7";
                 document.querySelector("#largeText").style.textShadow="2px 20px 25px #f0799d";
                 document.querySelector("#result").style.color = "#ffd8f7";
-				document.querySelector("#enjoy").style.color="#ffd8f7"
+				document.querySelector("#enjoy").style.color="#ffd8f7";
+				
                 toolTips[2].innerHTML = "Light"
                 
             } else {
@@ -330,7 +333,7 @@
                 document.querySelector("#largeText").style.color="#F04A00";
                 document.querySelector("#largeText").style.textShadow="2px 20px 25px lightyellow";
                 document.querySelector("#result").style.color = "#F04A00";
-                document.querySelector("#result").style.color = "#F04A00";
+                document.querySelector("#enjoy").style.color="#F04A00"
 
                 toolTips[2].innerHTML = "Dark"
             }
@@ -742,12 +745,12 @@ playAgain.addEventListener('click',function() {
 
 
 //pixie dust
-var MAX_LIFE = 50;
-var canvas = document.querySelector('canvas');
-var input = document.querySelector('input');
-var field = {}
-var hasFocus = false;
-var caret = document.createElement('span');
+let MAX_LIFE = 50;
+let canvas = document.querySelector('canvas');
+let input = document.querySelector('input');
+let field = {}
+let hasFocus = false;
+let caret = document.createElement('span');
 caret.style.position = 'absolute';
 caret.style.left = 0;
 caret.style.top = 0;
@@ -858,7 +861,7 @@ function burst(intensity) {
 
 
 
-// start particle simulation
+
 simulate(
 		'2d', {
 				init: function() {
@@ -882,18 +885,18 @@ simulate(
 				},
 				paint: function(particle) {
 					
-					var p = particle.position;
-					var s = particle.size;
-					var o = 1 - (particle.life / MAX_LIFE);
+					let p = particle.position;
+					let s = particle.size;
+					let o = 1 - (particle.life / MAX_LIFE);
 					
 					this.paint.circle(p.x, p.y, s, 'rgba(255,255,255,' + o +')');
 					this.paint.circle(p.x, p.y, s + 1.5, 'rgba(231,244,255,' + (o * .25) + ')');
 					
 					// extra
-					var w = 2;
-					var wh = w * .5;
-					var h = 35;
-					var hh = h * .5;
+					let w = 2;
+					let wh = w * .5;
+					let h = 35;
+					let hh = h * .5;
 					this.context.rect(p.x -wh, p.y - hh, w, h);
 					this.context.fillStyle = 'rgba(231,244,255,' + (o * .025) + ')';
 					this.context.fill();
@@ -973,20 +976,20 @@ Vector.subtract = function(a, b) {
 };
 
 Vector.random = function(range) {
-		var v = new Vector();
+		let v = new Vector();
 		v.randomize(range);
 		return v;
 };
 
 Vector.distanceSquared = function(a, b) {
-		var dx = a.x - b.x;
-		var dy = a.y - b.y;
+		let dx = a.x - b.x;
+		let dy = a.y - b.y;
 		return dx * dx + dy * dy;
 };
 
 Vector.distance = function(a, b) {
-		var dx = a.x - b.x;
-		var dy = a.y - b.y;
+		let dx = a.x - b.x;
+		let dy = a.y - b.y;
 		return Math.sqrt(dx * dx + dy * dy);
 };
 
@@ -1127,8 +1130,8 @@ Particle.prototype = {
 // setup DOM
 function simulate(dimensions, options) {
 
-		// private vars
-		var particles = [];
+		
+		let particles = [];
 		var destroyed = [];
 		var update = update || function() {};
 		var stage = stage || function() {};
@@ -1205,9 +1208,9 @@ function simulate(dimensions, options) {
 				function act() {
 
 						// update particle states
-						var i = 0;
-						var l = particles.length;
-						var p;
+						let i = 0;
+						let l = particles.length;
+						let p;
 						for (; i < l; i++) {
 								particles[i].update(this);
 						}
@@ -1255,9 +1258,7 @@ function simulate(dimensions, options) {
 
 				}
 
-				/**
-				 * API
-				 **/
+				
 				function clear() {
 						context.clearRect(0, 0, canvas.width, canvas.height);
 				}
@@ -1271,7 +1272,7 @@ function simulate(dimensions, options) {
 				}
 
 				function spray(amount, config) {
-						var i = 0;
+						let i = 0;
 						for (; i < amount; i++) {
 								add.apply(this, config());
 						}
@@ -1405,10 +1406,10 @@ function simulate(dimensions, options) {
 								range = Math.pow(range || 100, 2);
 								return function(particle) {
 
-										var i = 0;
-										var l = particles.length;
-										var count = 0;
-										var heading = new Vector();
+										let i = 0;
+										let l = particles.length;
+										let count = 0;
+										let heading = new Vector();
 
 										if (l <= 1) {
 												return;
@@ -1452,9 +1453,9 @@ function simulate(dimensions, options) {
 								food = food || [];
 								return function(particle) {
 
-										var i = 0;
-										var l = particles.length;
-										var prey;
+										let i = 0;
+										let l = particles.length;
+										let prey;
 
 										for (; i < l; i++) {
 
@@ -1491,14 +1492,14 @@ function simulate(dimensions, options) {
 								return function(particle) {
 
 										// attract other particles
-										var totalForce = new Vector(0, 0);
-										var force = new Vector(0, 0);
-										var i = 0;
-										var l = particles.length;
-										var distance;
-										var pull;
-										var attractor;
-										var grouping = groups.length;
+										let totalForce = new Vector(0, 0);
+										let force = new Vector(0, 0);
+										let i = 0;
+										let l = particles.length;
+										let distance;
+										let pull;
+										let attractor;
+										let grouping = groups.length;
 
 										for (; i < l; i++) {
 
@@ -1530,8 +1531,8 @@ function simulate(dimensions, options) {
 								return function(particle) {
 
 										// move around when particle reaches edge of screen
-										var position = particle.position;
-										var radius = particle.size * .5;
+										let position = particle.position;
+										let radius = particle.size * .5;
 
 										if (position.x + radius > canvas.width + margin) {
 												position.x = radius;
@@ -1556,9 +1557,9 @@ function simulate(dimensions, options) {
 								return function(particle) {
 
 										// bounce from edges
-										var position = particle.position;
-										var velocity = particle.velocity;
-										var radius = particle.size * .5;
+										let position = particle.position;
+										let velocity = particle.velocity;
+										let radius = particle.size * .5;
 
 										if (position.x + radius > canvas.width) {
 												velocity.x = -velocity.x;
@@ -1581,9 +1582,9 @@ function simulate(dimensions, options) {
 						edge: function(action) {
 								return function(particle) {
 
-										var position = particle.position;
-										var velocity = particle.velocity;
-										var radius = particle.size * .5;
+										let position = particle.position;
+										let velocity = particle.velocity;
+										let radius = particle.size * .5;
 
 										if (position.x + radius > canvas.width) {
 												action(particle);
@@ -1635,7 +1636,7 @@ function simulate(dimensions, options) {
 				tick();
 
 				// start listening to events
-				var self = this;
+				let self = this;
 				document.addEventListener('keyup', function(e) {
 						options.action.call(self, e);
 				});

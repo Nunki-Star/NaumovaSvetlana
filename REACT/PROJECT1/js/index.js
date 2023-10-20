@@ -1,5 +1,3 @@
-ReactDOM.render(React.createElement('input',{
-    placeholder:"enter your text",
-    onClick:()=>console.log("hi"), 
-    onMouseEnter:()=> console.log("mouse over")
-}), document.getElementById("app"))
+const elements = <input placeholder="my text" />
+const app = document.getElementById("app")
+ReactDOM.render(elements, app)
