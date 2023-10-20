@@ -25,9 +25,11 @@
                     <p style="font-family:Jelantik"   class="animate_animated animate__backInLeft"  id="weirdtext">Welcome to</p>
                     <p style="font-family: Jelantik" class="animate__animated animate__bounceInDown" id="largeText">Memoryify</h2>
                 </div>
-				<div>
-					<input type="text" placeholder="Type your name please..."/>
+				<div class="input">
+					<input id="txt" onInput = "getValue()" placeholder="Type your name please..."/><br>
+					
 				</div>
+				<span id = "result"></span>
             </div>
 
 
@@ -228,9 +230,17 @@
             }
         };
         
+
+		function getValue(){
+					let txt = document.getElementById("txt");
+					let textValue = txt.value;
+
+					let result =document.getElementById("result");
+					result.innerText = textValue
+
+   				 }
         
-        const main = document.getElementsByClassName("main")
-        console.log(main);
+        
 
 
         function changeCoordinates(){
@@ -239,6 +249,7 @@
             const buttonToREmove = document.querySelectorAll("button");
             const mainDiv = document.getElementsByClassName("main");
             let myBlock = document.getElementById("right");
+			
             if(smiley[1].getAttribute("class")==="fa-solid fa-face-smile fa-bounce fa-2xl"){
                 smiley[1].removeAttribute("class");
                 smiley[1].setAttribute("class", "fa-solid fa-house fa-bounce fa-2xl");
@@ -250,18 +261,22 @@
                 document.querySelector("#weirdtext").style.fontSize = "100px";
                 document.querySelector("#largeText").style.fontSize = "110px";
                 document.querySelector(".buttons").style.justifyContent= "left";
-                document.querySelector(".buttons").style.marginLeft = "-10px";
+				document.querySelector(".buttons").style.marginLeft = "-10px";
                 buttonToREmove[3].style.visibility = "hidden";
                 buttonToREmove[4].style.visibility = "hidden"
                 toolTips[1].innerHTML="Home";
-              
                 myBlock.style.display = "block";
-                
-                document.querySelector(".main").style.flexDirection="row"
-                document.querySelector(".main").style.justifyContent = "center"
-               document.querySelector(".main").style.marginTop = "20px"
-                
-
+                document.querySelector(".main").style.flexDirection="row";
+                document.querySelector(".main").style.justifyContent = "center";
+                document.querySelector(".main").style.marginTop = "20px";
+				document.querySelector(".input").style.display = "none"
+				document.querySelector("#result").style.display = "block";
+				document.querySelector("#result").style.color = "#F04A00";
+				document.querySelector("#result").style.fontFamily = "Jelantik";
+				document.querySelector("#result").style.fontSize = "100px";
+				document.querySelector("#result").style.textShadow = "2px 20px 25px lightyellow";
+				document.querySelector("#result").style.opacity = "0.8"
+				
             }else{
                 smiley[1].removeAttribute("class");
                 smiley[1].setAttribute("class", "fa-solid fa-face-smile fa-bounce fa-2xl");
@@ -275,8 +290,8 @@
                 buttonToREmove[3].style.visibility = "visible";
                 buttonToREmove[4].style.visibility = "visible";
                 myBlock.style.display = "none";
-                
-
+                document.querySelector(".input").style.display = "block"
+				document.querySelector("#result").style.display = "none"
             }
 
         }
@@ -293,7 +308,7 @@
                 document.querySelector("p").style.textShadow="2px 20px 25px #f0799d";
                 document.querySelector("#largeText").style.color="#ffd8f7";
                 document.querySelector("#largeText").style.textShadow="2px 20px 25px #f0799d";
-                
+                document.querySelector("#result").style.color = "#ffd8f7"
                 toolTips[2].innerHTML = "Light"
                 
             } else {
