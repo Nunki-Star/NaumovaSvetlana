@@ -21,7 +21,7 @@ window.matchMedia("(orientation: portrait)").addEventListener("change", e=>{
            document.querySelector(".message").style.fontSize="30px"
 
 
-    }else if(landscape){
+    }else{
         /*;
         document.body.style.backgroundImage="url(../images/gradient-forest-landscape.jpg.avif)";*/
         
