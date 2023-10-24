@@ -5,11 +5,13 @@ window.matchMedia("(orientation: portrait)").addEventListener("change", e=>{
         
        
            mainColor.style.display = "none";
-           document.body.style.background="orangered";
+           document.body.style.background="beige";
            document.body.style.display = "flex";
            document.body.style.flexDirection = "column";
            document.body.style.justifyContent = "center";
-           document.body.style.alignItems = "center"
+           document.body.style.alignItems = "center";
+           document.body.style.height = "100%";
+           document.body.style.width = "100%"
            document.querySelector(".phone").style.display = "block";
            document.querySelector(".phone").style.marginTop="50%"
            document.querySelector(".message").style.display = "block",
