@@ -26,25 +26,24 @@
 
                     <p style="font-family: Jelantik" class="animate__animated animate__bounceInDown" id="largeText">Memoryify</p>
                 </div>
+
 				<div class="input">
-					<input id="txt" onInput = "getValue()" style="color:#e75480" placeholder="Type your name please..."/><br>
+					
+					<input id="txt" onInput = "getValue()"  type="text" id="firstname"    style="color:#e75480" placeholder="Type your name please..." maxlength="15"/><br>
 				</div>
 				<div id="enjoy">and enjoy playing,</div>
 				<div id = "result"></div>
             </div>
 
 
-           
-
-
-            <div class="buttons">
+         <div class="buttons">
                 <button value="PLAY" onclick="play(), mute(), change()" class="bubbly-button">
                     <span class="tooltip">Mute</span>
                     <audio id="audio" src="sounds_and_music/twinkles_cutted.mp3"></audio>
                     <i class="fa-solid fa-volume-xmark fa-bounce fa-2xl"></i>
                     <!--<i class="fa-solid fa-music fa-bounce fa-2xl" id="img2" onClick="chg(this.id)" style="color: #fefcdd; display:none"></i>-->
                 </button>
-                <button value="PLAY"  onclick="play(), changeCoordinates()", class="bubbly-button">
+                <button value="PLAY"  onclick="play(), changeCoordinates(), validateName()", class="bubbly-button">
                     <!--<input type="button" value="PLAY" onclick="play()" class="bubbly-button">-->
                         <span class="tooltip">Play</span>
                         <audio id="audio" src="sounds_and_music/twinkles_cutted.mp3"></audio>
@@ -186,6 +185,7 @@
     <script>
         
         
+		
 
         let modal = document.getElementById("myModal");
         let btn = document.getElementById("myBtn");
@@ -243,7 +243,15 @@
 
    				 }
         
-        
+        //valid
+		function validateName() {
+    		let x = document.getElementById("txt").value;
+			if (x == "") {
+				alert("First Name is required!");
+				return false;
+			}
+			return ;
+	}
 
 
         function changeCoordinates(){
@@ -939,25 +947,18 @@ simulate(
 
 
 
-// "simulate" particle simulation logic
-/**
- * Constants
- */
+
 PI_2 = Math.PI / 2;
 PI_180 = Math.PI / 180;
 
-/**
- * Random
- */
+//random
 var Random = {
 		between: function(min, max) {
 				return min + (Math.random() * (max - min));
 		}
 }
 
-/**
- * 2D Vector Class
- */
+//2d vector class
 function Vector(x, y) {
 		this._x = x || 0;
 		this._y = y || 0;
@@ -1071,9 +1072,7 @@ Vector.prototype = {
 		}
 }
 
-/**
- * Particle Class
- */
+//practicle class
 function Particle(id, group, position, velocity, size, life, behavior) {
 
 		this._id = id || 'default';
@@ -1605,7 +1604,7 @@ function simulate(dimensions, options) {
 						}
 				}
 
-				// public
+			
 				Object.defineProperties(this, {
 						'particles': {
 								get: function() {
@@ -1629,13 +1628,12 @@ function simulate(dimensions, options) {
 						}
 				});
 
-				// call init method so the scene can be setup
+				
 				options.init.call(this)
 
-				// start ticking
+				
 				tick();
 
-				// start listening to events
 				let self = this;
 				document.addEventListener('keyup', function(e) {
 						options.action.call(self, e);
