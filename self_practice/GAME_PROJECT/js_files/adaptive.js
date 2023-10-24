@@ -10,10 +10,7 @@ window.matchMedia("(orientation: portrait)").addEventListener("change", e=>{
            document.body.style.flexDirection = "column";
            document.body.style.justifyContent = "center";
            document.body.style.alignItems = "center";
-           document.body.style.height = "100%";
-           document.body.style.width = "100%";
-           document.html.style.height = "100%";
-           document.html.style.width = "100%";
+          
            document.querySelector(".phone").style.display = "block";
            document.querySelector(".phone").style.marginTop="50%"
            document.querySelector(".message").style.display = "block",
