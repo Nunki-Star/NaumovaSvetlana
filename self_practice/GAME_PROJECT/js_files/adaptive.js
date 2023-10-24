@@ -1,6 +1,7 @@
-window.matchMedia("(orientation: portrait)").addEventListener("change", e=>{
+/*window.matchMedia("(orientation: portrait)").addEventListener("change", e=>{
     const portrait = e.matches;
-    const mainColor = document.querySelector(".main")
+    const mainColor = document.querySelector(".main");
+    
     if(portrait){
         
        
@@ -26,6 +27,8 @@ window.matchMedia("(orientation: portrait)").addEventListener("change", e=>{
         mainColor.style.display = "block";
         document.body.style.background = "transparent";
         document.body.style.backgroundImage="url(images/gradient-forest-landscape.jpg.avif)";
+       document.body.style.backgroundRepeat = "no-repeat"
+       
         
     }
- })
+ })*/

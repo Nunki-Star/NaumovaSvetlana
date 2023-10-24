@@ -1,7 +1,7 @@
 
 
 
-  .phone{
+  /*.phone{
     display:none;
     height: 50px;
     width: 100px;
@@ -33,4 +33,52 @@
     .phone, .message {
       display: block;
     }
-  }
+  }*/
+
+
+  @media (orientation: portrait) and (max-width: 800px) {
+    html, body {
+      background: black;
+      height: 100%;
+      width: 100%;
+    }
+    .main{
+      display:none
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+
+    .phone{
+      display:block;
+      height: 50px;
+      width: 100px;
+      border: 3px solid white;
+      border-radius: 10px;
+      animation: rotate 1.5s ease-in-out infinite alternate;
+    }
+    
+    .message{
+      display:block;
+      color: white;
+      font-size: 1em;
+      margin-top: 40px;
+    }
+    
+    @keyframes rotate {
+      0% {
+            transform: rotate(0deg)
+        }
+        50% {
+            transform: rotate(-90deg)
+        }
+        100% {
+            transform: rotate(-90deg)
+        }
+    }
+    }
+  
