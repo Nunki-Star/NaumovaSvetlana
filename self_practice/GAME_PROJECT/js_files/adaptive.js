@@ -18,9 +18,8 @@ window.matchMedia("(orientation: portrait)").addEventListener("change", e=>{
            document.querySelector(".message").style.fontSize="30px"
 
 
-    }else{
+    }else if(landscape){
         document.querySelector(".phone").style.display = "none";
-        document.querySelector(".message").style.display = "none",
         
         
     }
