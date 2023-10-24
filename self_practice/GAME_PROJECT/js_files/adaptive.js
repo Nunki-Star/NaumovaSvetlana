@@ -10,17 +10,22 @@ window.matchMedia("(orientation: portrait)").addEventListener("change", e=>{
            document.body.style.flexDirection = "column";
            document.body.style.justifyContent = "center";
            document.body.style.alignItems = "center";
-          
+           document.body.style.width = "100%";
+           document.body.style.height = "100%"
            document.querySelector(".phone").style.display = "block";
            document.querySelector(".phone").style.marginTop="50%";
            document.querySelector(".message").style.display = "block";
            document.querySelector(".message").style.fontFamily = "Jelantik";
-           document.querySelector(".message").style.fontSize="30px"
+           document.querySelector(".message").style.fontSize="30px";
+          
 
 
-    }else if(landscape){
+    }else{
         document.querySelector(".phone").style.display = "none";
-        
+        document.querySelector(".message").style.display = "none"
+        mainColor.style.display = "block";
+        document.body.style.background = "transparent";
+        document.body.style.backgroundImage="url(images/gradient-forest-landscape.jpg.avif)";
         
     }
  })
