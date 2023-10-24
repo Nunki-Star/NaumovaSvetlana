@@ -81,4 +81,44 @@
         }
     }
     }
+    @media (orientation: landscape) and (max-width: 300px){
+    body{
+      background: 100%;
+    }
+
+    .container{
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      margin-top:15px
+  }
+
+  .container .title p:first-child {
+    /*color: #FF7F50;*/
+    /*color:#F88379;*/
+    color:#F04A00;
+    opacity: 0.8;
+    font-size:60px;
+    text-shadow: 2px 20px 25px lightyellow;
+   
+    
+}
+  .animate__animated.animate__bounceInDown{
+    --animate-duration: 3s;
+    color:#F04A00;
+    opacity:0.9;
+    font-size:65px;
+    text-shadow: 2px 20px 25px lightyellow;
   
+}
+  button{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    opacity:0.8;
+    box-shadow: 2px 20px 25px lightyellow;
+    border: 1px;
+    position:relative
+}
+    }
