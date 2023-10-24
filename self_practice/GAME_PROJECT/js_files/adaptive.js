@@ -5,7 +5,7 @@ window.matchMedia("(orientation: portrait)").addEventListener("change", e=>{
         
        
            mainColor.style.display = "none";
-           document.body.style.background="beige";
+           document.body.style.background="black";
            document.body.style.display = "flex";
            document.body.style.flexDirection = "column";
            document.body.style.justifyContent = "center";
@@ -21,11 +21,9 @@ window.matchMedia("(orientation: portrait)").addEventListener("change", e=>{
            document.querySelector(".message").style.fontSize="30px"
 
 
-    }else{
+    }else if(landscape){
         /*;
         document.body.style.backgroundImage="url(../images/gradient-forest-landscape.jpg.avif)";*/
-        document.querySelector(".phone").style.display = "none";
-        document.querySelector(".message").style.display = "none"
-        mainColor.style.display = "block"
+        
     }
  })
