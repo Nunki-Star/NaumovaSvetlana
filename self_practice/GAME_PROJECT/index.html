@@ -43,7 +43,7 @@
                     <i class="fa-solid fa-volume-xmark fa-bounce fa-2xl"></i>
                     <!--<i class="fa-solid fa-music fa-bounce fa-2xl" id="img2" onClick="chg(this.id)" style="color: #fefcdd; display:none"></i>-->
                 </button>
-                <button value="PLAY"  onclick="play(), changeCoordinates(), validateName()", class="bubbly-button">
+                <button value="PLAY"  onclick="play(), changeCoordinates()", class="bubbly-button">
                     <!--<input type="button" value="PLAY" onclick="play()" class="bubbly-button">-->
                         <span class="tooltip">Play</span>
                         <audio id="audio" src="sounds_and_music/twinkles_cutted.mp3"></audio>
@@ -177,23 +177,21 @@
             
                 <ul class="deck"></ul>
             </div>
-            <div class="phone"></div>
-			<div class="message">
-			  Please rotate your device!
-			</div>
+            
         </div>
+		
     </div>
-    <script type="text/javascript" src="js_files/fly.js"></script>
+	<div class="phone"></div>
+	<div class="message">
+			  Please rotate your device!
+	</div>
+    <script type="text/javascript" src="fly.js"></script>
    	<script type="text/javascript" src="js_files/game.js"></script>
 	<script type="text/javascript" src="js_files/input.js"></script>
 	<script type="text/javascript" src="js_files/adaptive.js"></script>
     <script>
 		
-	
-
-
-        
-        let modal = document.getElementById("myModal");
+		let modal = document.getElementById("myModal");
         let btn = document.getElementById("myBtn");
         let span = document.getElementsByClassName("close")[0];
         btn.onclick = function() {

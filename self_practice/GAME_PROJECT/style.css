@@ -828,14 +828,14 @@ button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(
   display:none;
   height: 50px;
   width: 100px;
-  border: 3px solid white;
+  border: 3px solid black;
   border-radius: 10px;
   animation: rotate 1.5s ease-in-out infinite alternate;
 }
 
 .message{
-  display:block;
-  color: white;
+  display:none;
+  color: black;
   font-size: 1em;
   margin-top: 40px;
 }
@@ -853,11 +853,7 @@ button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(
 }
 
 
-@media only screen and (max-device-width: 812px) and (orientation: landscape) {
-  .phone, .message {
-    display: block;
-  }
-}
+
   
   
   
