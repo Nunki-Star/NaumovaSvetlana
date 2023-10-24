@@ -1,4 +1,4 @@
-@media (orientation: portrait) and (max-width: 800px) {
+@media (orientation: portrait) and (max-width: 812px) {
     html, body {
       background: black;
       height: 100%;
@@ -43,13 +43,14 @@
         }
     }
     }
-    @media (orientation: landscape) and (max-width:1000px){
+    @media (orientation: landscape) and (max-width:812px){
     body{
      
       background-image: url(images/gradient-forest-landscape.jpg.avif);
       background-size: 100%;
       background-repeat: no-repeat;
     }
+    
     .phone{
       display:none
     }
@@ -103,11 +104,11 @@
   text-align: center;
 }
 .deck{
-  width:35em;
-  height: 35em;
+  width:40em;
+  height: 40em;
 }
 .card {
-  height: 5em;
-  width: 5em;
+  height: 8em;
+  width: 8em;
 }
 }

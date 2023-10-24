@@ -634,56 +634,9 @@ button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(
   Footer
   ------------------------------------*/
   
-  .footer {
-    color: #666;
-    margin-bottom: 2em;
-  }
   
-  .footer > p {
-    font-size: 1em;
-    padding: 1em;
-  }
   
-  .footer a:link,
-  .footer a:visited {
-    color: #F3EAAF;
-    text-decoration: none;
-  }
   
-  /*---------------------------------- 
-  Media Queries
-  ------------------------------------*/
-  
-  /*--Tablets-------------------------*/
-  @media screen and (min-width: 550px) {
-  
-    .deck  {
-      height: 50em;
-      padding: 2em;
-      width: 50em;
-    }
-  
-    .card {
-      height: 10em;
-      width: 10em;
-    }
-  
-    .deck img {
-      width: 9em;
-    }
-  
-    .modalgamecontent h2 {
-      font-size: 4em;
-    }
-  
-    .play-again-btn {
-      font-size: 1.8em;
-    }
-  }
-  
-  /*---------------------------------- 
-  Desktops
-  ------------------------------------*/
   @media screen and (min-width: 800px) {
     
     h1 {
