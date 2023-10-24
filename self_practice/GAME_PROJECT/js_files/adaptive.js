@@ -12,15 +12,16 @@ window.matchMedia("(orientation: portrait)").addEventListener("change", e=>{
            document.body.style.alignItems = "center";
           
            document.querySelector(".phone").style.display = "block";
-           document.querySelector(".phone").style.marginTop="50%"
-           document.querySelector(".message").style.display = "block",
+           document.querySelector(".phone").style.marginTop="50%";
+           document.querySelector(".message").style.display = "block";
            document.querySelector(".message").style.fontFamily = "Jelantik";
            document.querySelector(".message").style.fontSize="30px"
 
 
     }else{
-        /*;
-        document.body.style.backgroundImage="url(../images/gradient-forest-landscape.jpg.avif)";*/
+        document.querySelector(".phone").style.display = "none";
+        document.querySelector(".message").style.display = "none",
+        
         
     }
  })
