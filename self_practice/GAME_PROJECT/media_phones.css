@@ -81,11 +81,11 @@
         }
     }
     }
-    @media (orientation: landscape) and (max-width: 300px){
+    @media (orientation: landscape) and (max-width: 800px){
     body{
       background: 100%;
     }
-
+    
     .container{
       display:flex;
       flex-direction: column;
