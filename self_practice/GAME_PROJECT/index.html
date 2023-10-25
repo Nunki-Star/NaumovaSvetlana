@@ -246,8 +246,7 @@
 					
    				 }
         
-        
-
+                 
 
         function changeLarge(){
             let small = window.matchMedia("(max-width: 900px)");
@@ -257,6 +256,7 @@
             const buttonToREmove = document.querySelectorAll("button");
             const mainDiv = document.getElementsByClassName("main");
             let myBlock = document.getElementById("right");
+
 			console.log("coordinates")
             if((smiley[1].getAttribute("class")==="fa-solid fa-face-smile fa-bounce fa-2xl") && (window.innerWidth > 900)){
                 console.log("large")
@@ -353,6 +353,9 @@
                 document.querySelector(".score-panel").style.fontSize = "7px";
                 document.querySelector(".score-panel").style.padding = "0 0 0 ";
                 document.querySelector(".timer-container").style.padding = "0px";
+                document.querySelector(".modalgamecontent").style.width = "70%";
+                document.querySelector(".modalgamecontent").style.width = "80%";
+                document.querySelector(".play_right").style.fontSize = "50.5%"
             }else if((smiley[1].getAttribute("class")==="fa-solid fa-house fa-bounce fa-2xl") && (window.innerWidth < 900)){
                 console.log("small2");
                 smiley[1].removeAttribute("class");
@@ -448,7 +451,7 @@
 		
 
         </script>
-       <script type="text/javascript" src="fly.js"></script>
+       
        <script type="text/javascript" src="game.js"></script>
        <script type="text/javascript" src="input.js"></script>
        <script type="text/javascript" src="adaptive.js"></script>
