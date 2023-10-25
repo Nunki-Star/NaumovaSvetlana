@@ -1,4 +1,4 @@
-@media (orientation: portrait) and (max-width: 812px) {
+@media (orientation: portrait) and (max-width: 900px) {
     html, body {
       background: black;
       height: 100vh;
