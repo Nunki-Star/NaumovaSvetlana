@@ -45,75 +45,38 @@
             transform: rotate(-90deg)
         }
     }
-    }
-@media (orientation: landscape) and (max-height:812px){
-    body{
-      /*background-image: url(images/gradient-forest-landscape.jpg.avif);*/
-      background-size: 100%;
-      background-repeat: no-repeat;
-    }
-    body, html{
-      height: 100%;
-      width:100%;
-      overflow: hidden
-    }
+  }
+
+  @media (orientation: landscape) {
     .phone{
-      display:none
+      display:none;
+      
     }
+    
     .message{
-      display:none
+      display:none;
+      
+    }
+  }
+
+  @media (max-width:900px){
+    body, html{
+      width:100%;
+      height:100%;
+      margin:0;
+      padding:0
+    }
+    img{
+      width:100%;
+      height:100%;
     }
     .container{
-      display:flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      margin-top:15px
+      margin-top:50px
+    }
+    .container .title p:first-child{
+      font-size: 40px;
+    }
+    .container .title p:nth-child(2){
+      font-size: 60px;
+    }
   }
-  
-  .container .title p:first-child {
-    
-    color:red;
-    opacity: 0.8;
-    font-size:60px;
-    text-shadow: 2px 20px 25px lightyellow;
-   
-    
-}
-  .animate__animated.animate__bounceInDown{
-    --animate-duration: 3s;
-    color:#F04A00;
-    opacity:0.9;
-    font-size:60px;
-    text-shadow: 2px 20px 25px lightyellow;
-  
-}
-  button{
-    width:65px;
-    height:65px;
-    border-radius:50%;
-    opacity:0.8;
-    box-shadow: 2px 20px 25px lightyellow;
-    border: 1px;
-    position:relative
-}
-
-.play_right {
-  /* Background pattern from Subtle Patterns */
- 
-  font-family: "Jelantik";
-  /*one Em roughly ten pixels (16 x 62.5% = 10)*/
-  font-size: 33.5%;
-  letter-spacing: 1.5px;
-  margin: 0;
-  text-align: center;
-}
-.deck{
-  width:40em;
-  height: 40em;
-}
-.card {
-  height: 8em;
-  width: 8em;
-}
-}
