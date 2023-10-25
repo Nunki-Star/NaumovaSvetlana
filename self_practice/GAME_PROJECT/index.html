@@ -332,7 +332,7 @@
                 myBlock.style.display = "block";
                 document.querySelector(".main").style.flexDirection="row";
                 document.querySelector(".main").style.justifyContent = "space-evenly";
-                document.querySelector(".main").style.marginTop = "20px";
+                document.querySelector(".main").style.marginTop = "5px";
 				document.querySelector(".input").style.display = "none"
 				document.querySelector("#result").style.display = "block";
 				document.querySelector("#result").style.color = "#F04A00";
@@ -347,10 +347,10 @@
 				document.querySelector("#enjoy").style.textShadow = "2px 20px 25px lightyellow";
 				document.querySelector("#enjoy").style.opacity = "0.9";
 				document.querySelector("#enjoy").style.marginTop = "-15px";
-                document.querySelector(".deck").style.width = "25em"
-                document.querySelector(".deck").style.height = "25em";
-                document.getElementsByClassName("card").style.width = "5em";
-                document.getElementsByClassName("card").style.height = "5em";
+                document.querySelector(".deck").style.width = "30em"
+                document.querySelector(".deck").style.height = "30em";
+                document.querySelectorAll(".card").style.height="5px";
+                document.querySelectorAll(".card").style.width="5px"
             }else if((smiley[1].getAttribute("class")==="fa-solid fa-house fa-bounce fa-2xl") && (window.innerWidth < 900)){
                 console.log("small2");
                 smiley[1].removeAttribute("class");
