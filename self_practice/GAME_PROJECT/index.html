@@ -15,6 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script type="text/javascript" src="fly.js"></script>
     
+    
 
     
 </head>
@@ -44,7 +45,7 @@
                     <i class="fa-solid fa-volume-xmark fa-bounce fa-2xl"></i>
                     <!--<i class="fa-solid fa-music fa-bounce fa-2xl" id="img2" onClick="chg(this.id)" style="color: #fefcdd; display:none"></i>-->
                 </button>
-                <button value="PLAY"  onclick="play(), changeCoordinates()", class="bubbly-button">
+                <button value="PLAY"  onclick="play(), changeCoordinates(), changeCoordinates2()", class="bubbly-button">
                     <!--<input type="button" value="PLAY" onclick="play()" class="bubbly-button">-->
                         <span class="tooltip">Play</span>
                         <audio id="audio" src="sounds_and_music/twinkles_cutted.mp3"></audio>
@@ -186,8 +187,7 @@
 	<div class="message">
 			  Please rotate your device!
 	</div>
-    <script type="text/javascript" src="fly.js"></script>
-   	
+    
     <script>
 		
 		let modal = document.getElementById("myModal");
@@ -262,7 +262,7 @@
                 document.querySelector(".container").style.marginBottom = "50px"
                 document.querySelector(".container").style.textAlign = "left";
                 
-                document.querySelector(".container").style.marginLeft = "-20px";
+                document.querySelector(".container").style.marginLeft = "20px";
                 document.querySelector(".container").style.marginTop = "20px";
                 document.querySelector("#weirdtext").style.fontSize = "130px";
                 document.querySelector("#largeText").style.fontSize = "140px";
@@ -309,6 +309,74 @@
             }
 
         }
+
+        function changeCoordinates2(){
+            const mediaQuery = window.matchMedia('(max-width: 900px)');
+            console.log("bbb")
+        
+            const smiley = document.getElementsByTagName("i");
+            console.log(i)
+            const toolTips = document.querySelectorAll("span");
+            const buttonToREmove = document.querySelectorAll("button");
+            const mainDiv = document.getElementsByClassName("main");
+            let myBlock = document.getElementById("right");
+
+            if(smiley[1].getAttribute("class")==="fa-solid fa-face-smile fa-bounce fa-2xl" && mediaQuery.matches){
+                console.log("yes")
+                smiley[1].removeAttribute("class");
+                smiley[1].setAttribute("class", "fa-solid fa-house fa-bounce fa-2xl");
+                document.querySelector(".container").style.marginBottom = "20px"
+                document.querySelector(".container").style.textAlign = "left";
+                
+                document.querySelector(".container").style.marginLeft = "25px";
+                document.querySelector(".container").style.marginTop = "20px";
+                document.querySelector("#weirdtext").style.fontSize = "30px";
+                document.querySelector("#largeText").style.fontSize = "40px";
+                document.querySelector(".buttons").style.justifyContent= "left";
+                document.querySelector(".buttons").style.marginLeft = "-10px";
+                buttonToREmove[3].style.visibility = "hidden";
+                buttonToREmove[4].style.visibility = "hidden"
+                toolTips[1].innerHTML="Home";
+                myBlock.style.display = "block";
+                document.querySelector(".main").style.flexDirection="row";
+                document.querySelector(".main").style.justifyContent = "space-evenly";
+                document.querySelector(".main").style.marginTop = "20px";
+                document.querySelector(".input").style.display = "none"
+                document.querySelector("#result").style.display = "block";
+                document.querySelector("#result").style.color = "#F04A00";
+                document.querySelector("#result").style.fontFamily = "Jelantik";
+                document.querySelector("#result").style.fontSize = "40px";
+                document.querySelector("#result").style.textShadow = "2px 20px 25px lightyellow";
+                document.querySelector("#result").style.opacity = "0.9"
+                document.querySelector("#enjoy").style.display = "block";
+                document.querySelector("#enjoy").style.color = "#F04A00";
+                document.querySelector("#enjoy").style.fontFamily = "Jelantik";
+                document.querySelector("#enjoy").style.fontSize = "40px";
+                document.querySelector("#enjoy").style.textShadow = "2px 20px 25px lightyellow";
+                document.querySelector("#enjoy").style.opacity = "0.9";
+                document.querySelector("#enjoy").style.marginTop = "-15px";
+
+            }else if(smiley[1].getAttribute("class")==="fa-solid fa-house fa-bounce fa-2xl" && mediaQuery.matches){
+                smiley[1].removeAttribute("class");
+                smiley[1].setAttribute("class", "fa-solid fa-face-smile fa-bounce fa-2xl");
+                document.querySelector(".container").style.justifyContent = "center";
+                document.querySelector(".container").style.textAlign = "center";
+                document.querySelector(".buttons").style.justifyContent= "center";
+                document.querySelector("#weirdtext").style.fontSize = "60px";
+                document.querySelector("#largeText").style.fontSize = "60px";
+                document.querySelector(".container").style.marginTop = "40px"
+                toolTips[1].innerHTML="Play";
+                buttonToREmove[3].style.visibility = "visible";
+                buttonToREmove[4].style.visibility = "visible";
+                myBlock.style.display = "none";
+                document.querySelector(".input").style.display = "block"
+                document.querySelector("#result").style.display = "none";
+                document.querySelector("#enjoy").style.display = "none";
+            }
+
+    }
+
+
 
         function changeDayToNight(){
             const dayOrNight = document.getElementsByTagName("i");
@@ -382,6 +450,9 @@
 		
 
         </script>
-       
+       <script type="text/javascript" src="fly.js"></script>
+       <script type="text/javascript" src="game.js"></script>
+       <script type="text/javascript" src="input.js"></script>
+       <script type="text/javascript" src="adaptive.js"></script>
     </body>
 </html>   
