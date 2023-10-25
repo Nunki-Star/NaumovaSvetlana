@@ -347,10 +347,12 @@
 				document.querySelector("#enjoy").style.textShadow = "2px 20px 25px lightyellow";
 				document.querySelector("#enjoy").style.opacity = "0.9";
 				document.querySelector("#enjoy").style.marginTop = "-15px";
-                document.querySelector(".deck").style.width = "30em"
+                document.querySelector(".deck").style.width = "30em";
                 document.querySelector(".deck").style.height = "30em";
-                document.querySelectorAll(".card").style.height="5px";
-                document.querySelectorAll(".card").style.width="5px"
+                document.querySelector(".container2").style.marginTop = "0";
+                document.querySelector(".score-panel").style.fontSize = "7px";
+                document.querySelector(".score-panel").style.padding = "0 0 0 ";
+                document.querySelector(".timer-container").style.padding = "0px";
             }else if((smiley[1].getAttribute("class")==="fa-solid fa-house fa-bounce fa-2xl") && (window.innerWidth < 900)){
                 console.log("small2");
                 smiley[1].removeAttribute("class");
