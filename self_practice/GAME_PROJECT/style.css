@@ -639,13 +639,7 @@ button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(
   
   @media screen and (min-width: 900px) {
     
-    h1 {
-      font-size: 6em;
-    }
-  
-    p {
-      font-size: 2.3em;
-    }
+   
   
     .deck  {
       height: 55em;
