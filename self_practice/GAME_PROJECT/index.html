@@ -95,7 +95,7 @@
                 <div class="modal-content2">
                 <div class="modal-body2">
                     <span class="close2">&times;</span>
-                        <table class="zigzag" style="border-collapse:separate; border-spacing:.25em 1em;transform:rotate(6deg); border:beige 2px solid; border-radius:5px">
+                        <table class="zigzag" style="border-collapse:separate; border-spacing:.25em 1em;transform:rotate(5deg); border:beige 2px solid; border-radius:5px">
                             <thead>
                                 <tr style="background-color: darkgray;transform:rotate(2deg); border-radius: 5px; font-family: 'Jelantik';">
                                     <th class="header" style="width:70%"; border-radius: 5px;>Player</th>
@@ -312,6 +312,7 @@
                 document.querySelector(".input").style.display = "block"
 				document.querySelector("#result").style.display = "none";
 				document.querySelector("#enjoy").style.display = "none";
+                document.querySelector("#info").style.fontSize = "40px"
             }else if((smiley[1].getAttribute("class")==="fa-solid fa-face-smile fa-bounce fa-2xl") && (window.innerWidth < 900)){
                 
                 console.log("small");

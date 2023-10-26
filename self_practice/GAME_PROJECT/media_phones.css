@@ -82,4 +82,16 @@
     .container .title p:nth-child(2){
       font-size: 60px;
     }
+    #info{
+      font-size: 15px;
+    }
+    .zigzag{
+      width:450px;
+      font-size: 20px;
+      
+     }
+     .modal-body2{
+      margin-top:78px
+     }
+
   }
