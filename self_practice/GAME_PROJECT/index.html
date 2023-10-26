@@ -79,7 +79,7 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <span class="close">&times;</span>
-                        <p style="font-family: Quicksand;" class="info">Hi Friend!!!<br>
+                        <p style="font-family: Quicksand;" class="info" id="info">Hi Friend!!!<br>
                                                     So here is some info for you to read before you start your journey with <span style="font-family:'Jelantik'">Memoryify</span>.
                                                     This game was created to test your ability to retain information. Play it to improve your 
                                                     attention, concentration, and focus. The idea is to find all 8 pairs of images as fast as your memory will allow you!
@@ -292,8 +292,8 @@
 				document.querySelector("#enjoy").style.textShadow = "2px 20px 25px lightyellow";
 				document.querySelector("#enjoy").style.opacity = "0.9";
 				document.querySelector("#enjoy").style.marginTop = "-35px";
-
-                
+                document.querySelector("#info").style.fontSize = "70px"
+                document.querySelector(".play_right").style.fontSize = "70.5%"
 				
             }else  if((smiley[1].getAttribute("class")==="fa-solid fa-house fa-bounce fa-2xl") && (window.innerWidth > 900)){
                 console.log("large2")
