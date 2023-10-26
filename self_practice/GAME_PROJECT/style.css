@@ -310,9 +310,15 @@ button:nth-child(2), button:nth-child(3), button:nth-child(4), button:nth-child(
     border-radius:25px
   }
   
+ .winner{
+  font-size:20px
+ }
+ p.stats{
+  font-size:30px
+ }
  .zigzag{
   width:900px
- }
+}
   @-webkit-keyframes animatetop {
     from {top:-300px; opacity:0} 
     to {top:0; opacity:1}

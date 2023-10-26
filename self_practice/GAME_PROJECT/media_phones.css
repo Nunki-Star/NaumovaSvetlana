@@ -91,7 +91,14 @@
       
      }
      .modal-body2{
-      margin-top:78px
+      margin-top:-78px
      }
+     .winner{
+      font-size:10px
+     }
+     p.stats{
+      font-size:10px
+     }
+     
 
   }
