@@ -79,7 +79,7 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <span class="close">&times;</span>
-                        <p style="font-family: Quicksand;" class="info" id="info">Hi Friend!!!<br>
+                        <p style="font-family: Quicksand;" class="info">Hi Friend!!!<br>
                                                     So here is some info for you to read before you start your journey with <span style="font-family:'Jelantik'">Memoryify</span>.
                                                     This game was created to test your ability to retain information. Play it to improve your 
                                                     attention, concentration, and focus. The idea is to find all 8 pairs of images as fast as your memory will allow you!
@@ -95,7 +95,7 @@
                 <div class="modal-content2">
                 <div class="modal-body2">
                     <span class="close2">&times;</span>
-                        <table class="zigzag" style="border-collapse:separate; border-spacing:.25em 1em;transform:rotate(5deg); border:beige 2px solid; border-radius:5px">
+                        <table class="zigzag" style="border-collapse:separate; border-spacing:.25em 1em;transform:rotate(6deg); border:beige 2px solid; border-radius:5px">
                             <thead>
                                 <tr style="background-color: darkgray;transform:rotate(2deg); border-radius: 5px; font-family: 'Jelantik';">
                                     <th class="header" style="width:70%"; border-radius: 5px;>Player</th>
@@ -170,7 +170,7 @@
                         <div class="modalgamecontent">
                             <span class="close">&times;</span>
                             <h2>Congratulations!</h2>
-                            <p class="winner">You have won the game and found all 8 pairs of cards.</p>
+                            <p>You have won the game and found all 8 pairs of cards.</p>
                             <img class="modal-img" src="icons/shooting_star.png" alt="stars">
                             <button class="btn play-again-btn">Play Again?</button>
                         </div>
@@ -264,7 +264,6 @@
                 smiley[1].setAttribute("class", "fa-solid fa-house fa-bounce fa-2xl");
                 document.querySelector(".container").style.marginBottom = "50px"
                 document.querySelector(".container").style.textAlign = "left";
-                
                 document.querySelector(".container").style.marginLeft = "20px";
                 document.querySelector(".container").style.marginTop = "20px";
                 document.querySelector("#weirdtext").style.fontSize = "130px";
@@ -292,8 +291,8 @@
 				document.querySelector("#enjoy").style.textShadow = "2px 20px 25px lightyellow";
 				document.querySelector("#enjoy").style.opacity = "0.9";
 				document.querySelector("#enjoy").style.marginTop = "-35px";
-                document.querySelector("#info").style.fontSize = "70px"
-                document.querySelector(".play_right").style.fontSize = "70.5%"
+
+                
 				
             }else  if((smiley[1].getAttribute("class")==="fa-solid fa-house fa-bounce fa-2xl") && (window.innerWidth > 900)){
                 console.log("large2")
@@ -312,7 +311,6 @@
                 document.querySelector(".input").style.display = "block"
 				document.querySelector("#result").style.display = "none";
 				document.querySelector("#enjoy").style.display = "none";
-                document.querySelector("#info").style.fontSize = "40px"
             }else if((smiley[1].getAttribute("class")==="fa-solid fa-face-smile fa-bounce fa-2xl") && (window.innerWidth < 900)){
                 
                 console.log("small");
@@ -374,6 +372,7 @@
                 document.querySelector(".input").style.display = "block"
 				document.querySelector("#result").style.display = "none";
 				document.querySelector("#enjoy").style.display = "none";
+                
             }
         }    
         
