@@ -3,22 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>test</title>
+  <style>
+    .container{
+      border:10px solid blue;
+      width: 50px;
+      height:50px;
+      border-radius: 20px;
+      background:red
+    }
+    
+  </style>
 </head>
 <body>
-  <div>
-    <input id="txt" onInput = "getValue()">
-    <span id="result"></span>
+  <div class="container">
+
   </div>
   <script>
-    function getValue(){
-      let txt = document.getElementById("txt");
-      let textValue = txt.value;
-
-      let result =document.getElementById("result");
-      result.innerText = textValue
-
-    }
+    document.querySelector(".container").style.background = "yellow";
+    document.querySelector(".container").style.width = "100px"
   </script>
 </body>
 </html>
