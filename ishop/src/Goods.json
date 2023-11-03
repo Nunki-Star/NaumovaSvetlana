@@ -1,0 +1,36 @@
+{
+    "goods" :[
+        {
+            "name":"product1", 
+            "Price":30,
+            "URL":"http://111.com",
+            "quantity":50,
+            "constrol": "Delete"
+
+        },
+        {
+            "name":"product2", 
+            "Price":30,
+            "URL":"http://222.com",
+            "quantity":50,
+            "constrol": "Delete"
+
+        },
+        {
+            "name":"product3", 
+            "Price":30,
+            "URL":"http://333.com",
+            "quantity":50,
+            "constrol": "Delete"
+
+        },
+        {
+            "name":"product1", 
+            "Price":30,
+            "URL":"http://111.com",
+            "quantity":50,
+            "constrol": "Delete"
+
+        }
+    ]
+}
