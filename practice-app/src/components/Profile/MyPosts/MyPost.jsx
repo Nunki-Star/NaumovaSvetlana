@@ -13,9 +13,9 @@ function MyPosts(){
                 <button>Remove</button>
             </div>
             <div classname = {classes.posts}>
-                <Post/>
-                <Post/>
-                <Post/>
+                <Post message="hi!how are you?"/>
+                <Post message="its my first post"/>
+            
             </div>
         </div>
     )
