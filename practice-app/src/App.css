@@ -9,22 +9,6 @@
  
 }
 
-.header{
-  grid-area:h;
-  background-color: limegreen;
-}
-.header img{
-  width:100px
-}
 
 
 
-.content{
-  grid-area:c;
-  background-color: deeppink;
-}
-
-.content img{
-  width:100%;
-  height:500px
-}
