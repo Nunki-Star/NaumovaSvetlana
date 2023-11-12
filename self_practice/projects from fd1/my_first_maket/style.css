@@ -1,0 +1,456 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header{
+   font-family: Roboto;
+   background-color: black;
+  
+   
+}   
+.container{
+    background-color: black;
+    padding-top:10px; 
+    padding-bottom:12px;
+    
+    
+}
+.menu{
+    float:left;
+}
+
+.menu > ul li:first-child{
+    padding-right: 30px;
+}
+
+.menu > ul li:nth-child(2){
+    padding-right: 30px;
+}    
+   
+
+div .delivery{
+    float:right;
+}
+
+ul li{
+    display:inline-block; 
+    list-style-type:none;
+   
+    
+}
+.delivery{
+    margin-right: -20px;
+}
+div.delivery div:first-child{
+    float:left;
+    
+}
+
+div.delivery div:nth-child(2){
+    float: right;
+    margin-right:121px
+}
+
+img[src*="phone"] {
+    padding-right:11px
+}
+    
+a [href^="tel"]{
+    padding-right:30px
+
+}
+
+img[src*="delivery-icon"]{
+  
+    padding-left: 30px;
+    padding-right:11px;
+}
+
+a{
+    text-decoration: none;
+    color:white
+}
+/*logo field*/
+.logo{
+    margin-left:140px;
+    margin-right:121px
+}
+
+div.logo div>img[src*="LOGO"]{
+    float:left;
+    margin-top:32px;
+}
+
+img[src*="wishlist"]{
+    float:left;
+    margin-left:-110px;
+  
+}
+
+img[src*="bag"]{
+    float:left;
+    margin-left:-70px;
+    margin-top:-1px
+   
+}
+
+img[src*="reddot"]{
+    float:left;
+    margin-left:-57px;
+   
+}
+img[src*="profile"]{
+    float:left;
+    margin-left:-30px
+}
+.list_items{
+    background-image: url(list_items/bg-menu.png);
+    background-repeat: no-repeat;
+    margin-left:140px;
+    margin-right:120px;
+    height:120px;
+    margin-top:40px
+}
+
+
+/* kitchen bedroom etc field*/
+
+
+ img[src*="Rectangle37"]{
+    padding-left:38.04px; 
+    margin-top:20px
+ }
+
+   
+
+ .list_items > ul li{
+    font-size: 16px;
+    padding-right:4px; 
+    padding-top:30px;
+ }
+
+ .list_items img[src*="kitchen"]{
+    padding-right: 10px;
+ }
+
+ .list_items ul li:nth-child(2), .list_items ul li:nth-child(3){
+    padding-left: 50px; 
+    
+ }
+
+ .list_items ul li:nth-child(4), .list_items ul li:nth-child(5){
+    padding-left: 40px; 
+ }
+
+.list_items ul li:nth-child(6){
+    padding-left: 50px;
+}
+
+.list_items img[src$="png"]{
+    padding-right: 10px;
+}
+
+img[src*="etc"]{
+    padding-left:15px
+}
+.list_items a{
+    color:black;
+
+}
+
+
+/*large picture promotion field*/
+
+
+.large_pic{
+    background-image: url(list_items/large_pic.png);
+    background-repeat: no-repeat;
+    height:450px;
+    margin-left:130px
+}
+
+.large_pic img[src*="loft"]{
+    margin-top:120px; 
+    margin-left:120px
+}
+
+.large_pic img[src*="comfy"]{
+    margin-top: 10px;
+    margin-left:120px
+}
+
+.large_pic div:nth-child(3){
+    background-image: url(list_items/little_rec.png);
+    background-repeat:no-repeat; 
+    margin-top:15px; 
+    margin-left:120px; 
+    height:45px
+}
+
+.large_pic div:nth-child(3) p{
+    padding-top:10px; 
+    padding-left:15px;
+    font-size:16px
+}
+
+.large_pic div:nth-child(3) p a{
+    text-decoration:none; 
+    color:black;
+    font-size:16px 
+
+}
+
+img[src*="hits"]{
+    margin-left:140px; 
+    margin-top:30px
+}
+
+
+/* FURNITURE FIELD */
+
+/*first item of the row*/
+.furniture_samples1 div.one:first-child {
+    float:left;
+  
+}
+
+div.one div:first-child{
+    margin-top:56px;
+    margin-left:370px
+}
+
+div.one div:nth-child(2){
+    margin-top:38px;
+    margin-left:172px
+}
+
+.one p:first-of-type{
+    margin-top:54px; 
+    margin-left:160px
+}
+
+.one p:nth-of-type(2){
+    font-size:11px; 
+    margin-top:-6px; 
+    margin-left:160px
+}
+
+.one p:nth-of-type(3){
+    margin-top:9px; 
+    margin-left:160px
+}
+
+
+/* second items of the rows and further.*/
+div.two:nth-child(2) {
+    float:left;
+    
+    
+}
+
+div.two div:first-child{
+    margin-top:56px;
+    margin-left:274.5px;
+}
+
+div.two div:nth-child(2){
+    margin-top:38px; 
+    margin-left:38px;
+    
+}
+
+.two p:first-of-type{
+    margin-top:54px; 
+    margin-left:20px;
+    
+
+}
+
+.two p:nth-of-type(2){
+    font-size:11px; 
+    margin-top:-6px; 
+    margin-left:20px;
+    
+}
+
+.two p:nth-of-type(3){
+    margin-top:9px; 
+    margin-left:20px
+}
+
+
+ /*window with discount*/
+
+.discount_window{
+    margin-left:50.5px;
+    margin-top:56px
+}
+
+    
+div.discount_field img[src*="Vector"]{
+    float:left;
+    margin-right:7px
+    
+
+}
+
+div.discount_field img[src*="discount"]{
+    float:left;
+    margin-top:4px
+}
+
+div.discount_field img[src*="heartshape"]{
+    float:left;
+    padding-left:162px
+}
+
+/*footer*/
+.footer{
+    background-image: url(footer/bg-footer.png);
+    background-repeat: no-repeat;
+    height:234px
+}
+
+.left_footer{
+    background-color: gold;
+    float:left; 
+    padding-top:54px; 
+    padding-left:130px;
+}
+
+.left_footer div:first-of-type{
+    background-color: palevioletred;
+    font-size:14px; 
+    font-weight:400
+}
+
+.left_footer div:nth-child(2){
+    color: violet;
+    font-size:14px; 
+    padding-top:10px;
+}
+
+.left_footer div:nth-child(2) ul:first-of-type{
+    color:blue;
+    float:left; 
+    padding-left:0px
+
+}
+/*спальни гостинные*/
+.left_footer div:nth-child(2) ul:first-of-type li:nth-of-type(2),
+.left_footer div:nth-child(2) ul:first-of-type li:nth-of-type(3){
+    background-color: green;
+    padding-top:7px
+}
+
+.left_footer div:nth-child(2) ul:nth-of-type(2),
+.left_footer div:nth-child(2) ul:nth-of-type(3){
+    color:red;
+    float:left
+}
+/* офисная мебель и детская*/
+.left_footer div:nth-child(2) ul:nth-of-type(2) li:nth-of-type(2),
+.left_footer div:nth-child(2) ul:nth-of-type(2) li:nth-of-type(3){
+    background-color: orange;
+    padding-top:7px
+}
+
+/* матсрасы и мягкая мебель*/
+.left_footer div:nth-child(2) ul:nth-of-type(3) li:nth-of-type(2),
+.left_footer div:nth-child(2) ul:nth-of-type(3) li:nth-of-type(3){
+    background-color: beige;
+    padding-top:7px
+}
+
+.left_footer div:last-of-type{
+    background-color: aquamarine;
+    margin-bottom:34px
+}
+
+.left_footer div:last-of-type span:first-of-type a{
+    background-color: bisque;
+    font-size:14px; 
+    color:red
+}
+
+.left_footer div:last-of-type span:last-of-type a{
+    background-color: aliceblue;
+    font-size:14px; 
+    color:black; 
+    margin-left:30px
+}
+
+div.footer div.right_footer{
+    background-color: red;
+    float:right; 
+    padding-top:49px; 
+    padding-right:128px
+
+}
+
+.right_footer > div:first-of-type{
+    background-color: pink;
+    text-align:right
+}
+
+.right_footer > div:nth-child(2) p{
+    background-color: skyblue;
+    text-align: right;
+    font-size:14px;
+    margin-top:30px
+}
+/*phone*/
+ .right_footer div.bottom > div:first-of-type{
+   background-color: blueviolet;
+   float:left;
+}
+.right_footer div.bottom > div:first-of-type img[src*="phone"]{
+    background-color: yellowgreen;
+    float:left; 
+    padding-left:10px
+}
+.right_footer div.bottom > div:first-of-type p{
+    background-color: aquamarine;
+    float:left;
+}
+
+
+/*instagram*/
+.right_footer div.bottom >div:nth-child(2){
+    background-color: blue;
+    float:left; 
+    padding-left:30px
+}
+.right_footer div.bottom > div:nth-child(2) img[src*="inst"]{
+    background-color: yellow;
+    float:left; 
+    padding-right:10px
+
+}
+.right_footer div.bottom > div:nth-child(2) p{
+    background-color: green;
+    float:left
+}
+/*mail*/
+.right_footer div.bottom > div:nth-child(3){
+    background-color: bisque;
+    float:left; 
+    padding-left:30px
+}
+.right_footer div.bottom > div:nth-child(3) img[src*="mail"]{
+    background-color: pink;
+    float:left; 
+    padding-right:10px
+
+}
+.right_footer div.bottom > div:nth-child(3) p{
+    background-color: sandybrown;
+    float:left
+
+}
+
+/*yellow bench page styles*/
+
+
