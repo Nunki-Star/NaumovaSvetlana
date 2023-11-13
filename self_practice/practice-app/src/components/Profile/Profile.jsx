@@ -15,7 +15,7 @@ function Profile(){
                     blablabla
                 </p>
             </div>
-            <MyPosts/>
+            <MyPosts testmessage="my first props on my own"/>
         </div>
     )
 }

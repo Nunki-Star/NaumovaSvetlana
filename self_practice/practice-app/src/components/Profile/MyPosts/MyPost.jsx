@@ -3,18 +3,18 @@ import classes from './MyPosts.module.css';
 import Post from './Post/Post'
 
 
-function MyPosts(){
+function MyPosts(props){
     return(
         <div>
-            My posts
+            {props.testmessage}
             <div>
                 <textarea></textarea>
                 <button>Add text</button>
                 <button>Remove</button>
             </div>
             <div classname = {classes.posts}>
-                <Post message="hi!how are you?"/>
-                <Post message="its my first post"/>
+                <Post message="hi!how are you?" likesCount = "23"/>
+                <Post message="its my first post" likesCount = "0"/>
             
             </div>
         </div>
