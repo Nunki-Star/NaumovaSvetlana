@@ -11,19 +11,24 @@ const goods = [
 ]
 
 const Row = (props) => {
-  const {Name, Price, URL, Quantity} = props
+  const {Name, Price, URL, Quantity, delRow, index} = props
   return(<tr>
     <td>{Name}</td>
     <td>{Price}</td>
     <td>{URL}</td>
     <td>{Quantity}</td>
+    <td>
+      <button onClick = {
+      () => { delRow(index) }
+    }>Delete</button>
+    </td>
   </tr>)
 }
 
 
 
 const Table = (props) =>{
-  const {data} = props
+  const {data, delRow} = props
   return(<table>
     <thead>
       <tr>
@@ -35,11 +40,14 @@ const Table = (props) =>{
       </tr>
     </thead>
     <tbody>
-      {data.map(row => 
-        <Row Name = {row.Name}
+      {data.map((row, index) => 
+        <Row key = {`key${index}`}
+        Name = {row.Name}
         Price = {row.Price}
         URL = {row.URL}
-        Quantity = {row.Quantity}/>
+        Quantity = {row.Quantity}
+        delRow = {delRow}
+        index = {index}/>
       )}
     </tbody>
   </table>)
@@ -48,10 +56,20 @@ const Table = (props) =>{
 function App() {
 
   const [rows, setRows] = useState(goods)
+
+  const deleteRow = (number) =>  {
+    let copy = [...rows]
+    copy = copy.filter(
+      (item, index) => number != index
+    )
+    setRows(copy)
+  }
+
   return (
     <div className="App">
       
-      <Table data = {rows}/>
+      <Table data = {rows}
+        delRow = {deleteRow} />
     </div>
   );
 }
