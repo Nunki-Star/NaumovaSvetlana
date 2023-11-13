@@ -1,0 +1,27 @@
+table{
+  width:500px;
+  height:300px;
+  border:1px solid lightgrey;
+  border-collapse: collapse;
+  margin-top:20px;
+  margin-left:20px
+}
+thead{
+  border:1px solid lightgrey
+}
+
+th{
+  border:1px solid lightgrey;
+  padding-top:10px;
+  padding-bottom:10px
+}
+
+td{
+  text-align: center;
+  border:1px solid lightgray;
+  border-collapse: collapse;
+}
+
+
+
+
