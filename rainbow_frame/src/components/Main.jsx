@@ -5,7 +5,7 @@ import RainbowFrame from './RainbowFrame.jsx'
 class App extends React.Component {
 
     render() {
-        let colors = ['deeppink', 'lime', 'yellow', 'orangered', '#00BFFF', 'blue', 'red'];
+        let colors = ['yellow', 'lime', 'orange', 'orangered', "lightblue", 'red'];
         return (
             <RainbowFrame colors={colors}>
                 Hello!
