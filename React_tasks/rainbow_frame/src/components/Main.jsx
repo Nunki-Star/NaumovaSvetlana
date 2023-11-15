@@ -2,7 +2,7 @@ import React from 'react';
 import RainbowFrame from './RainbowFrame.jsx'
 
 
-class App extends React.Component {
+class Main extends React.Component {
 
     render() {
         let colors = ['yellow', 'lime', 'orange', 'orangered', "lightblue", 'red'];
@@ -14,4 +14,4 @@ class App extends React.Component {
     }
 }
 
-export default App;
+export default Main;
