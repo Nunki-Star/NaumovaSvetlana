@@ -1,7 +1,5 @@
 import './App.css';
-import Container from './components/Container';
-import Data from './components/BR2JSX'
-
+import BR2JSX from './components/BR2JSX'
 
 function App() {
   return (
