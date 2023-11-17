@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './container.module.css';
-import Data from './Data'
+import Data from './BR2JSX'
 
 
 function Container(){

@@ -4,7 +4,7 @@ import React from 'react';
 
 
 
-class Data extends React.Component{
+class BR2JSX extends React.Component{
   render() {
     let text = "first<br>second<br/>third<br />fourth"
     let lines=text.split(/<br *\/?>/);
@@ -18,4 +18,4 @@ class Data extends React.Component{
   }
 }
 
-export default Data;
+export default BR2JSX;
