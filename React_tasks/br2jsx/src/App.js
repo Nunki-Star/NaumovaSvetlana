@@ -2,22 +2,14 @@ import './App.css';
 import React, { Component } from 'react';
 import BR2JSX from './components/BR2JSX'
 
-let text = 
-  [
-    {
-      text:"first<br>second<br/>third<br />fourth"
-    }
-  ]
-class App extends Component() {
-  render(){
-  return (
-    <div>
+let text = "first<br>second<br/>third<br />fourth"
 
-      <BR2JSX item={text}/>
-      
+function App(){
+  return(
+    <div className = "container">
+      <BR2JSX string={text}/>
     </div>
-    );
-  }
+  )
 }
 
 
