@@ -1,12 +1,12 @@
 import React from 'react';
-
+import classes from './container.module.css'
 
 
 
 
 class BR2JSX extends React.Component{
   render() {
-    let text = "first<br>second<br/>third<br />fourth"
+    
     let lines=text.split(/<br *\/?>/);
     let arr =[];
     for (let i=0; i<lines.length; i++){
