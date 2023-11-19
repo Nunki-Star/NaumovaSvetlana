@@ -5,7 +5,7 @@ class BR2JSX extends React.Component{
   render() {
    //console.log(this.props.string)
     let lines = this.props.txt.split(/<br *\/?>/);
-    console.log(lines+"aaa")
+   
     let arr =[];
    
     for (let i=0; i<lines.length; i++){
