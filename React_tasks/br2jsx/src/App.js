@@ -1,19 +1,19 @@
 import './App.css';
-import React, { Component } from 'react';
+import React from 'react';
 import BR2JSX from './components/BR2JSX'
 
-let text = "first<br>second<br/>third<br />fourth"
+
 
 function App(){
+  let text =[
+  {id:1, txt:"first<br>second<br/>third<br />fourth"}
+  ]
   return(
     <div className = "container">
-      <BR2JSX string={text}/>
+     {text.map((item, index)=><BR2JSX key={index} txt={item.txt}/>)}
     </div>
   )
 }
-
-
-
 export default App;
 
 
