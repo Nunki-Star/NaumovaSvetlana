@@ -10,7 +10,7 @@ class BR2JSX extends React.Component{
    
     for (let i=0; i<lines.length; i++){
         arr.push(lines[i]);
-        console.log(lines[i])
+      
         if(i<lines.length-1)
         arr.push(<br/>);
         
