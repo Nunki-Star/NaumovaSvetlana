@@ -10,7 +10,7 @@ function App(){
   ]
   return(
     <div className = "container">
-     {text.map((item, index)=><BR2JSX key={index} txt={item.txt}/>)}
+     {text.map((item, index)=><BR2JSX key={item.id} txt={item.txt}/>)}
     </div>
   )
 }
