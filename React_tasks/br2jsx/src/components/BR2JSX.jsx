@@ -8,7 +8,8 @@ class BR2JSX extends React.Component{
     const someTxt = lines.map((item, id) => {
       return (
         <div key={id}>
-            {<br /> && id !== 0 } {item}
+            {<br/> && id !== 0} 
+            {item}
         </div>
         )}
         )
