@@ -1,34 +1,39 @@
 import './App.css';
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const goods = [
-  {Name:"product1", Price:"30", URL:"http://111.com", Quantity:"20"},
-  {Name:"product2", Price:"40", URL:"http://222.com", Quantity:"30"},
-  {Name:"product3", Price:"56", URL:"http://333.com", Quantity:"40"},
-  {Name:"product4", Price:"40", URL:"http://444.com", Quantity:"20"},
-  {Name:"product5", Price:"77", URL:"http://555.com", Quantity:"20"},
-  {Name:"product6", Price:"30", URL:"http://666.com", Quantity:"20"}
+  {Name:"product1", Price:"30", URL:"http://111.com", Quantity:"20", id:1},
+  {Name:"product2", Price:"40", URL:"http://222.com", Quantity:"30", id:2},
+  {Name:"product3", Price:"56", URL:"http://333.com", Quantity:"40", id:3},
+  {Name:"product4", Price:"40", URL:"http://444.com", Quantity:"20", id:4},
+  {Name:"product5", Price:"77", URL:"http://555.com", Quantity:"20", id:5},
+  {Name:"product6", Price:"30", URL:"http://666.com", Quantity:"20", id:6}
 ]
 
 const Row = (props) => {
   const {Name, Price, URL, Quantity, delRow, index} = props
+  
+  
   return(<tr>
-    <td>{Name}</td>
-    <td>{Price}</td>
-    <td>{URL}</td>
-    <td>{Quantity}</td>
-    <td>
-      <button onClick = {
-      () => { delRow(index) }
-    }>Delete</button>
-    </td>
-  </tr>)
+            <td>{Name}</td>
+            <td>{Price}</td>
+            <td>{URL}</td>
+            <td>{Quantity}</td>
+            <td>
+              <button onClick = {
+              () => { delRow(index) }
+            }>Delete</button>
+            </td>
+        </tr>)
 }
 
 
 
+
+
 const Table = (props) =>{
-  const {data, delRow} = props
+  const {data, delRow} = props;
+  
   return(<table>
     <thead>
       <tr>
@@ -67,7 +72,6 @@ function App() {
 
   return (
     <div className="App">
-      
       <Table data = {rows}
         delRow = {deleteRow} />
     </div>
