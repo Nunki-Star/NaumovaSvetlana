@@ -12,9 +12,15 @@ const goods = [
 
 const Row = (props) => {
   const {Name, Price, URL, Quantity, delRow, index} = props
+  const [activeIndex, setIsActiveIndex] = useState('white'); 
+  const handleColorChange = (index) => {
+    setIsActiveIndex(index);
+  };
   
-  
-  return(<tr>
+  return(<tr style= {
+    {backgroundColor: index === activeIndex ? 'deeppink' : 'white'}
+  }
+    onClick={ () => { handleColorChange(index); }}>
             <td>{Name}</td>
             <td>{Price}</td>
             <td>{URL}</td>

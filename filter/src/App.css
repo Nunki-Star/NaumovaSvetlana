@@ -1,0 +1,13 @@
+.to_filter {
+  margin-top:50px;
+  
+}
+
+.filtered {
+  border: 2px solid grey;
+  margin-top:10px;
+  width: 180px;
+  height: 250px;
+  overflow: hidden;
+  margin-left:10px
+}
