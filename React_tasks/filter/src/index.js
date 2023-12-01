@@ -1,8 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom/client.js';
 import './index.css';
 import Filter from './Filter.js';
-import reportWebVitals from './reportWebVitals';
+import reportWebVitals from './reportWebVitals.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const wordsToSort = ['california', 'everything', 'aboveboard', 'washington', 'basketball', 'weathering', 'characters', 'literature', 'contraband', 'appreciate']
