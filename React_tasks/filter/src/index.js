@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client.js';
+import ReactDOM from 'react-dom';
 import './index.css';
 import Filter from './Filter.js';
 import reportWebVitals from './reportWebVitals.js';
