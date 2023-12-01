@@ -16,7 +16,7 @@ const Filter = ({ wordsTosort }) => {
     sortArr(checked ? [...myArray].sort() : myArray);
   }
 
-  const onChange = () => {
+  const sort = () => {
     sortedWords();
     setInput(inputField.current.value.toLowerCase());
   }
@@ -34,8 +34,8 @@ const Filter = ({ wordsTosort }) => {
 
   return (
     <div className="to_filter">
-      <input type="checkbox" ref={checkBox} checked={checked} onChange={checkbox} />
-      <input className="textField" type="text" ref={inputField} value={input} onChange={onChange} />
+      <input type="checkbox" ref={checkBox} checked={checked} sort={checkbox} />
+      <input className="textField" type="text" ref={inputField} value={input} sort={sort} />
       <button className="resetButton" onClick={resetButton}>Reset</button>
       <div className='filtered'>
         {arrayToSort.map((i) => <p key={i}>{i}</p>)}
