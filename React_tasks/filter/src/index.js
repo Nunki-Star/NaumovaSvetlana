@@ -1,15 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import './index.css';
-import Filter from './Filter.js';
+import App from './App.js'
 import reportWebVitals from './reportWebVitals.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const wordsToSort = ['california', 'everything', 'aboveboard', 'washington', 'basketball', 'weathering', 'characters', 'literature', 'contraband', 'appreciate']
 
 root.render(
   <React.StrictMode>
-    <Filter wordsTosort={wordsToSort} />
+    <App />
   </React.StrictMode>
 );
 
