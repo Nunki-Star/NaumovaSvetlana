@@ -7,7 +7,7 @@ const SingleProduct = () => {
   const { productId } = useParams();
   const { pathname } = useLocation();
 
-  // get product
+ 
   const singleProduct = PRODUCTS.find(product => product.id === parseInt(productId))
  
 
@@ -21,7 +21,7 @@ const SingleProduct = () => {
           <div className="row align-items-center">
             <div className="col-lg-7">
               <h1>{name}</h1>
-              {/* <p>{pathname}</p> */}
+             
             </div>
             <div className="col-lg-5">
               <nav aria-label="breadcrumb">
