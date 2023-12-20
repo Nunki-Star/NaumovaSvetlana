@@ -108,13 +108,7 @@ switch (color){
 function saySomething(){
     document.write("HELLO!");
 }*/
-
-
-function anyThing(a, b){
-    let c = a+b;
-    return c
-}
-
-for(let i = 1; i <= 5; i++){
-    console.log(i, anyThing(3, 2))
-}
+const s1 = ["a", "b", "c"];
+const s2 = ["d", "e", "f"];
+const result = s1.concat(s2).join("+");
+;console.log(result)
